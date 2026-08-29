@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
 import AuthorityBar from "@/components/social-proof/AuthorityBar";
+import MissionVisionValues from "@/components/brand/MissionVisionValues";
 import PillarsSection from "@/components/pillars/PillarsSection";
 import SolutionsMatrix from "@/components/solutions/SolutionsMatrix";
 import ProcessFlowEngine from "@/components/interactive/ProcessFlowEngine";
@@ -14,7 +15,7 @@ import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#030712] text-slate-100 relative selection:bg-blue-600/30 selection:text-white">
+    <main className="min-h-screen bg-white text-slate-900 relative selection:bg-blue-600/20 selection:text-slate-900">
       {/* Navigation Header */}
       <Navbar />
 
@@ -23,6 +24,9 @@ export default function Home() {
 
       {/* Quantitative Social Proof & Technology Ecosystem */}
       <AuthorityBar />
+
+      {/* Brand Identity & Core Ethos: Misión, Visión, Valores & Reglas de Oro */}
+      <MissionVisionValues />
 
       {/* 01. Four Pillars of Operative Transformation */}
       <PillarsSection />

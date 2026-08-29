@@ -23,17 +23,17 @@ const config: Config = {
           950: "#030712",
           900: "#090D16",
           850: "#0D1322",
-          800: "#0F172A",
+          800: "#0F172A", // Azul Noche Oficial
           700: "#1E293B",
           600: "#334155",
         },
         brand: {
-          50: "#EFF6FF",
+          50: "#EFF6FF", // Azul Hielo Oficial
           100: "#DBEAFE",
           200: "#BFDBFE",
           300: "#93C5FD",
           400: "#60A5FA",
-          500: "#3B82F6", // Primary Brand Accent
+          500: "#3B82F6", // Azul Brillante Oficial
           600: "#2563EB",
           700: "#1D4ED8",
           800: "#1E40AF",
@@ -45,21 +45,23 @@ const config: Config = {
           600: "#059669",
         },
         ice: "#EFF6FF",
+        noche: "#0F172A",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "mesh-light": "radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(239, 246, 255, 0.8) 0px, transparent 50%)",
         "mesh-dark": "radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%)",
-        "glass-gradient": "linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)",
       },
       boxShadow: {
         "glow-sm": "0 0 15px -3px rgba(59, 130, 246, 0.25)",
         "glow-md": "0 0 30px -4px rgba(59, 130, 246, 0.3)",
         "glow-lg": "0 0 50px -5px rgba(59, 130, 246, 0.35)",
-        "subtle-card": "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
-        "elevation-1": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-        "elevation-2": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
-        "elevation-3": "0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        "subtle-card": "0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03)",
+        "elevation-1": "0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px 0 rgba(15, 23, 42, 0.04)",
+        "elevation-2": "0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04)",
+        "elevation-3": "0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.06)",
+        "elevation-hover": "0 20px 35px -8px rgba(15, 23, 42, 0.14), 0 8px 16px -4px rgba(59, 130, 246, 0.08)",
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
