@@ -6,14 +6,7 @@ import {
   ArrowRight,
   ArrowLeft,
   CheckCircle2,
-  Sparkles,
-  Building2,
-  Users,
-  AlertTriangle,
   Send,
-  Shield,
-  Calendar,
-  MessageSquare,
 } from "lucide-react";
 import confetti from "canvas-confetti";
 import { cn } from "@/lib/utils";
@@ -60,38 +53,38 @@ export default function DiagnosticForm() {
   };
 
   return (
-    <section id="diagnostico" className="relative py-24 sm:py-32 bg-[#02050e] border-t border-slate-800">
+    <section id="diagnostico" className="relative py-24 sm:py-32 bg-[#EFF6FF]/40 border-t border-slate-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="brand-label text-blue-400">
+          <span className="brand-label text-blue-600 font-semibold">
             07 — DIAGNÓSTICO OPERATIVO & CONTACTO
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl lg:text-6xl text-white font-light mt-3 leading-tight">
+          <h2 className="font-brand-display text-3xl sm:text-5xl lg:text-6xl text-[#0F172A] font-light mt-3 leading-tight">
             Descubre en 2 minutos dónde se fuga tu{" "}
-            <span className="italic text-blue-500 font-normal">rentabilidad operativa</span>
+            <span className="italic text-blue-600 font-normal">rentabilidad operativa</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base font-light mt-4 leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 leading-relaxed">
             Completa la evaluación técnica para recibir un mapa personalizado de automatización
             agéntica y agendar una sesión estratégica con nuestros ingenieros.
           </p>
         </div>
 
         {/* Multi-Step Card Form */}
-        <div className="rounded-3xl bg-slate-900/60 border border-slate-800 backdrop-blur-xl p-6 sm:p-10 lg:p-12 shadow-2xl relative">
+        <div className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-subtle-card relative">
           {!isSubmitted ? (
             <div>
               {/* Progress Steps Header */}
-              <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
+              <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-100">
                 <div className="flex items-center gap-3">
-                  <span className="w-8 h-8 rounded-full bg-blue-600/30 border border-blue-500/50 flex items-center justify-center font-mono text-xs text-blue-400 font-bold">
+                  <span className="w-8 h-8 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center font-mono text-xs text-blue-600 font-bold">
                     0{step}
                   </span>
                   <div>
                     <span className="text-xs font-mono text-slate-400 block">
                       PASO {step} DE 4
                     </span>
-                    <span className="text-xs font-semibold text-slate-200">
+                    <span className="text-xs font-semibold text-slate-800">
                       {step === 1 && "Perfil de tu Empresa"}
                       {step === 2 && "Principal Cuello de Botella"}
                       {step === 3 && "Ecosistema Actual"}
@@ -107,10 +100,10 @@ export default function DiagnosticForm() {
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300",
                         s === step
-                          ? "w-8 bg-blue-500"
+                          ? "w-8 bg-blue-600"
                           : s < step
                           ? "w-4 bg-emerald-500"
-                          : "w-4 bg-slate-800"
+                          : "w-4 bg-slate-200"
                       )}
                     />
                   ))}
@@ -128,7 +121,7 @@ export default function DiagnosticForm() {
                     className="space-y-6"
                   >
                     <div>
-                      <label className="text-sm font-semibold text-white block mb-3">
+                      <label className="text-sm font-semibold text-[#0F172A] block mb-3">
                         ¿Qué tipo de organización o negocio operas?
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -145,10 +138,10 @@ export default function DiagnosticForm() {
                             type="button"
                             onClick={() => setFormData({ ...formData, companyType: opt })}
                             className={cn(
-                              "p-3.5 rounded-xl border text-left text-xs sm:text-sm transition-all cursor-pointer",
+                              "p-3.5 rounded-2xl border text-left text-xs sm:text-sm transition-all cursor-pointer",
                               formData.companyType === opt
-                                ? "bg-blue-600/20 border-blue-500 text-white shadow-glow-sm"
-                                : "bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700"
+                                ? "bg-blue-50 border-blue-500 text-[#0F172A] font-medium shadow-sm"
+                                : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                             )}
                           >
                             {opt}
@@ -158,7 +151,7 @@ export default function DiagnosticForm() {
                     </div>
 
                     <div className="pt-2">
-                      <label className="text-sm font-semibold text-white block mb-3">
+                      <label className="text-sm font-semibold text-[#0F172A] block mb-3">
                         Tamaño aproximado del equipo operativo
                       </label>
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -169,10 +162,10 @@ export default function DiagnosticForm() {
                               type="button"
                               onClick={() => setFormData({ ...formData, teamSize: opt })}
                               className={cn(
-                                "p-3 rounded-xl border text-center text-xs font-mono transition-all cursor-pointer",
+                                "p-3 rounded-2xl border text-center text-xs font-mono transition-all cursor-pointer",
                                 formData.teamSize === opt
-                                  ? "bg-blue-600/20 border-blue-500 text-blue-300"
-                                  : "bg-slate-950/70 border-slate-800 text-slate-400 hover:border-slate-700"
+                                  ? "bg-blue-50 border-blue-500 text-blue-700 font-bold"
+                                  : "bg-slate-50 border-slate-200 text-slate-600 hover:border-slate-300"
                               )}
                             >
                               {opt}
@@ -193,7 +186,7 @@ export default function DiagnosticForm() {
                     className="space-y-6"
                   >
                     <div>
-                      <label className="text-sm font-semibold text-white block mb-3">
+                      <label className="text-sm font-semibold text-[#0F172A] block mb-3">
                         ¿Cuál es el cuello de botella que más limita tu crecimiento actualmente?
                       </label>
                       <div className="grid grid-cols-1 gap-3">
@@ -209,15 +202,15 @@ export default function DiagnosticForm() {
                             type="button"
                             onClick={() => setFormData({ ...formData, primaryBottleneck: opt })}
                             className={cn(
-                              "p-4 rounded-xl border text-left text-xs sm:text-sm transition-all cursor-pointer flex items-center justify-between",
+                              "p-4 rounded-2xl border text-left text-xs sm:text-sm transition-all cursor-pointer flex items-center justify-between",
                               formData.primaryBottleneck === opt
-                                ? "bg-blue-600/20 border-blue-500 text-white shadow-glow-sm"
-                                : "bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700"
+                                ? "bg-blue-50 border-blue-500 text-[#0F172A] font-medium shadow-sm"
+                                : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                             )}
                           >
                             <span>{opt}</span>
                             {formData.primaryBottleneck === opt && (
-                              <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 ml-2" />
+                              <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 ml-2" />
                             )}
                           </button>
                         ))}
@@ -235,7 +228,7 @@ export default function DiagnosticForm() {
                     className="space-y-6"
                   >
                     <div>
-                      <label className="text-sm font-semibold text-white block mb-3">
+                      <label className="text-sm font-semibold text-[#0F172A] block mb-3">
                         ¿Qué herramientas forman el núcleo de tu operativa hoy?
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -250,10 +243,10 @@ export default function DiagnosticForm() {
                             type="button"
                             onClick={() => setFormData({ ...formData, currentTools: opt })}
                             className={cn(
-                              "p-4 rounded-xl border text-left text-xs sm:text-sm transition-all cursor-pointer",
+                              "p-4 rounded-2xl border text-left text-xs sm:text-sm transition-all cursor-pointer",
                               formData.currentTools === opt
-                                ? "bg-blue-600/20 border-blue-500 text-white shadow-glow-sm"
-                                : "bg-slate-950/70 border-slate-800 text-slate-300 hover:border-slate-700"
+                                ? "bg-blue-50 border-blue-500 text-[#0F172A] font-medium shadow-sm"
+                                : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                             )}
                           >
                             {opt}
@@ -274,7 +267,7 @@ export default function DiagnosticForm() {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-xs text-slate-300 block mb-1.5 font-medium">
+                        <label className="text-xs text-slate-700 block mb-1.5 font-medium">
                           Nombre y Apellidos *
                         </label>
                         <input
@@ -283,12 +276,12 @@ export default function DiagnosticForm() {
                           placeholder="Ej. Carlos Mendoza"
                           value={formData.fullName}
                           onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500"
                         />
                       </div>
 
                       <div>
-                        <label className="text-xs text-slate-300 block mb-1.5 font-medium">
+                        <label className="text-xs text-slate-700 block mb-1.5 font-medium">
                           Correo Corporativo *
                         </label>
                         <input
@@ -297,14 +290,14 @@ export default function DiagnosticForm() {
                           placeholder="carlos@tuempresa.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-xs text-slate-300 block mb-1.5 font-medium">
+                        <label className="text-xs text-slate-700 block mb-1.5 font-medium">
                           Teléfono / WhatsApp de Contacto
                         </label>
                         <input
@@ -312,12 +305,12 @@ export default function DiagnosticForm() {
                           placeholder="+34 600 000 000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500"
                         />
                       </div>
 
                       <div>
-                        <label className="text-xs text-slate-300 block mb-1.5 font-medium">
+                        <label className="text-xs text-slate-700 block mb-1.5 font-medium">
                           Detalle o reto específico (opcional)
                         </label>
                         <input
@@ -325,7 +318,7 @@ export default function DiagnosticForm() {
                           placeholder="Ej. Queremos automatizar la confirmación de citas"
                           value={formData.notes}
                           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                          className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                          className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm focus:outline-none focus:border-blue-500"
                         />
                       </div>
                     </div>
@@ -334,12 +327,12 @@ export default function DiagnosticForm() {
               </AnimatePresence>
 
               {/* Navigation Buttons */}
-              <div className="flex items-center justify-between pt-8 mt-6 border-t border-slate-800">
+              <div className="flex items-center justify-between pt-8 mt-6 border-t border-slate-100">
                 {step > 1 ? (
                   <button
                     type="button"
                     onClick={handleBack}
-                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-950 text-slate-300 hover:text-white border border-slate-800 text-xs font-medium cursor-pointer"
+                    className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 text-xs font-medium cursor-pointer"
                   >
                     <ArrowLeft className="w-3.5 h-3.5" />
                     <span>Atrás</span>
@@ -352,7 +345,7 @@ export default function DiagnosticForm() {
                   <button
                     type="button"
                     onClick={handleNext}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-glow-sm cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold shadow-sm cursor-pointer"
                   >
                     <span>Siguiente Paso</span>
                     <ArrowRight className="w-4 h-4" />
@@ -362,7 +355,7 @@ export default function DiagnosticForm() {
                     type="button"
                     onClick={handleSubmit}
                     disabled={isSubmitting || !formData.fullName || !formData.email}
-                    className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-glow-md disabled:opacity-50 cursor-pointer"
+                    className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold shadow-sm disabled:opacity-50 cursor-pointer"
                   >
                     {isSubmitting ? (
                       <span>Analizando diagnóstico...</span>
@@ -379,25 +372,25 @@ export default function DiagnosticForm() {
           ) : (
             /* Submission Success State */
             <div className="text-center py-8 space-y-6">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mx-auto">
+              <div className="w-16 h-16 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mx-auto">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
 
               <div className="max-w-md mx-auto space-y-2">
-                <span className="brand-label text-blue-400 text-xs">
+                <span className="brand-label text-blue-600 text-xs font-semibold">
                   DIAGNÓSTICO REGISTRADO CON ÉXITO
                 </span>
-                <h3 className="font-brand-display text-3xl text-white">
+                <h3 className="font-brand-display text-3xl text-[#0F172A]">
                   ¡Gracias, {formData.fullName}!
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
                   Nuestro equipo de ingeniería y estrategia ha recibido los detalles de tu empresa (
-                  <strong className="text-blue-400">{formData.companyType}</strong>). En menos de 24
+                  <strong className="text-blue-600">{formData.companyType}</strong>). En menos de 24
                   horas te contactaremos con una propuesta preliminar de arquitectura de agentes.
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800 max-w-sm mx-auto text-left font-mono text-[11px] space-y-1 text-slate-300">
+              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 max-w-sm mx-auto text-left font-mono text-[11px] space-y-1 text-slate-700">
                 <div>
                   <span className="text-slate-400">Cuello de Botella:</span> {formData.primaryBottleneck}
                 </div>
@@ -415,7 +408,7 @@ export default function DiagnosticForm() {
                   setIsSubmitted(false);
                   setStep(1);
                 }}
-                className="px-6 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 text-xs font-mono border border-slate-800"
+                className="px-6 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-mono border border-slate-300"
               >
                 Realizar otra consulta
               </button>

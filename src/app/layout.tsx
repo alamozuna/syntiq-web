@@ -72,7 +72,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#030712",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
 };
@@ -85,9 +85,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${cormorant.variable} ${jakarta.variable} ${jetbrains.variable} dark scroll-smooth`}
+      className={`${cormorant.variable} ${jakarta.variable} ${jetbrains.variable} scroll-smooth`}
     >
-      <body className="antialiased selection:bg-blue-600/30 selection:text-white bg-[#030712] text-slate-100 min-h-screen">
+      <body className="antialiased selection:bg-blue-600/20 selection:text-slate-900 bg-white text-slate-900 min-h-screen">
         {children}
       </body>
     </html>

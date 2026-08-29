@@ -4,40 +4,41 @@
 
 :root {
   --font-primary: 'Cormorant Garamond', serif;
-  --color-dark: #090d16;
+  --color-white: #ffffff;
+  --color-dark: #0f172a;
   --color-accent: #3b82f6;
   --color-light: #eff6ff;
-  --color-white: #ffffff;
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
-  background-color: #030712;
-  color: #f8fafc;
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 body {
   font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   overflow-x: hidden;
-  background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.9) 0%, rgba(3, 7, 18, 1) 100%);
+  background-color: #ffffff;
+  color: #0f172a;
   min-height: 100vh;
 }
 
 ::selection {
-  background-color: rgba(59, 130, 246, 0.35);
-  color: #ffffff;
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #0f172a;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Clean & Refined */
 ::-webkit-scrollbar {
   width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #030712;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -58,51 +59,46 @@ body {
   text-transform: uppercase;
 }
 
-/* Ambient glow & laser effects */
-.laser-beam {
-  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.8) 50%, transparent 100%);
+/* Luxury Accent & Surface Treatments */
+.laser-beam-light {
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.4) 50%, transparent 100%);
   height: 1px;
 }
 
-.laser-beam-vertical {
-  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.6) 50%, transparent 100%);
-  width: 1px;
-}
-
-.glass-panel {
-  background: rgba(13, 19, 34, 0.7);
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-.glass-panel-hover {
+.glass-panel-light-hover {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-panel-hover:hover {
-  background: rgba(15, 23, 42, 0.85);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
+.glass-panel-light-hover:hover {
+  background: #ffffff;
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(59, 130, 246, 0.06);
   transform: translateY(-2px);
 }
 
-.border-gradient-blue {
+.border-gradient-brand {
   border: 1px solid transparent;
-  background-image: linear-gradient(#090d16, #090d16), linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(59, 130, 246, 0.2) 100%);
+  background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(226, 232, 240, 0.6) 50%, rgba(59, 130, 246, 0.3) 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
 
-/* Grid & Dots background */
-.bg-grid-pattern {
+/* Grid & Dots background for light surfaces */
+.bg-grid-pattern-light {
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
 }
 
-.bg-dots-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+.bg-dots-pattern-light {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
