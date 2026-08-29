@@ -82,7 +82,7 @@ export default function AuthorityBar() {
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
-                <h4 className="text-sm font-semibold text-slate-800 mb-1">{stat.label}</h4>
+                <h3 className="text-sm font-semibold text-slate-800 mb-1">{stat.label}</h3>
                 <p className="text-xs text-slate-500 leading-relaxed font-light">{stat.detail}</p>
               </motion.div>
             );

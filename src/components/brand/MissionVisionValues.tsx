@@ -222,9 +222,9 @@ export default function MissionVisionValues() {
                         </span>
                       </div>
 
-                      <h4 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-1">
+                      <h3 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-1">
                         {v.title}
-                      </h4>
+                      </h3>
                       <p className="text-xs font-medium text-blue-600 mb-3">
                         {v.tagline}
                       </p>
@@ -265,9 +265,9 @@ export default function MissionVisionValues() {
                     <span className="brand-label text-emerald-600 text-[10px] block mb-1">
                       REGLA OPERATIVA #0{idx + 1}
                     </span>
-                    <h4 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-3">
+                    <h3 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-3">
                       {rule.title}
-                    </h4>
+                    </h3>
                     <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
                       {rule.description}
                     </p>

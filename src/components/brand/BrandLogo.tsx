@@ -32,7 +32,7 @@ export default function BrandLogo({
       <div className={`relative inline-flex items-center select-none ${className}`}>
         <Image
           src="/assets/icon-syntiq.webp"
-          alt="SyntIQ Isotipo"
+          alt="Isotipo de SyntIQ Enterprise AI"
           width={120}
           height={148}
           className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-105`}
@@ -47,7 +47,7 @@ export default function BrandLogo({
       {/* Official Master Logo with authentic geometric custom typography */}
       <Image
         src={isLight ? "/assets/logo-syntiq-light.webp" : "/assets/logo-syntiq-dark.webp"}
-        alt="SyntIQ Enterprise AI"
+        alt="SyntIQ Enterprise AI — Logotipo Oficial"
         width={360}
         height={100}
         className={`${heightClasses[size]} w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]`}

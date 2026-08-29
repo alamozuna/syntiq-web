@@ -10,6 +10,7 @@ import RoiCalculator from "@/components/calculator/RoiCalculator";
 import UseCasesSection from "@/components/use-cases/UseCasesSection";
 import TeamSection from "@/components/team/TeamSection";
 import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
+import FaqSection from "@/components/faq/FaqSection";
 import DiagnosticForm from "@/components/contact/DiagnosticForm";
 import Footer from "@/components/layout/Footer";
 
@@ -49,7 +50,10 @@ export default function Home() {
       {/* Lead Magnet: The Autonomous Agent Architecture Blueprint */}
       <BlueprintSection />
 
-      {/* 07. Interactive Operative Diagnostic & Strategic Contact */}
+      {/* 07. Frequently Asked Questions (WAI-ARIA Accordion & Schema.org FAQPage) */}
+      <FaqSection />
+
+      {/* 08. Interactive Operative Diagnostic & Strategic Contact */}
       <DiagnosticForm />
 
       {/* Corporate Enterprise Footer */}

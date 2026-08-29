@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Col 1 & 2: Brand & Ethos */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block" aria-label="SyntIQ - Inicio">
               <BrandLogo size="md" variant="light" />
             </Link>
 
@@ -38,24 +38,24 @@ export default function Footer() {
             </span>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <a href="#soluciones" className="hover:text-blue-400 transition-colors">
+                <Link href="/servicios" className="hover:text-blue-400 transition-colors">
+                  Todas las Soluciones
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicios/motor-productizado" className="hover:text-blue-400 transition-colors">
                   Motor Productizado (PyMEs)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#soluciones" className="hover:text-blue-400 transition-colors">
+                <Link href="/servicios/motor-consultivo" className="hover:text-blue-400 transition-colors">
                   Motor Consultivo (Enterprise)
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gobernanza" className="hover:text-blue-400 transition-colors">
+                <Link href="/servicios/gobernanza-compliance" className="hover:text-blue-400 transition-colors">
                   Gobernanza & Blindaje Legal
-                </a>
-              </li>
-              <li>
-                <a href="#flujo-ia" className="hover:text-blue-400 transition-colors">
-                  Arquitectura Data & Agents
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -63,28 +63,28 @@ export default function Footer() {
           {/* Col 4: Recursos & Casos */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
-              RECURSOS & HERRAMIENTAS
+              EMPRESA & RECURSOS
             </span>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <a href="#calculadora" className="hover:text-blue-400 transition-colors">
-                  Calculadora de Retorno (ROI)
-                </a>
+                <Link href="/nosotros" className="hover:text-blue-400 transition-colors">
+                  Sobre Nosotros & Equipo
+                </Link>
               </li>
               <li>
-                <a href="#casos-uso" className="hover:text-blue-400 transition-colors">
+                <Link href="/#casos-uso" className="hover:text-blue-400 transition-colors">
                   Casos de Uso por Industria
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#filosofia" className="hover:text-blue-400 transition-colors">
-                  Misión, Visión & Valores
-                </a>
+                <Link href="/#calculadora" className="hover:text-blue-400 transition-colors">
+                  Calculadora de Retorno (ROI)
+                </Link>
               </li>
               <li>
-                <a href="#equipo" className="hover:text-blue-400 transition-colors">
-                  Equipo Directivo & Fundadores
-                </a>
+                <Link href="/contacto" className="hover:text-blue-400 transition-colors">
+                  Diagnóstico Operativo Gratuito
+                </Link>
               </li>
             </ul>
           </div>
@@ -110,15 +110,21 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <span>Privacidad & RGPD</span>
-            <span>Términos de Servicio</span>
-            <span>Seguridad & Compliance</span>
+            <Link href="/privacidad" className="hover:text-slate-200 transition-colors">
+              Privacidad & RGPD
+            </Link>
+            <Link href="/terminos" className="hover:text-slate-200 transition-colors">
+              Términos de Servicio
+            </Link>
+            <Link href="/servicios/gobernanza-compliance" className="hover:text-slate-200 transition-colors">
+              Seguridad & Compliance
+            </Link>
           </div>
 
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors cursor-pointer"
+            className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400 rounded px-1"
           >
             <span>Volver arriba</span>
             <ArrowUp className="w-3.5 h-3.5" />

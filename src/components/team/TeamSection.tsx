@@ -76,8 +76,9 @@ export default function TeamSection() {
                   <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-blue-200 shrink-0 bg-slate-100 shadow-sm group-hover:border-blue-500 transition-colors">
                     <Image
                       src={member.image}
-                      alt={member.name}
+                      alt={`${member.name} — ${member.role} de SyntIQ`}
                       fill
+                      sizes="(max-width: 640px) 80px, 96px"
                       className="object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
@@ -121,7 +122,7 @@ export default function TeamSection() {
               <span className="brand-label text-blue-400 text-[10px]">
                 REGLA HUMAN-IN-THE-LOOP
               </span>
-              <h4 className="text-sm font-semibold text-white">Supervisión Sistemática</h4>
+              <h3 className="text-sm font-semibold text-white">Supervisión Sistemática</h3>
               <p className="text-xs text-slate-300 font-light">
                 Ningún agente sale a producción sin auditoría humana de logs para evitar
                 alucinaciones o sesgos.
@@ -131,7 +132,7 @@ export default function TeamSection() {
               <span className="brand-label text-emerald-400 text-[10px]">
                 PROHIBIDO EL &quot;VAPORWARE&quot;
               </span>
-              <h4 className="text-sm font-semibold text-white">Soluciones Reales Hoy</h4>
+              <h3 className="text-sm font-semibold text-white">Soluciones Reales Hoy</h3>
               <p className="text-xs text-slate-300 font-light">
                 No vendemos maquetas teóricas. Construimos sistemas operativos que resuelven dolores
                 financieros desde el primer mes.
@@ -141,7 +142,7 @@ export default function TeamSection() {
               <span className="brand-label text-indigo-400 text-[10px]">
                 INTEGRIDAD INNEGOCIABLE
               </span>
-              <h4 className="text-sm font-semibold text-white">Obsesión por el Dato Real</h4>
+              <h3 className="text-sm font-semibold text-white">Obsesión por el Dato Real</h3>
               <p className="text-xs text-slate-300 font-light">
                 Preferimos perder una propuesta comercial antes que inflar expectativas de IA no
                 validadas matemáticamente.
