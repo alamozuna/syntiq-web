@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ShieldCheck, Award, GraduationCap, CheckCircle2 } from "lucide-react";
 
 const TEAM = [
   {
@@ -42,18 +41,18 @@ const TEAM = [
 
 export default function TeamSection() {
   return (
-    <section id="equipo" className="relative py-24 sm:py-32 bg-[#060a14] border-t border-slate-800/80">
+    <section id="equipo" className="relative py-24 sm:py-32 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="brand-label text-blue-400">
+          <span className="brand-label text-blue-600 font-semibold">
             06 — AUTORIDAD PROFESIONAL & EQUIPO FUNDADOR
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl text-white font-light mt-3 leading-tight">
+          <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
             Ingeniería de datos, rigor legal y{" "}
-            <span className="italic text-blue-500 font-normal">estrategia corporativa</span>
+            <span className="italic text-blue-600 font-normal">estrategia corporativa</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base font-light mt-4 leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 leading-relaxed">
             Nuestro equipo combina formación de posgrado en Ciencia de Datos e IA (CESTE Centro
             Universitario), experiencia operativa en normativas internacionales y un compromiso
             inquebrantable con la verdad y la excelencia técnica.
@@ -69,12 +68,12 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="rounded-3xl bg-slate-900/60 border border-slate-800 p-6 sm:p-8 hover:border-blue-500/40 transition-all duration-300 group hover:shadow-glow-sm flex flex-col justify-between"
+              className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-8 hover:border-blue-300 transition-all duration-300 group shadow-subtle-card hover:shadow-elevation-hover flex flex-col justify-between"
             >
               <div>
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-6">
                   {/* Photo with frame */}
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-blue-500/30 shrink-0 bg-slate-800 shadow-md group-hover:border-blue-400 transition-colors">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-blue-200 shrink-0 bg-slate-100 shadow-sm group-hover:border-blue-500 transition-colors">
                     <Image
                       src={member.image}
                       alt={member.name}
@@ -85,27 +84,27 @@ export default function TeamSection() {
 
                   {/* Name & Role */}
                   <div>
-                    <h3 className="font-brand-display text-2xl sm:text-3xl text-white font-normal group-hover:text-blue-400 transition-colors">
+                    <h3 className="font-brand-display text-2xl sm:text-3xl text-[#0F172A] font-normal group-hover:text-blue-600 transition-colors">
                       {member.name}
                     </h3>
-                    <p className="text-sm font-medium text-blue-400 mt-0.5">{member.role}</p>
-                    <span className="text-[11px] font-mono text-slate-400 block mt-1">
+                    <p className="text-sm font-medium text-blue-600 mt-0.5">{member.role}</p>
+                    <span className="text-[11px] font-mono text-slate-500 block mt-1">
                       {member.credentials}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mb-6">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mb-6">
                   {member.bio}
                 </p>
               </div>
 
               {/* Skill Tags */}
-              <div className="pt-4 border-t border-slate-800/80 flex flex-wrap gap-2">
+              <div className="pt-4 border-t border-slate-100 flex flex-wrap gap-2">
                 {member.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-1 rounded-md text-[10px] font-mono bg-slate-950 text-slate-300 border border-slate-800"
+                    className="px-2.5 py-1 rounded-md text-[10px] font-mono bg-slate-50 text-slate-700 border border-slate-200 font-medium"
                   >
                     {tag}
                   </span>
@@ -116,14 +115,14 @@ export default function TeamSection() {
         </div>
 
         {/* Brand Ethos & Gold Rules Bar */}
-        <div id="gobernanza" className="mt-16 p-6 sm:p-8 rounded-3xl bg-slate-950/80 border border-slate-800/90 shadow-xl">
+        <div id="gobernanza" className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#0F172A] text-slate-200 border border-slate-800 shadow-elevation-3">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             <div className="space-y-1">
               <span className="brand-label text-blue-400 text-[10px]">
                 REGLA HUMAN-IN-THE-LOOP
               </span>
               <h4 className="text-sm font-semibold text-white">Supervisión Sistemática</h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300 font-light">
                 Ningún agente sale a producción sin auditoría humana de logs para evitar
                 alucinaciones o sesgos.
               </p>
@@ -133,7 +132,7 @@ export default function TeamSection() {
                 PROHIBIDO EL &quot;VAPORWARE&quot;
               </span>
               <h4 className="text-sm font-semibold text-white">Soluciones Reales Hoy</h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300 font-light">
                 No vendemos maquetas teóricas. Construimos sistemas operativos que resuelven dolores
                 financieros desde el primer mes.
               </p>
@@ -143,7 +142,7 @@ export default function TeamSection() {
                 INTEGRIDAD INNEGOCIABLE
               </span>
               <h4 className="text-sm font-semibold text-white">Obsesión por el Dato Real</h4>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-300 font-light">
                 Preferimos perder una propuesta comercial antes que inflar expectativas de IA no
                 validadas matemáticamente.
               </p>

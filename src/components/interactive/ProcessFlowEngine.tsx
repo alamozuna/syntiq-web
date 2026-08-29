@@ -7,12 +7,7 @@ import {
   Brain,
   Workflow,
   TrendingUp,
-  ArrowRight,
   Code2,
-  Cpu,
-  Layers,
-  Sparkles,
-  CheckCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -116,18 +111,18 @@ export default function ProcessFlowEngine() {
   const Icon = currentStage.icon;
 
   return (
-    <section id="flujo-ia" className="relative py-24 sm:py-32 bg-[#060a12] border-t border-slate-800">
+    <section id="flujo-ia" className="relative py-24 sm:py-32 bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="brand-label text-blue-400">
+          <span className="brand-label text-blue-600 font-semibold">
             03 — CÓMO FUNCIONA EL MOTOR SYNTIQ
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl text-white font-light mt-3 leading-tight">
+          <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
             Data → Intelligence → Automation →{" "}
-            <span className="italic text-blue-500 font-normal">Rentabilidad Neta</span>
+            <span className="italic text-blue-600 font-normal">Rentabilidad Neta</span>
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base font-light mt-4 leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 leading-relaxed">
             Inspirado en la gobernanza de datos enterprise de Dataiku y la precisión agéntica de V7 Labs.
             Haz clic en cada fase para inspeccionar el flujo técnico.
           </p>
@@ -146,15 +141,15 @@ export default function ProcessFlowEngine() {
                 className={cn(
                   "p-4 rounded-2xl border text-left transition-all duration-300 relative overflow-hidden cursor-pointer",
                   isSelected
-                    ? "bg-slate-900 border-blue-500 shadow-glow-sm"
-                    : "bg-slate-950/70 border-slate-800 hover:border-slate-700 hover:bg-slate-900/40"
+                    ? "bg-blue-50/80 border-blue-400 shadow-sm"
+                    : "bg-slate-50 border-slate-200 hover:border-slate-300 hover:bg-slate-100/60"
                 )}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span
                     className={cn(
                       "font-mono text-xs font-semibold",
-                      isSelected ? "text-blue-400" : "text-slate-400"
+                      isSelected ? "text-blue-600" : "text-slate-500"
                     )}
                   >
                     FASE {s.step}
@@ -162,19 +157,19 @@ export default function ProcessFlowEngine() {
                   <StepIcon
                     className={cn(
                       "w-4 h-4",
-                      isSelected ? "text-blue-400" : "text-slate-400"
+                      isSelected ? "text-blue-600" : "text-slate-400"
                     )}
                   />
                 </div>
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-100 line-clamp-1">
+                <h4 className="text-xs sm:text-sm font-semibold text-[#0F172A] line-clamp-1">
                   {s.title.split(". ")[1]}
                 </h4>
-                <p className="text-[11px] text-slate-400 font-mono mt-1">{s.label}</p>
+                <p className="text-[11px] text-slate-500 font-mono mt-1">{s.label}</p>
 
                 {isSelected && (
                   <motion.div
-                    layoutId="active-stage-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-1 bg-blue-500"
+                    layoutId="active-stage-indicator-light"
+                    className="absolute bottom-0 left-0 right-0 h-1 bg-blue-600"
                   />
                 )}
               </button>
@@ -190,26 +185,26 @@ export default function ProcessFlowEngine() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="rounded-3xl bg-slate-900/50 border border-slate-800/90 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-md"
+            className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-subtle-card"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Left Column: Stage Explanation & KPIs (6 cols) */}
               <div className="lg:col-span-6 space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="brand-label text-blue-400 text-[10px]">
+                    <span className="brand-label text-blue-600 text-[10px] font-semibold">
                       ETAPA {currentStage.step} // {currentStage.label}
                     </span>
-                    <h3 className="font-brand-display text-2xl sm:text-3xl text-white font-normal mt-0.5">
+                    <h3 className="font-brand-display text-2xl sm:text-3xl text-[#0F172A] font-normal mt-0.5">
                       {currentStage.title}
                     </h3>
                   </div>
                 </div>
 
-                <p className="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                <p className="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
                   {currentStage.description}
                 </p>
 
@@ -218,12 +213,12 @@ export default function ProcessFlowEngine() {
                   {currentStage.kpis.map((kpi) => (
                     <div
                       key={kpi.label}
-                      className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center font-mono"
+                      className="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-center font-mono"
                     >
-                      <span className="text-[9px] sm:text-[10px] text-slate-400 block mb-1">
+                      <span className="text-[9px] sm:text-[10px] text-slate-500 block mb-1">
                         {kpi.label}
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold text-emerald-400">
+                      <span className="text-xs sm:text-sm font-semibold text-emerald-600">
                         {kpi.value}
                       </span>
                     </div>
@@ -232,22 +227,22 @@ export default function ProcessFlowEngine() {
               </div>
 
               {/* Right Column: Code Snippet / Architecture Terminal (6 cols) */}
-              <div className="lg:col-span-6 bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-                <div className="flex items-center justify-between px-4 py-3 bg-slate-900/90 border-b border-slate-800 text-xs font-mono text-slate-400">
+              <div className="lg:col-span-6 bg-[#0F172A] border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                <div className="flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-800 text-xs font-mono text-slate-400">
                   <div className="flex items-center gap-2">
                     <Code2 className="w-3.5 h-3.5 text-blue-400" />
-                    <span>syntiq_engine_pipeline_{currentStage.id}.ts</span>
+                    <span className="text-slate-300">syntiq_engine_pipeline_{currentStage.id}.ts</span>
                   </div>
-                  <span className="text-[10px] text-emerald-400">● LIVE RUNTIME</span>
+                  <span className="text-[10px] text-emerald-400 font-semibold">● LIVE RUNTIME</span>
                 </div>
 
-                <pre className="p-4 sm:p-6 text-xs sm:text-[13px] font-mono text-blue-300/90 overflow-x-auto leading-relaxed bg-[#030712]">
+                <pre className="p-4 sm:p-6 text-xs sm:text-[13px] font-mono text-blue-300 overflow-x-auto leading-relaxed bg-[#090D16]">
                   {currentStage.codeSnippet}
                 </pre>
 
-                <div className="px-4 py-2.5 bg-slate-900/60 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <div className="px-4 py-2.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
                   <span>Modo: Producción Enterprise</span>
-                  <span className="text-slate-300">Trazabilidad: 100% Auditada</span>
+                  <span className="text-slate-300 font-medium">Trazabilidad: 100% Auditada</span>
                 </div>
               </div>
             </div>

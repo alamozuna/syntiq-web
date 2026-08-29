@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Database, Bot, ShieldCheck, TrendingUp, ArrowUpRight, Check } from "lucide-react";
+import { Database, Bot, ShieldCheck, TrendingUp, Check } from "lucide-react";
 
 const PILLARS = [
   {
@@ -69,23 +69,23 @@ const PILLARS = [
 
 export default function PillarsSection() {
   return (
-    <section id="soluciones" className="relative py-24 sm:py-32 bg-[#030712] overflow-hidden">
-      {/* Background radial accent */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-600/5 blur-[160px] rounded-full pointer-events-none" />
+    <section id="soluciones" className="relative py-24 sm:py-32 bg-white overflow-hidden">
+      {/* Background subtle mesh */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-100/40 blur-[160px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="brand-label text-blue-400">
+            <span className="brand-label text-blue-600 font-semibold">
               01 — ARQUITECTURA DE VALOR FUNDACIONAL
             </span>
-            <h2 className="font-brand-display text-3xl sm:text-5xl lg:text-6xl text-white font-light mt-3 leading-tight">
+            <h2 className="font-brand-display text-3xl sm:text-5xl lg:text-6xl text-[#0F172A] font-light mt-3 leading-tight">
               Los 4 Pilares del{" "}
-              <span className="italic text-blue-500 font-normal">Orden Operativo</span>
+              <span className="italic text-blue-600 font-normal">Orden Operativo</span>
             </h2>
           </div>
-          <p className="text-slate-400 text-sm sm:text-base max-w-md font-light leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base max-w-md font-light leading-relaxed">
             No agregamos parches superficiales ni vendemos &quot;vaporware&quot;. Diseñamos el sistema
             operativo definitivo para erradicar cuellos de botella y maximizar tu rentabilidad neta.
           </p>
@@ -94,7 +94,6 @@ export default function PillarsSection() {
         {/* 4 Asymmetric Pillar Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {PILLARS.map((pillar, index) => {
-            const Icon = pillar.icon;
             return (
               <motion.div
                 key={pillar.number}
@@ -102,38 +101,38 @@ export default function PillarsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative rounded-2xl bg-slate-900/40 border border-slate-800 p-6 sm:p-8 hover:border-blue-500/40 transition-all duration-300 group hover:shadow-glow-sm flex flex-col justify-between"
+                className="relative rounded-3xl bg-white border border-slate-200/90 p-7 sm:p-9 hover:border-blue-300 transition-all duration-300 group shadow-subtle-card hover:shadow-elevation-hover flex flex-col justify-between"
               >
                 {/* Top Badge & Number */}
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl sm:text-3xl font-light text-slate-400 group-hover:text-blue-400 transition-colors">
+                    <span className="font-mono text-2xl sm:text-3xl font-light text-slate-300 group-hover:text-blue-600 transition-colors">
                       {pillar.number}
                     </span>
-                    <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-slate-800/80 text-slate-300 border border-slate-700/60">
+                    <span className="text-[10px] font-mono px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-medium">
                       {pillar.badge}
                     </span>
                   </div>
 
-                  <span className="brand-label text-blue-400/90 text-[10px] block mb-2">
+                  <span className="brand-label text-blue-600 text-[10px] block mb-2 font-semibold">
                     {pillar.label}
                   </span>
 
-                  <h3 className="font-brand-display text-2xl sm:text-3xl text-white font-normal mb-3">
+                  <h3 className="font-brand-display text-2xl sm:text-3xl text-[#0F172A] font-normal mb-3">
                     {pillar.title}
                   </h3>
 
-                  <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6 font-light">
                     {pillar.description}
                   </p>
                 </div>
 
                 {/* Bullets List */}
-                <div className="pt-6 border-t border-slate-800/60 space-y-2.5">
+                <div className="pt-6 border-t border-slate-100 space-y-2.5">
                   {pillar.bullets.map((bullet) => (
-                    <div key={bullet} className="flex items-center gap-2.5 text-xs text-slate-300">
-                      <div className="w-4 h-4 rounded-full bg-blue-950/60 border border-blue-500/30 flex items-center justify-center shrink-0">
-                        <Check className="w-2.5 h-2.5 text-blue-400" />
+                    <div key={bullet} className="flex items-center gap-2.5 text-xs text-slate-700">
+                      <div className="w-4 h-4 rounded-full bg-blue-50 border border-blue-300 flex items-center justify-center shrink-0">
+                        <Check className="w-2.5 h-2.5 text-blue-600" />
                       </div>
                       <span>{bullet}</span>
                     </div>
