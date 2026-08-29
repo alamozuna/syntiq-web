@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-primary: 'Cormorant Garamond', serif;
+  --color-dark: #090d16;
+  --color-accent: #3b82f6;
+  --color-light: #eff6ff;
+  --color-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: #030712;
+  color: #f8fafc;
+}
+
+body {
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  background: radial-gradient(circle at 50% 0%, rgba(15, 23, 42, 0.9) 0%, rgba(3, 7, 18, 1) 100%);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: rgba(59, 130, 246, 0.35);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Typography Overrides based on SyntIQ Brand Guide */
+.font-brand-display {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+.brand-label {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+/* Ambient glow & laser effects */
+.laser-beam {
+  background: linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.8) 50%, transparent 100%);
+  height: 1px;
+}
+
+.laser-beam-vertical {
+  background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.6) 50%, transparent 100%);
+  width: 1px;
+}
+
+.glass-panel {
+  background: rgba(13, 19, 34, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 12px 30px -10px rgba(59, 130, 246, 0.15);
+  transform: translateY(-2px);
+}
+
+.border-gradient-blue {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#090d16, #090d16), linear-gradient(135deg, rgba(59, 130, 246, 0.5) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(59, 130, 246, 0.2) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Grid & Dots background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
