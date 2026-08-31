@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Shield, Cpu, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, GraduationCap, BookOpen, Zap } from "lucide-react";
 import AgentOrchestratorVisual from "./AgentOrchestratorVisual";
 
 export default function HeroSection() {
@@ -27,7 +27,7 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/90 border border-blue-200 text-blue-700 backdrop-blur-md shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span className="brand-label text-[10px] sm:text-[11px] tracking-widest uppercase">
-              CONECTA · ORDENA · IMPULSA — SYNTIQ ENTERPRISE AI
+              APRENDE · CONSTRUYE · AUTOMATIZA — SYNTIQ ACADEMY
             </span>
           </div>
         </motion.div>
@@ -40,9 +40,9 @@ export default function HeroSection() {
           className="text-center max-w-5xl mx-auto mb-6"
         >
           <h1 className="font-brand-display text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light text-[#0F172A] tracking-tight leading-[1.06]">
-            Transformamos el caos operativo en un sistema inteligente{" "}
+            Domina la IA que Trabaja por Ti:{" "}
             <span className="italic font-normal text-blue-600 inline-block">
-              que piensa por ti.
+              Talleres y Formaciones Prácticas.
             </span>
           </h1>
         </motion.div>
@@ -54,9 +54,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto text-center font-light leading-relaxed mb-8 sm:mb-10"
         >
-          Erradicamos los cuellos de botella y la fuga de capital invisible en tu empresa.
-          Desplegamos <span className="text-slate-900 font-medium">arquitecturas de agentes autónomos</span>,
-          orquestación de datos y automatización enterprise 24/7 sin inflar tus costos fijos.
+          Construye sistemas operativos reales y automatiza tus flujos en menos de 20 minutos.
+          Pasa de <span className="text-slate-900 font-medium">chatear con la IA</span> a
+          dirigir una fuerza laboral digital con agentes autónomos que trabajan 24/7.
         </motion.p>
 
         {/* CTAs */}
@@ -67,19 +67,19 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
         >
           <a
-            href="#diagnostico"
+            href="#formaciones"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Solicitar Diagnóstico Operativo</span>
+            <span>Explorar Talleres en Vivo</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
-            href="#flujo-ia"
+            href="#blueprint"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-medium text-sm sm:text-base px-6 py-3.5 rounded-full border border-slate-200 shadow-sm hover:border-blue-300 transition-all duration-300"
           >
-            <Cpu className="w-4 h-4 text-blue-600" />
-            <span>Explorar Ecosistema de Agentes</span>
+            <BookOpen className="w-4 h-4 text-blue-600" />
+            <span>Descargar Blueprint Gratuito</span>
           </a>
         </motion.div>
 
@@ -91,16 +91,16 @@ export default function HeroSection() {
           className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-slate-600 text-xs sm:text-sm font-mono mb-12"
         >
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4 text-blue-600" />
-            <span>Gobernanza Human-in-the-Loop</span>
+            <GraduationCap className="w-4 h-4 text-blue-600" />
+            <span>+500 Profesionales Formados</span>
           </div>
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 text-emerald-600" />
-            <span>24/7 Ejecución Continua</span>
+            <span>98% Satisfacción Post-Taller</span>
           </div>
           <div className="flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-indigo-600" />
-            <span>Cero Alucinaciones en Prod</span>
+            <span>100% Casos Prácticos Reales</span>
           </div>
         </motion.div>
 

@@ -28,24 +28,24 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://syntiq.ai"),
   title: {
-    default: "SyntIQ | Infraestructura de IA & Agentes Autónomos para Empresas",
-    template: "%s | SyntIQ Enterprise AI",
+    default: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
+    template: "%s | SyntIQ Academy",
   },
   description:
-    "Infraestructura tecnológica y soluciones avanzadas de Inteligencia Artificial, Agentes Autónomos y Data Engineering para empresas. Conecta · Ordena · Impulsa.",
+    "Talleres prácticos, cursos modulares y formación corporativa en Inteligencia Artificial. Aprende a construir agentes autónomos, automatizar flujos con n8n y dominar el prompting avanzado. Aprende · Construye · Automatiza.",
   keywords: [
     "SyntIQ",
-    "Inteligencia Artificial para Empresas",
-    "Agentes Autónomos",
-    "Automatización de Procesos",
-    "Data Engineering",
-    "n8n Workflows",
-    "Gobernanza de IA",
-    "Human in the Loop",
-    "Auditoría Operativa IA",
-    "ISO 13485 IA",
+    "Talleres de IA",
+    "Cursos de Inteligencia Artificial",
+    "Formación IA para empresas",
+    "Bootcamp IA",
+    "Capacitación en IA",
+    "Talleres prácticos IA",
+    "Curso de Agentes Autónomos",
+    "Formación n8n",
+    "Prompting avanzado",
   ],
-  authors: [{ name: "SyntIQ Enterprise AI" }],
+  authors: [{ name: "SyntIQ Academy" }],
   creator: "SyntIQ",
   publisher: "SyntIQ",
   alternates: {
@@ -59,24 +59,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://syntiq.ai",
-    siteName: "SyntIQ Enterprise AI",
-    title: "SyntIQ | Infraestructura de IA & Agentes Autónomos para Empresas",
+    siteName: "SyntIQ Academy",
+    title: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
     description:
-      "Erradicamos los cuellos de botella y transformamos la ineficiencia en rentabilidad neta mediante sistemas inteligentes y agentes autónomos 24/7.",
+      "Domina la IA que trabaja por ti. Talleres hands-on, cursos modulares y formación In-Company para profesionales y equipos que quieren resultados reales.",
     images: [
       {
         url: "/assets/logo-syntiq.png",
         width: 1200,
         height: 630,
-        alt: "SyntIQ - Conecta · Ordena · Impulsa",
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyntIQ | Infraestructura de IA & Agentes Autónomos para Empresas",
+    title: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
     description:
-      "Transformamos el caos operativo en un sistema inteligente que piensa por ti.",
+      "Domina la IA que trabaja por ti. Talleres prácticos para construir agentes autónomos y automatizar tu operativa.",
     images: ["/assets/logo-syntiq.png"],
   },
   robots: {
@@ -104,32 +104,32 @@ const organizationSchema = {
     {
       "@type": "Organization",
       "@id": "https://syntiq.ai/#organization",
-      name: "SyntIQ Enterprise AI",
+      name: "SyntIQ Academy",
       url: "https://syntiq.ai",
       logo: "https://syntiq.ai/assets/logo-syntiq.png",
       description:
-        "Infraestructura tecnológica y soluciones avanzadas de Inteligencia Artificial, Agentes Autónomos y Data Engineering para empresas.",
-      slogan: "Conecta · Ordena · Impulsa",
+        "Formaciones prácticas, talleres y cursos de Inteligencia Artificial para profesionales y empresas. Aprende a construir agentes autónomos y automatizar flujos reales.",
+      slogan: "Aprende · Construye · Automatiza",
       founder: [
         {
           "@type": "Person",
           name: "Bryan Villar Sánchez",
-          jobTitle: "Ingeniero de Operaciones e IA",
+          jobTitle: "Formador Principal de IA & Operaciones",
         },
         {
           "@type": "Person",
           name: "Alam Antonio Ozuna Silva",
-          jobTitle: "Estrategia de Negocios & Análisis de Datos",
+          jobTitle: "Director Académico & Estrategia de Negocios",
         },
         {
           "@type": "Person",
           name: "Laura Nicole Espino Andújar",
-          jobTitle: "Legal, Cumplimiento & Propiedad Intelectual",
+          jobTitle: "Formadora de Gobernanza de IA & Propiedad Intelectual",
         },
         {
           "@type": "Person",
           name: "Karyleydi Ortiz Segura",
-          jobTitle: "Comercio Internacional & Experiencia de Cliente",
+          jobTitle: "Coordinadora de Experiencia del Alumno & Operaciones",
         },
       ],
       sameAs: [],

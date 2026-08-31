@@ -3,240 +3,244 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Boxes,
+  Users,
+  LayoutTemplate,
   Building2,
-  ShieldCheck,
   CheckCircle2,
   ArrowRight,
-  Sparkles,
+  Clock,
+  CalendarDays,
+  Target,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const SOLUTIONS_DATA = [
+// Sustituimos Motor Productizado/Consultivo por Formatos Educativos
+const FORMATIONS = [
   {
-    id: "productized",
-    tabLabel: "Motor Productizado (PyMEs)",
-    tag: "PLUG & PLAY DE ALTA VELOCIDAD",
-    title: "Infraestructura de IA Plug-and-Play para PyMEs y Despachos",
-    subtitle:
-      "Erradica las tareas repetitivas y rescata el lucro cesante con un sistema estandarizado que opera 24/7 sin aumentar tu nómina.",
-    icon: Boxes,
-    deliveryTime: "Despliegue en 7 a 14 días",
-    targetAudience: "PyMEs, clínicas, despachos legales, inmobiliarias y agencias",
-    painPoint:
-      "Leads que se enfrían de madrugada, citas canceladas a última hora y personal administrativo saturado respondiendo lo mismo.",
-    solutionCore:
-      "Orquestador n8n + Claude 3.5 + WhatsApp Cloud + Google Calendar + Stripe/CRM totalmente integrado.",
+    id: "talleres",
+    title: "Talleres Intensivos",
+    subtitle: "Para profesionales que buscan resultados inmediatos",
+    icon: Clock,
+    description:
+      "Sesiones prácticas de 2 a 4 horas donde construyes una solución específica en vivo. Sales del taller con la automatización funcionando.",
+    targetAudience: "Freelancers, marketers, analistas y profesionales independientes.",
     features: [
-      "Calificación de prospectos y enrutamiento inteligente en <30 segundos",
-      "Asistente conversacional de WhatsApp 24/7 con memoria contextual",
-      "Sistema anti-no-show con confirmación y recordatorios automatizados",
-      "Sincronización directa con CRM, correo y bases de datos",
-      "Mantenimiento continuo de servidores y optimización de tokens",
+      "100% práctico y guiado paso a paso",
+      "Plantillas ejecutables listas para usar",
+      "Resultados funcionales en la misma sesión",
+      "Temáticas: AntiGravity, Vibe Coding, Inbox Autopilot",
+      "Acceso a la grabación de la sesión",
     ],
-    ctaText: "Ver Plan Productizado",
-    href: "#diagnostico",
+    priceLabel: "Desde $49 USD",
+    color: "blue",
+    cta: "Ver Próximos Talleres",
   },
   {
-    id: "consultative",
-    tabLabel: "Motor Consultivo (Enterprise)",
-    tag: "TRANSFORMACIÓN ESTRATÉGICA A MEDIDA",
-    title: "Auditoría y Desarrollo Estratégico de IA para Gran Empresa",
-    subtitle:
-      "Modernización profunda de la cadena de valor operativa: orquestación de datos, agentes autónomos y conexión con sistemas ERP.",
+    id: "curso-modular",
+    title: "Curso Modular (4 Semanas)",
+    subtitle: "Maestría Agéntica Completa",
+    icon: CalendarDays,
+    description:
+      "Programa estructurado en cohortes que cubre los 4 pilares de la metodología SyntIQ. Desde los fundamentos del prompting hasta la orquestación avanzada en n8n.",
+    targetAudience: "Líderes de equipo, consultores tech y profesionales en transición a IA.",
+    features: [
+      "Cohortes en vivo con plazas limitadas",
+      "Proyectos prácticos semanales con feedback",
+      "Comunidad privada de alumnos (Discord)",
+      "Certificado de finalización oficial",
+      "Plantillas y frameworks empresariales exclusivos",
+    ],
+    priceLabel: "Próxima Cohorte: Septiembre",
+    color: "emerald",
+    cta: "Ver Programa Completo",
+  },
+  {
+    id: "in-company",
+    title: "Formación In-Company",
+    subtitle: "Para equipos corporativos y universidades",
     icon: Building2,
-    deliveryTime: "Proyectos por fases de 4 a 12 semanas",
-    targetAudience: "Empresas medianas, sector industrial, manufactura y corporaciones",
-    painPoint:
-      "Sistemas heredados rígidos, deuda tecnológica acumulada, falta de talento interno en IA y procesos lentos no automatizados.",
-    solutionCore:
-      "Auditoría técnica en planta, arquitectura de agentes distribuidos, control estadístico y pipelines de datos seguros.",
+    description:
+      "Programas formativos a medida diseñados para alinear a todo tu equipo o institución bajo una misma metodología operativa de IA.",
+    targetAudience: "Departamentos corporativos, pymes estructuradas y centros educativos.",
     features: [
-      "Auditoría integral de procesos para detección quirúrgica de cuellos de botella",
-      "Despliegue de agentes autónomos conectados a ERPs corporativos (SAP, Salesforce)",
-      "Control estadístico de variabilidad y optimización algorítmica (Python/Minitab)",
-      "Documentación técnica homologada para fondos y subvenciones de innovación",
-      "Acuerdos de Nivel de Servicio (SLAs) y soporte de ingeniería dedicado",
+      "Auditoría previa de necesidades operativas",
+      "Temario adaptado a las herramientas de la empresa",
+      "Instructor dedicado para la organización",
+      "Casos de uso reales de vuestro sector",
+      "Métricas de adopción y evaluación post-formación",
     ],
-    ctaText: "Agendar Auditoría Enterprise",
-    href: "#diagnostico",
-  },
-  {
-    id: "governance",
-    tabLabel: "Gobernanza & Compliance",
-    tag: "BLINDAJE LEGAL Y ÉTICO",
-    title: "Capa de Gobernanza, Ciberseguridad & Blindaje de IA",
-    subtitle:
-      "Garantiza que la adopción de IA en tu empresa sea segura, ética, libre de alucinaciones y legalmente inexpugnable.",
-    icon: ShieldCheck,
-    deliveryTime: "Auditoría continua & monitoreo 24/7",
-    targetAudience: "Direcciones legales, directores de IT, CFOs y comités de riesgo",
-    painPoint:
-      "Riesgo de filtración de secretos comerciales, alucinaciones en respuestas críticas, 'token bleeding' y falta de cumplimiento normativo.",
-    solutionCore:
-      "Protocolos Human-in-the-Loop, anonimización PII, auditoría de propiedad intelectual y cumplimiento ISO 13485 / FDA / OMA.",
-    features: [
-      "Auditoría de logs con supervisión humana sistemática en producción",
-      "Protección estricta de propiedad intelectual (IP) y secretos comerciales",
-      "Cumplimiento normativo internacional (RGPD / LOPD / ISO 13485 / FDA)",
-      "Políticas de contención de costes de tokens y prevención de sobrecargas",
-      "Certificación de seguridad técnica y mitigación de sesgos algorítmicos",
-    ],
-    ctaText: "Consultar Blindaje Legal",
-    href: "#diagnostico",
+    priceLabel: "Presupuesto a medida",
+    color: "indigo",
+    cta: "Solicitar Propuesta",
   },
 ];
 
 export default function SolutionsMatrix() {
-  const [activeTab, setActiveTab] = useState<string>("productized");
-
-  const current = SOLUTIONS_DATA.find((s) => s.id === activeTab) || SOLUTIONS_DATA[0];
-  const Icon = current.icon;
+  const [activeTab, setActiveTab] = useState(FORMATIONS[0].id);
 
   return (
-    <section className="relative py-24 sm:py-32 bg-[#EFF6FF]/40 border-t border-slate-200">
+    <section id="formaciones" className="relative py-24 sm:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="brand-label text-blue-600 font-semibold">
-            02 — MATRIZ DE SOLUCIONES & MODELO OPERATIVO
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <span className="brand-label text-blue-600 mb-4 block">
+            CATÁLOGO DE FORMACIONES
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
-            Dos motores de impacto adaptados a tu{" "}
-            <span className="italic text-blue-600 font-normal">etapa de crecimiento</span>
+          <h2 className="font-brand-display text-4xl sm:text-5xl lg:text-6xl text-[#0F172A] font-light tracking-tight leading-[1.1] mb-6">
+            Aprende a tu ritmo. <br />
+            <span className="font-normal italic text-slate-500">
+              Aplica desde el día uno.
+            </span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 leading-relaxed">
-            Desde la implementación rápida de agentes productizados hasta consultoría técnica de
-            alta ingeniería y blindaje legal enterprise.
+          <p className="text-lg text-slate-600 font-light leading-relaxed">
+            Elige el formato que mejor se adapte a tu disponibilidad y objetivos.
+            Todas nuestras formaciones comparten el mismo rigor metodológico 100% práctico.
           </p>
         </div>
 
-        {/* Interactive Segment Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
-          {SOLUTIONS_DATA.map((tab) => {
-            const TabIcon = tab.icon;
-            const isActive = tab.id === activeTab;
+        {/* Custom Tabs */}
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 p-1.5 bg-slate-100 rounded-2xl sm:rounded-full max-w-4xl mx-auto mb-12 sm:mb-16">
+          {FORMATIONS.map((form) => {
+            const isActive = activeTab === form.id;
+            const Icon = form.icon;
+
             return (
               <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveTab(tab.id)}
+                key={form.id}
+                onClick={() => setActiveTab(form.id)}
                 className={cn(
-                  "flex items-center gap-2 px-5 py-3 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer",
+                  "relative flex-1 flex items-center justify-center gap-2.5 px-6 py-4 sm:py-3.5 rounded-xl sm:rounded-full text-sm font-medium transition-all duration-300",
                   isActive
-                    ? "bg-[#0F172A] text-white shadow-md scale-[1.02]"
-                    : "bg-white text-slate-700 border border-slate-200 hover:border-slate-300 hover:text-slate-900 shadow-sm"
+                    ? "text-[#0F172A] bg-white shadow-sm"
+                    : "text-slate-500 hover:text-slate-700 hover:bg-slate-200/50"
                 )}
               >
-                <TabIcon className="w-4 h-4" />
-                <span>{tab.tabLabel}</span>
+                <Icon
+                  className={cn(
+                    "w-4 h-4 transition-colors",
+                    isActive ? "text-blue-600" : "text-slate-400"
+                  )}
+                />
+                <span>{form.title}</span>
               </button>
             );
           })}
         </div>
 
-        {/* Solution Detail Panel */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current.id}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.3 }}
-            className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-subtle-card"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Column: Solution Story & Features (7 cols) */}
-              <div className="lg:col-span-7 space-y-6">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono">
-                  <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                  <span>{current.tag}</span>
-                </div>
-
-                <h3 className="font-brand-display text-2xl sm:text-4xl text-[#0F172A] font-light leading-tight">
-                  {current.title}
-                </h3>
-
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-light">
-                  {current.subtitle}
-                </p>
-
-                {/* Pain vs Solution Box */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="p-4 rounded-2xl bg-red-50/60 border border-red-200/80">
-                    <span className="text-[10px] font-mono text-red-700 font-semibold block mb-1">
-                      EL PROBLEMA A RESOLVER:
-                    </span>
-                    <p className="text-xs text-slate-700 leading-relaxed font-light">{current.painPoint}</p>
-                  </div>
-                  <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80">
-                    <span className="text-[10px] font-mono text-emerald-700 font-semibold block mb-1">
-                      NÚCLEO DE LA SOLUCIÓN:
-                    </span>
-                    <p className="text-xs text-slate-700 leading-relaxed font-light">
-                      {current.solutionCore}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Feature Checkmarks */}
-                <div className="space-y-3 pt-2">
-                  <span className="text-xs font-mono text-slate-500 uppercase tracking-wider block">
-                    CAPACIDADES TÉCNICAS INCLUIDAS:
-                  </span>
-                  <div className="grid gap-2.5">
-                    {current.features.map((feat) => (
-                      <div key={feat} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-                        <span className="text-xs sm:text-sm text-slate-700 font-light">{feat}</span>
+        {/* Content Area */}
+        <div className="max-w-5xl mx-auto">
+          <AnimatePresence mode="wait">
+            {FORMATIONS.map(
+              (form) =>
+                activeTab === form.id && (
+                  <motion.div
+                    key={form.id}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.3 }}
+                    className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-subtle-card"
+                  >
+                    {/* Left Column: Description */}
+                    <div className="lg:col-span-7 space-y-6">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-mono mb-2">
+                        <Target className="w-3.5 h-3.5" />
+                        <span>Ideal para: {form.targetAudience}</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
 
-              {/* Right Column: Execution Card & Summary (5 cols) */}
-              <div className="lg:col-span-5 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-[#0F172A]">Modelo de Implementación</h4>
-                    <span className="text-xs font-mono text-emerald-600 font-medium">
-                      {current.deliveryTime}
-                    </span>
-                  </div>
-                </div>
+                      <div>
+                        <h3 className="text-2xl sm:text-3xl font-brand-display font-light text-[#0F172A] mb-2">
+                          {form.title}
+                        </h3>
+                        <p className="text-blue-600 font-medium text-sm">
+                          {form.subtitle}
+                        </p>
+                      </div>
 
-                <div className="space-y-3 text-xs text-slate-600 border-y border-slate-200 py-4 font-light">
-                  <div>
-                    <span className="text-slate-400 font-mono text-[10px] block font-medium">
-                      DIRIGIDO A:
-                    </span>
-                    <p className="mt-0.5 text-slate-800 font-medium">{current.targetAudience}</p>
-                  </div>
-                  <div>
-                    <span className="text-slate-400 font-mono text-[10px] block font-medium">
-                      GARANTÍA SYNTIQ:
-                    </span>
-                    <p className="mt-0.5 text-slate-800">
-                      Integración &quot;Human-in-the-Loop&quot; y 0% de alucinaciones en producción.
-                    </p>
-                  </div>
-                </div>
+                      <p className="text-slate-600 font-light leading-relaxed">
+                        {form.description}
+                      </p>
 
-                <a
-                  href={current.href}
-                  className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm py-3.5 rounded-2xl transition-all shadow-sm hover:shadow-md"
-                >
-                  <span>{current.ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+                      <div className="pt-6 mt-6 border-t border-slate-100">
+                        <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
+                          ¿Qué incluye este formato?
+                        </h4>
+                        <ul className="space-y-3">
+                          {form.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <CheckCircle2
+                                className={cn(
+                                  "w-5 h-5 shrink-0 mt-0.5",
+                                  form.color === "blue"
+                                    ? "text-blue-500"
+                                    : form.color === "emerald"
+                                    ? "text-emerald-500"
+                                    : "text-indigo-500"
+                                )}
+                              />
+                              <span className="text-sm text-slate-700 font-light">
+                                {feature}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Right Column: Call to Action Panel */}
+                    <div className="lg:col-span-5">
+                      <div
+                        className={cn(
+                          "rounded-2xl p-8 border text-center h-full flex flex-col justify-center",
+                          form.color === "blue"
+                            ? "bg-blue-50/50 border-blue-100"
+                            : form.color === "emerald"
+                            ? "bg-emerald-50/50 border-emerald-100"
+                            : "bg-indigo-50/50 border-indigo-100"
+                        )}
+                      >
+                        <div className="mb-8">
+                          <span className="text-[10px] font-mono tracking-widest uppercase text-slate-500 mb-2 block">
+                            Inversión / Estado
+                          </span>
+                          <span
+                            className={cn(
+                              "text-xl sm:text-2xl font-semibold",
+                              form.color === "blue"
+                                ? "text-blue-900"
+                                : form.color === "emerald"
+                                ? "text-emerald-900"
+                                : "text-indigo-900"
+                            )}
+                          >
+                            {form.priceLabel}
+                          </span>
+                        </div>
+
+                        <a
+                          href="/contacto"
+                          className={cn(
+                            "inline-flex items-center justify-center gap-2 w-full py-4 px-6 rounded-full text-white font-medium transition-all shadow-sm hover:shadow-md",
+                            form.color === "blue"
+                              ? "bg-blue-600 hover:bg-blue-700"
+                              : form.color === "emerald"
+                              ? "bg-emerald-600 hover:bg-emerald-700"
+                              : "bg-indigo-600 hover:bg-indigo-700"
+                          )}
+                        >
+                          <span>{form.cta}</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                        
+                        <p className="mt-4 text-[11px] text-slate-500 font-light">
+                          Plazas limitadas por sesión para asegurar la calidad de la enseñanza.
+                        </p>
+                      </div>
+                    </div>
+                  </motion.div>
+                )
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

@@ -1,253 +1,303 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Database,
-  Brain,
-  Workflow,
-  TrendingUp,
-  Code2,
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
+import { 
+  Database, 
+  BrainCircuit, 
+  Network, 
+  LineChart, 
+  ChevronRight, 
+  TerminalSquare,
+  Play
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const STAGES = [
+// Los 4 pasos del método de aprendizaje
+const LEARNING_STAGES = [
   {
-    step: "01",
-    id: "data",
-    label: "DATA INGESTION",
-    title: "1. Datos & Ingesta Unificada",
-    subtitle: "De información dispersa y caótica a un lago de datos estructurado y vectorial.",
+    id: "stage-1",
+    label: "Diagnóstico",
+    title: "1. Auditoría Operativa",
+    description: "Evaluamos tu nivel actual y mapeamos las tareas manuales que debes delegar a la IA.",
     icon: Database,
-    accentColor: "blue",
-    description:
-      "Conectamos tus canales (WhatsApp, correo, CRM, ERP, formularios) y los unificamos en un pipeline de datos canónico. Limpiamos redundancias y creamos índices vectoriales (RAG) para que la IA disponga de memoria empresarial exacta.",
-    codeSnippet: `// SyntIQ Ingestion Engine v2.4
-const ingestedStream = await syntiqData.collect({
-  sources: ["whatsapp_cloud", "imap_leads", "crm_deal_sync"],
-  cleanPII: true,
-  vectorizeEmbeddings: "text-embedding-3-large",
-  destination: "SyntIQ_Memory_Vault_Postgres"
-});`,
-    kpis: [
-      { label: "Fuentes Conectadas", value: "100% Omnicanal" },
-      { label: "Limpieza PII", value: "Automática" },
-      { label: "Indexación RAG", value: "< 50ms" },
-    ],
-  },
-  {
-    step: "02",
-    id: "intelligence",
-    label: "COGNITIVE INTELLIGENCE",
-    title: "2. Inteligencia & Razonamiento Agéntico",
-    subtitle: "Modelos de frontera con lógica estricta y roles empresariales asignados.",
-    icon: Brain,
-    accentColor: "indigo",
-    description:
-      "La información pasa por nuestro motor de razonamiento basado en Claude 3.5 Sonnet y agentes de frontera. El sistema no responde mecánicamente: califica la intención, evalúa el contexto financiero y decide la acción óptima con supervisión 'Human-in-the-Loop'.",
-    codeSnippet: `// SyntIQ Agent Decision Loop
-const agentDecision = await syntiqAgent.reason({
-  context: ingestedStream.memoryTrace,
-  intentClassification: "B2B_High_Value_Lead",
-  governanceRules: ["NO_HALLUCINATION", "ISO_13485_COMPLIANT"],
-  actionPlan: "DISPATCH_CALENDAR_INVITE_AND_SYNC_ERP"
-});`,
-    kpis: [
-      { label: "Modelo Cognitivo", value: "Claude 3.5 / LLMs" },
-      { label: "Validación Humana", value: "Logs Auditados" },
-      { label: "Tasa de Alucinación", value: "0.00%" },
-    ],
-  },
-  {
-    step: "03",
-    id: "automation",
-    label: "WORKFLOW ORCHESTRATION",
-    title: "3. Orquestación & Automatización",
-    subtitle: "Ejecución transaccional instantánea a través de flujos en n8n.",
-    icon: Workflow,
-    accentColor: "emerald",
-    description:
-      "La decisión del agente se traduce en acciones en tu software real: creación de tratos en CRM, emisión de presupuestos, sincronización de calendarios, envío de confirmaciones por WhatsApp y actualización contable inmediata sin tocar un solo teclado.",
-    codeSnippet: `// SyntIQ n8n Orchestrator Node
-const execution = await n8nCluster.executeWorkflow({
-  workflowId: "WF_ENTERPRISE_DISPATCH_09",
-  nodes: ["whatsapp_auto_reply", "calendar_book", "hubspot_deal_create"],
-  payload: agentDecision.validatedAction
-});`,
-    kpis: [
-      { label: "Orquestador", value: "n8n Enterprise" },
-      { label: "Tiempo de Ejecución", value: "< 280ms" },
-      { label: "Disponibilidad", value: "99.98% Uptime" },
-    ],
-  },
-  {
-    step: "04",
-    id: "results",
-    label: "NET BUSINESS RESULTS",
-    title: "4. Resultados de Negocio & Rentabilidad",
-    subtitle: "Impacto tangible en el balance general y tiempo recuperado para el equipo.",
-    icon: TrendingUp,
-    accentColor: "blue",
-    description:
-      "El caos operativo se transforma en un balance financiero saludable: citas confirmadas sin no-show, leads atendidos en segundos durante la madrugada y el equipo directivo liberado de la mediocridad administrativa para enfocarse en la estrategia.",
-    codeSnippet: `// SyntIQ ROI Metrics Dashboard
-const financialImpact = {
-  hoursSavedMonthly: "184 horas / equipo",
-  revenueLeakagePrevented: "$12,800 USD / mes",
-  responseSpeedImprovement: "32x más rápido",
-  roiMultiplier: "9.4x inversión neta"
+    color: "blue",
+    codeSnippet: `// Paso 1: Mapeo de Tareas
+const auditTask = {
+  task: "Lectura de facturas PDF",
+  frequency: "Diaria",
+  timeSpent: "2h/día",
+  aiViability: "Alta (100% delegable)",
+  recommendedTool: "Claude 3.5 + n8n"
 };`,
-    kpis: [
-      { label: "Respuesta al Lead", value: "< 30 seg" },
-      { label: "No-Shows", value: "Reducción 85%" },
-      { label: "Capacidad Operativa", value: "+340%" },
-    ],
+  },
+  {
+    id: "stage-2",
+    label: "Prompting",
+    title: "2. Estructuración Lógica",
+    description: "Aprendes a diseñar prompts como código. Pasas de instrucciones vagas a system prompts deterministas.",
+    icon: BrainCircuit,
+    color: "indigo",
+    codeSnippet: `// Paso 2: Prompt Estructurado (Extracto)
+<rol>Eres un parser de facturas experto.</rol>
+<contexto>El usuario adjuntará un PDF.</contexto>
+<tarea>
+  1. Extraer NIF y Base Imponible.
+  2. Validar que los montos cuadren.
+  3. Retornar SÓLO un JSON válido.
+</tarea>
+<restriccion>Cero alucinaciones.</restriccion>`,
+  },
+  {
+    id: "stage-3",
+    label: "Construcción",
+    title: "3. Vibe Coding & n8n",
+    description: "Construyes tu primera automatización real uniendo LLMs con tus herramientas diarias mediante APIs.",
+    icon: Network,
+    color: "purple",
+    codeSnippet: `// Paso 3: Flujo n8n (Pseudocódigo)
+On(EmailReceived)
+  -> CheckIf(HasInvoicePDF)
+  -> DownloadAttachment()
+  -> CallLLM(PromptExtractor, File)
+  -> Parse(JSON)
+  -> GoogleSheets.addRow(Data)
+  -> Slack.notify("Factura Procesada");`,
+  },
+  {
+    id: "stage-4",
+    label: "Despliegue",
+    title: "4. Autopiloto Seguro",
+    description: "Despliegas el agente con reglas de gobernanza para que requiera tu aprobación en casos dudosos.",
+    icon: LineChart,
+    color: "emerald",
+    codeSnippet: `// Paso 4: Gobernanza (Human-in-the-Loop)
+if (Invoice.confidence < 0.95) {
+  // Pausar ejecución
+  Slack.sendActionBlock(
+    "Revisión humana requerida",
+    Invoice.data,
+    ["Aprobar", "Rechazar"]
+  );
+  waitForHuman();
+} else {
+  proceedAutomatically();
+}`,
   },
 ];
 
 export default function ProcessFlowEngine() {
-  const [activeStep, setActiveStep] = useState<number>(0);
-  const currentStage = STAGES[activeStep];
-  const Icon = currentStage.icon;
+  const [activeStage, setActiveStage] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  
+  // Auto-play functionality
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setActiveStage((prev) => (prev + 1) % LEARNING_STAGES.length);
+      }, 4000);
+    }
+    return () => clearInterval(interval);
+  }, [isPlaying]);
 
   return (
-    <section id="flujo-ia" className="relative py-24 sm:py-32 bg-white border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="brand-label text-blue-600 font-semibold">
-            03 — CÓMO FUNCIONA EL MOTOR SYNTIQ
-          </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
-            Data → Intelligence → Automation →{" "}
-            <span className="italic text-blue-600 font-normal">Rentabilidad Neta</span>
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 leading-relaxed">
-            Inspirado en la gobernanza de datos enterprise de Dataiku y la precisión agéntica de V7 Labs.
-            Haz clic en cada fase para inspeccionar el flujo técnico.
-          </p>
-        </div>
+    <section 
+      ref={sectionRef}
+      className="relative py-24 sm:py-32 bg-[#030712] overflow-hidden"
+    >
+      {/* Dark Atmosphere */}
+      <div className="absolute inset-0 bg-mesh-dark opacity-40 mix-blend-screen" />
+      <div className="absolute inset-0 bg-[url('/assets/noise.png')] opacity-[0.03] mix-blend-overlay" />
+      
+      {/* Decorative Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1E293B_1px,transparent_1px),linear-gradient(to_bottom,#1E293B_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20" />
 
-        {/* 4 Steps Selector Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
-          {STAGES.map((s, index) => {
-            const StepIcon = s.icon;
-            const isSelected = index === activeStep;
-            return (
-              <button
-                key={s.id}
-                type="button"
-                onClick={() => setActiveStep(index)}
-                className={cn(
-                  "p-4 rounded-2xl border text-left transition-all duration-300 relative overflow-hidden cursor-pointer",
-                  isSelected
-                    ? "bg-blue-50/80 border-blue-400 shadow-sm"
-                    : "bg-slate-50 border-slate-200 hover:border-slate-300 hover:bg-slate-100/60"
-                )}
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span
-                    className={cn(
-                      "font-mono text-xs font-semibold",
-                      isSelected ? "text-blue-600" : "text-slate-500"
-                    )}
-                  >
-                    FASE {s.step}
-                  </span>
-                  <StepIcon
-                    className={cn(
-                      "w-4 h-4",
-                      isSelected ? "text-blue-600" : "text-slate-400"
-                    )}
-                  />
-                </div>
-                <h4 className="text-xs sm:text-sm font-semibold text-[#0F172A] line-clamp-1">
-                  {s.title.split(". ")[1]}
-                </h4>
-                <p className="text-[11px] text-slate-500 font-mono mt-1">{s.label}</p>
-
-                {isSelected && (
-                  <motion.div
-                    layoutId="active-stage-indicator-light"
-                    className="absolute bottom-0 left-0 right-0 h-1 bg-blue-600"
-                  />
-                )}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Stage Content Card */}
-        <AnimatePresence mode="wait">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
           <motion.div
-            key={currentStage.id}
             initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.3 }}
-            className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 lg:p-12 shadow-subtle-card"
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/50 border border-blue-900/50 text-blue-400 mb-6"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-              {/* Left Column: Stage Explanation & KPIs (6 cols) */}
-              <div className="lg:col-span-6 space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <span className="brand-label text-blue-600 text-[10px] font-semibold">
-                      ETAPA {currentStage.step} // {currentStage.label}
-                    </span>
-                    <h3 className="font-brand-display text-2xl sm:text-3xl text-[#0F172A] font-normal mt-0.5">
-                      {currentStage.title}
-                    </h3>
-                  </div>
-                </div>
+            <TerminalSquare className="w-3.5 h-3.5" />
+            <span className="brand-label text-[10px] tracking-widest uppercase font-semibold">
+              EL MÉTODO DE APRENDIZAJE SYNTIQ
+            </span>
+          </motion.div>
 
-                <p className="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
-                  {currentStage.description}
-                </p>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-brand-display text-3xl sm:text-4xl lg:text-5xl text-white font-light tracking-tight leading-tight mb-6"
+          >
+            Cómo construimos <span className="font-normal italic text-blue-400">empleados digitales</span> en clase.
+          </motion.h2>
 
-                {/* KPI Badges */}
-                <div className="grid grid-cols-3 gap-3 pt-2">
-                  {currentStage.kpis.map((kpi) => (
-                    <div
-                      key={kpi.label}
-                      className="p-3 rounded-2xl bg-slate-50 border border-slate-200 text-center font-mono"
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base sm:text-lg text-slate-400 font-light leading-relaxed"
+          >
+            Este es el framework exacto que aplicarás durante el taller. Aprendes haciendo,
+            programando lógica de negocio sin tocar una sola línea de código tradicional.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          {/* Left Column: Interactive Steps */}
+          <div className="lg:col-span-5 space-y-3">
+            <div className="flex items-center justify-between mb-6 px-2">
+              <span className="text-xs font-mono text-slate-500 uppercase tracking-widest">
+                Fases del Taller
+              </span>
+              <button
+                onClick={() => setIsPlaying(!isPlaying)}
+                className="flex items-center gap-1.5 text-xs font-mono text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                <Play className={cn("w-3.5 h-3.5", isPlaying && "animate-pulse")} />
+                <span>{isPlaying ? "PAUSAR" : "AUTO-PLAY"}</span>
+              </button>
+            </div>
+
+            {LEARNING_STAGES.map((stage, idx) => {
+              const isActive = activeStage === idx;
+              const Icon = stage.icon;
+              
+              return (
+                <button
+                  key={stage.id}
+                  onClick={() => {
+                    setActiveStage(idx);
+                    setIsPlaying(false);
+                  }}
+                  className={cn(
+                    "w-full text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden group",
+                    isActive 
+                      ? "bg-slate-800/80 border-slate-700 shadow-lg" 
+                      : "bg-transparent border-slate-800/50 hover:bg-slate-800/40 hover:border-slate-700"
+                  )}
+                >
+                  {/* Active Indicator Line */}
+                  <div 
+                    className={cn(
+                      "absolute left-0 top-0 bottom-0 w-1 transition-all duration-300",
+                      isActive ? `bg-${stage.color}-500` : "bg-transparent group-hover:bg-slate-700"
+                    )}
+                  />
+                  
+                  <div className="flex items-start gap-4">
+                    <div 
+                      className={cn(
+                        "p-2.5 rounded-xl transition-all duration-300 shrink-0",
+                        isActive 
+                          ? `bg-${stage.color}-500/20 text-${stage.color}-400` 
+                          : "bg-slate-800 text-slate-500"
+                      )}
                     >
-                      <span className="text-[9px] sm:text-[10px] text-slate-500 block mb-1">
-                        {kpi.label}
-                      </span>
-                      <span className="text-xs sm:text-sm font-semibold text-emerald-600">
-                        {kpi.value}
-                      </span>
+                      <Icon className="w-5 h-5" />
                     </div>
+                    
+                    <div>
+                      <h3 className={cn(
+                        "text-base font-semibold mb-1.5 transition-colors",
+                        isActive ? "text-white" : "text-slate-300"
+                      )}>
+                        {stage.title}
+                      </h3>
+                      
+                      {/* Collapse description when not active for cleaner UI on mobile */}
+                      <div className={cn(
+                        "grid transition-all duration-300 ease-in-out",
+                        isActive ? "grid-rows-[1fr] opacity-100 mt-2" : "grid-rows-[0fr] opacity-0"
+                      )}>
+                        <p className="overflow-hidden text-sm text-slate-400 font-light leading-relaxed">
+                          {stage.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Right Column: Code/Terminal Visualizer */}
+          <div className="lg:col-span-7">
+            <div className="sticky top-24 rounded-2xl bg-[#090D16] border border-slate-800 shadow-2xl overflow-hidden h-[450px] flex flex-col">
+              {/* Terminal Header */}
+              <div className="flex items-center justify-between px-4 py-3 bg-[#0D1322] border-b border-slate-800/80">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-rose-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
+                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
+                </div>
+                <div className="text-[10px] font-mono text-slate-500 tracking-wider">
+                  taller-practico.ts — {LEARNING_STAGES[activeStage].label}
+                </div>
+                <div className="w-12" /> {/* Spacer for balance */}
+              </div>
+
+              {/* Terminal Body with Code */}
+              <div className="flex-1 p-6 overflow-auto custom-scrollbar relative">
+                {/* Line numbers */}
+                <div className="absolute left-0 top-0 bottom-0 w-10 bg-[#0D1322]/50 border-r border-slate-800/50 flex flex-col items-end py-6 pr-2 font-mono text-[10px] text-slate-700 select-none">
+                  {[...Array(20)].map((_, i) => (
+                    <span key={i} className="leading-relaxed mb-0.5">{i + 1}</span>
                   ))}
                 </div>
+
+                <div className="pl-8 relative z-10">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={activeStage}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <pre className="font-mono text-[13px] sm:text-sm leading-relaxed whitespace-pre-wrap break-words">
+                        <code dangerouslySetInnerHTML={{ 
+                          __html: LEARNING_STAGES[activeStage].codeSnippet
+                            // Simple syntax highlighting via regex replaces
+                            .replace(/\/\/.*/g, match => `<span class="text-slate-500 italic">${match}</span>`)
+                            .replace(/const|let|var|if|else|return|function/g, match => `<span class="text-blue-400">${match}</span>`)
+                            .replace(/".*?"/g, match => `<span class="text-emerald-400">${match}</span>`)
+                            .replace(/<rol>|<contexto>|<tarea>|<restriccion>|<\/rol>|<\/contexto>|<\/tarea>|<\/restriccion>/g, match => `<span class="text-indigo-400">${match}</span>`)
+                            .replace(/\{|\}|\(|\)/g, match => `<span class="text-slate-400">${match}</span>`)
+                        }} />
+                      </pre>
+                      
+                      {/* Blinking cursor */}
+                      <motion.div 
+                        animate={{ opacity: [1, 0] }}
+                        transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+                        className="inline-block w-2 h-4 bg-blue-500 ml-1 mt-1 align-middle"
+                      />
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
               </div>
-
-              {/* Right Column: Code Snippet / Architecture Terminal (6 cols) */}
-              <div className="lg:col-span-6 bg-[#0F172A] border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-                <div className="flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-800 text-xs font-mono text-slate-400">
-                  <div className="flex items-center gap-2">
-                    <Code2 className="w-3.5 h-3.5 text-blue-400" />
-                    <span className="text-slate-300">syntiq_engine_pipeline_{currentStage.id}.ts</span>
-                  </div>
-                  <span className="text-[10px] text-emerald-400 font-semibold">● LIVE RUNTIME</span>
+              
+              {/* Terminal Footer */}
+              <div className="px-4 py-2 bg-[#0D1322] border-t border-slate-800 flex items-center justify-between text-[10px] font-mono text-slate-500">
+                <div className="flex items-center gap-3">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Entorno Listo
+                  </span>
+                  <span>UTF-8</span>
                 </div>
-
-                <pre className="p-4 sm:p-6 text-xs sm:text-[13px] font-mono text-blue-300 overflow-x-auto leading-relaxed bg-[#090D16]">
-                  {currentStage.codeSnippet}
-                </pre>
-
-                <div className="px-4 py-2.5 bg-slate-900 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
-                  <span>Modo: Producción Enterprise</span>
-                  <span className="text-slate-300 font-medium">Trazabilidad: 100% Auditada</span>
-                </div>
+                <span>SyntIQ Academy</span>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        </div>
       </div>
     </section>
   );

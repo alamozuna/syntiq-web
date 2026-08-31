@@ -86,7 +86,7 @@ export default function MissionVisionValues() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 text-blue-700 shadow-sm mb-4">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span className="brand-label text-[10px] tracking-widest uppercase">
-              FILOSOFÍA & IDENTIDAD CORPORATIVA
+              FILOSOFÍA & IDENTIDAD ACADÉMICA
             </span>
           </div>
 
@@ -98,8 +98,8 @@ export default function MissionVisionValues() {
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
-            Construimos tecnología de vanguardia sobre cimientos éticos inquebrantables.
-            Conoce el código que guía cada línea de software y decisión en SyntIQ.
+            Formamos profesionales con herramientas reales sobre cimientos éticos inquebrantables.
+            Conoce los principios que guían cada taller, curso y decisión en SyntIQ.
           </p>
 
           {/* Interactive Navigation Tabs */}
@@ -162,12 +162,12 @@ export default function MissionVisionValues() {
                 </div>
 
                 <p className="text-lg text-slate-700 font-light leading-relaxed mb-6">
-                  <span className="font-medium text-[#0F172A]">Erradicar los cuellos de botella</span> corporativos y transformar la ineficiencia en rentabilidad neta mediante soluciones avanzadas de Inteligencia Artificial.
+                  <span className="font-medium text-[#0F172A]">Capacitar y transformar</span> a profesionales y equipos empresariales mediante formación práctica, aplicable y de alto impacto en Inteligencia Artificial, cerrando la brecha entre el potencial de la IA y su adopción real.
                 </p>
 
                 <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-                  <span>CONECTA · ORDENA · IMPULSA</span>
-                  <span className="text-blue-600 font-semibold">Impacto Cuantificable</span>
+                  <span>APRENDE · CONSTRUYE · AUTOMATIZA</span>
+                  <span className="text-blue-600 font-semibold">Impacto Real</span>
                 </div>
               </div>
 
@@ -185,12 +185,12 @@ export default function MissionVisionValues() {
                 </div>
 
                 <p className="text-lg text-slate-700 font-light leading-relaxed mb-6">
-                  Ser la <span className="font-medium text-[#0F172A]">infraestructura tecnológica definitiva</span> donde agentes autónomos ejecutan, optimizan y escalan empresas completas, transformando la IA en el sistema operativo fundacional de los negocios del futuro.
+                  Ser la <span className="font-medium text-[#0F172A]">academia y centro de formación referente</span> que democratiza y capacita en la adopción real de la IA en el mundo hispanohablante, formando a los líderes que diseñarán el futuro del trabajo.
                 </p>
 
                 <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
-                  <span>ENTERPRISE AI ARCHITECTURE</span>
-                  <span className="text-indigo-600 font-semibold">Futuro Autónomo</span>
+                  <span>FORMACIÓN DE ÉLITE EN IA</span>
+                  <span className="text-indigo-600 font-semibold">Futuro Capacitado</span>
                 </div>
               </div>
             </motion.div>

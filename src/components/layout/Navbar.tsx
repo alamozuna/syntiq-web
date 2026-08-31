@@ -10,7 +10,7 @@ import BrandLogo from "@/components/brand/BrandLogo";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [formacionesDropdownOpen, setFormacionesDropdownOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === "/";
 
@@ -24,20 +24,20 @@ export default function Navbar() {
 
   const navLinks = [
     {
-      name: "Soluciones",
-      href: "/servicios",
+      name: "Formaciones",
+      href: "/formaciones",
       isDropdown: true,
       subLinks: [
-        { name: "Ver Todas las Soluciones", href: "/servicios" },
-        { name: "Motor Productizado (PyMEs)", href: "/servicios/motor-productizado" },
-        { name: "Motor Consultivo (Enterprise)", href: "/servicios/motor-consultivo" },
-        { name: "Gobernanza & Compliance", href: "/servicios/gobernanza-compliance" },
+        { name: "Ver Todas las Formaciones", href: "/formaciones" },
+        { name: "Talleres Intensivos (2-4h)", href: "/formaciones/talleres-intensivos" },
+        { name: "Curso Modular (4 Semanas)", href: "/formaciones/curso-modular" },
+        { name: "Formación In-Company", href: "/formaciones/in-company" },
       ],
     },
     { name: "Nosotros & Valores", href: "/nosotros" },
-    { name: "Flujo de IA", href: isHome ? "#flujo-ia" : "/#flujo-ia" },
-    { name: "Calculadora ROI", href: isHome ? "#calculadora" : "/#calculadora" },
-    { name: "Casos de Uso", href: isHome ? "#casos-uso" : "/#casos-uso" },
+    { name: "Metodología", href: isHome ? "#metodologia" : "/#metodologia" },
+    { name: "Calculadora ROTI", href: isHome ? "#calculadora" : "/#calculadora" },
+    { name: "Testimonios", href: isHome ? "#testimonios" : "/#testimonios" },
     { name: "Contacto", href: "/contacto" },
   ];
 
@@ -71,14 +71,14 @@ export default function Navbar() {
                 <div
                   key={link.name}
                   className="relative"
-                  onMouseEnter={() => setServicesDropdownOpen(true)}
-                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                  onMouseEnter={() => setFormacionesDropdownOpen(true)}
+                  onMouseLeave={() => setFormacionesDropdownOpen(false)}
                 >
                   <Link
                     href={link.href}
                     className={cn(
                       "text-xs font-medium tracking-wide text-slate-600 hover:text-blue-600 px-3 py-1.5 rounded-full transition-colors duration-200 hover:bg-slate-50 inline-flex items-center gap-1",
-                      pathname.startsWith("/servicios") && "text-blue-600 font-semibold bg-blue-50/60"
+                      pathname.startsWith("/formaciones") && "text-blue-600 font-semibold bg-blue-50/60"
                     )}
                   >
                     <span>{link.name}</span>
@@ -86,13 +86,13 @@ export default function Navbar() {
                   </Link>
 
                   {/* Dropdown Menu */}
-                  {servicesDropdownOpen && (
+                  {formacionesDropdownOpen && (
                     <div className="absolute top-full left-0 mt-1 w-64 bg-white border border-slate-200 rounded-2xl p-2 shadow-xl backdrop-blur-lg animate-in fade-in-50 zoom-in-95 duration-150">
                       {link.subLinks?.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          onClick={() => setServicesDropdownOpen(false)}
+                          onClick={() => setFormacionesDropdownOpen(false)}
                           className={cn(
                             "block px-3 py-2 rounded-xl text-xs text-slate-700 hover:text-blue-600 hover:bg-slate-50 transition-colors font-medium",
                             pathname === sub.href && "text-blue-600 bg-blue-50 font-semibold"
@@ -131,15 +131,15 @@ export default function Navbar() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
             </span>
-            <span className="hidden md:inline">Agentes 100% Online</span>
-            <span className="md:hidden">Online</span>
+            <span className="hidden md:inline">Próximo Taller en Vivo</span>
+            <span className="md:hidden">En Vivo</span>
           </div>
 
           <Link
             href="/contacto"
             className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Diagnóstico Gratis</span>
+            <span>Ver Próximos Talleres</span>
             <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
         </div>
@@ -162,7 +162,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div className="flex items-center gap-2 text-xs text-emerald-700 font-mono">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Sistemas Agénticos Activos</span>
+              <span>Academia SyntIQ</span>
             </div>
           </div>
           <div className="grid gap-1">
@@ -211,7 +211,7 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2.5 rounded-xl shadow-sm"
             >
-              <span>Solicitar Diagnóstico Operativo</span>
+              <span>Reservar Plaza en Taller</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

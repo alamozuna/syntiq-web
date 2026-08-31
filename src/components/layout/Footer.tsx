@@ -21,40 +21,40 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs text-slate-300 leading-relaxed max-w-sm">
-              Infraestructura tecnológica y agentes autónomos de Inteligencia Artificial para
-              empresas. Transformamos el caos operativo en un sistema inteligente que piensa por ti.
+              Formación práctica y talleres de Inteligencia Artificial para profesionales y empresas.
+              Aprende a construir agentes autónomos y automatiza tu operativa real.
             </p>
 
             <div className="flex items-center gap-2 text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1 rounded-full w-fit">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Cluster de Agentes: 99.98% Uptime</span>
+              <span>Próximo Taller: Plazas Disponibles</span>
             </div>
           </div>
 
-          {/* Col 3: Soluciones */}
+          {/* Col 3: Formaciones */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
-              SOLUCIONES DE IA
+              FORMACIONES
             </span>
             <ul className="space-y-2 text-slate-300">
               <li>
-                <Link href="/servicios" className="hover:text-blue-400 transition-colors">
-                  Todas las Soluciones
+                <Link href="/formaciones" className="hover:text-blue-400 transition-colors">
+                  Todas las Formaciones
                 </Link>
               </li>
               <li>
-                <Link href="/servicios/motor-productizado" className="hover:text-blue-400 transition-colors">
-                  Motor Productizado (PyMEs)
+                <Link href="/formaciones/talleres-intensivos" className="hover:text-blue-400 transition-colors">
+                  Talleres Intensivos (2-4h)
                 </Link>
               </li>
               <li>
-                <Link href="/servicios/motor-consultivo" className="hover:text-blue-400 transition-colors">
-                  Motor Consultivo (Enterprise)
+                <Link href="/formaciones/curso-modular" className="hover:text-blue-400 transition-colors">
+                  Curso Modular (4 Semanas)
                 </Link>
               </li>
               <li>
-                <Link href="/servicios/gobernanza-compliance" className="hover:text-blue-400 transition-colors">
-                  Gobernanza & Blindaje Legal
+                <Link href="/formaciones/in-company" className="hover:text-blue-400 transition-colors">
+                  Formación In-Company
                 </Link>
               </li>
             </ul>
@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Col 4: Recursos & Casos */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
-              EMPRESA & RECURSOS
+              ACADEMIA & RECURSOS
             </span>
             <ul className="space-y-2 text-slate-300">
               <li>
@@ -72,18 +72,18 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#casos-uso" className="hover:text-blue-400 transition-colors">
-                  Casos de Uso por Industria
+                <Link href="/#testimonios" className="hover:text-blue-400 transition-colors">
+                  Testimonios de Alumnos
                 </Link>
               </li>
               <li>
                 <Link href="/#calculadora" className="hover:text-blue-400 transition-colors">
-                  Calculadora de Retorno (ROI)
+                  Calculadora ROTI
                 </Link>
               </li>
               <li>
                 <Link href="/contacto" className="hover:text-blue-400 transition-colors">
-                  Diagnóstico Operativo Gratuito
+                  Reservar Plaza o Asesoría
                 </Link>
               </li>
             </ul>
@@ -92,13 +92,13 @@ export default function Footer() {
           {/* Col 5: Principios Fundacionales */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
-              FILOSOFÍA CORE
+              FILOSOFÍA ACADÉMICA
             </span>
             <p className="text-[11px] text-slate-400 leading-relaxed">
               <strong className="text-slate-200">Mayordomía Radical:</strong> Operamos bajo la premisa de buscar la máxima excelencia para honrar el encargo recibido.
             </p>
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              <strong className="text-slate-200">Integridad Innegociable:</strong> La verdad y los datos reales son nuestro activo más valioso.
+              <strong className="text-slate-200">Integridad Innegociable:</strong> La verdad y los resultados aplicables son nuestro activo más valioso.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-mono">
           <div>
-            © {new Date().getFullYear()} SyntIQ Enterprise AI. Todos los derechos reservados.
+            © {new Date().getFullYear()} SyntIQ Academy. Todos los derechos reservados.
           </div>
 
           <div className="flex items-center gap-6">
@@ -116,8 +116,8 @@ export default function Footer() {
             <Link href="/terminos" className="hover:text-slate-200 transition-colors">
               Términos de Servicio
             </Link>
-            <Link href="/servicios/gobernanza-compliance" className="hover:text-slate-200 transition-colors">
-              Seguridad & Compliance
+            <Link href="/campus" className="hover:text-slate-200 transition-colors">
+              Campus Virtual
             </Link>
           </div>
 

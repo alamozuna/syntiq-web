@@ -1,16 +1,31 @@
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
+// 2. Social Proof / Resultados
 import AuthorityBar from "@/components/social-proof/AuthorityBar";
+
+// 3. Filosofía & Identidad Académica
 import MissionVisionValues from "@/components/brand/MissionVisionValues";
+
+// 4. Scaffolding Educativo
 import PillarsSection from "@/components/pillars/PillarsSection";
+
+// 5. Catálogo de Formaciones
 import SolutionsMatrix from "@/components/solutions/SolutionsMatrix";
+
+// 6. Metodología de Aprendizaje (Interactive Flow)
 import ProcessFlowEngine from "@/components/interactive/ProcessFlowEngine";
+
+// 7. Calculadora ROTI (Return on Time Invested)
 import RoiCalculator from "@/components/calculator/RoiCalculator";
+
+// 8. Testimonios por Audiencia
 import UseCasesSection from "@/components/use-cases/UseCasesSection";
 import TeamSection from "@/components/team/TeamSection";
+// 9. Lead Magnet (Kit de Inicio)
 import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
 import FaqSection from "@/components/faq/FaqSection";
+// 10. Formulario de Admisión / Contacto
 import DiagnosticForm from "@/components/contact/DiagnosticForm";
 import Footer from "@/components/layout/Footer";
 
