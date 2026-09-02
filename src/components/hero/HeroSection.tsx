@@ -60,7 +60,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-12 sm:mb-14"
         >
           <a
-            href="#formaciones"
+            href="/formaciones"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.98]"
           >
             <span>Ver próximos talleres</span>

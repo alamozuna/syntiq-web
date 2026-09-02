@@ -22,7 +22,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Formaciones", href: isHome ? "#formaciones" : "/#formaciones" },
+    { name: "Formaciones", href: "/formaciones" },
     { name: "Método", href: isHome ? "#metodo" : "/#metodo" },
     { name: "Resultados", href: isHome ? "#resultados" : "/#resultados" },
     { name: "Nosotros", href: "/nosotros" },
@@ -73,7 +73,7 @@ export default function Navbar() {
         {/* Priority CTA */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href={isHome ? "#formaciones" : "/#formaciones"}
+            href="/formaciones"
             className="group inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.98]"
           >
             <span>Ver talleres</span>
@@ -110,7 +110,7 @@ export default function Navbar() {
           </div>
           <div className="pt-2 border-t border-slate-100">
             <Link
-              href={isHome ? "#formaciones" : "/#formaciones"}
+              href="/formaciones"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full min-h-[44px] bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium py-2.5 px-4 rounded-xl shadow-xs"
             >

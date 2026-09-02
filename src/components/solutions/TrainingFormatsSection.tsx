@@ -20,7 +20,7 @@ const FORMATS = [
       "Sales de la sesión con el sistema operando",
     ],
     ctaText: "Ver talleres",
-    ctaHref: "/contacto?modalidad=taller",
+    ctaHref: "/formaciones#talleres",
     isFeatured: false,
   },
   {
@@ -36,7 +36,7 @@ const FORMATS = [
       "Acceso directo a sesiones de mentoría",
     ],
     ctaText: "Ver programa",
-    ctaHref: "/contacto?modalidad=modular",
+    ctaHref: "/formaciones#programa",
     isFeatured: true,
   },
   {
@@ -70,7 +70,7 @@ export default function TrainingFormatsSection() {
             Elige cómo <span className="italic font-normal text-blue-600">quieres aprender.</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-light mt-4 max-w-xl mx-auto leading-relaxed">
-            Formaciones 100% prácticas enfocadas en resultados inmediatos, sin relleno teórico.
+            Formaciones enfocadas en construir soluciones reales desde la primera sesión.
           </p>
         </div>
 

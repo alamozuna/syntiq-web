@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 const STEPS = [
   {
     number: "01",
-    label: "DETECTA",
-    tagline: "Encuentra una tarea que consume tiempo.",
+    label: "AUDITA",
+    tagline: "Encuentra tareas repetitivas y oportunidades.",
     icon: Search,
-    detail: "Auditamos correos, hojas de cálculo o procesos manuales donde se pierde tiempo repetitivo.",
+    detail: "Revisamos correos, hojas de cálculo o procesos manuales donde se pierde tiempo repetitivo.",
   },
   {
     number: "02",

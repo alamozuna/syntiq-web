@@ -43,17 +43,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/talleres-intensivos" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones#talleres" className="hover:text-blue-400 transition-colors">
                   Talleres Intensivos (2-4h)
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/curso-modular" className="hover:text-blue-400 transition-colors">
-                  Curso Modular (4 Semanas)
+                <Link href="/formaciones#programa" className="hover:text-blue-400 transition-colors">
+                  Programa Modular (4 Semanas)
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/in-company" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones#in-company" className="hover:text-blue-400 transition-colors">
                   Formación In-Company
                 </Link>
               </li>
@@ -72,8 +72,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#testimonios" className="hover:text-blue-400 transition-colors">
-                  Testimonios de Alumnos
+                <Link href="/#resultados" className="hover:text-blue-400 transition-colors">
+                  Resultados de Alumnos
                 </Link>
               </li>
               <li>
@@ -115,9 +115,6 @@ export default function Footer() {
             </Link>
             <Link href="/terminos" className="hover:text-slate-200 transition-colors">
               Términos de Servicio
-            </Link>
-            <Link href="/campus" className="hover:text-slate-200 transition-colors">
-              Campus Virtual
             </Link>
           </div>
 

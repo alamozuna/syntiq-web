@@ -33,6 +33,11 @@ export const ACADEMY_FAQS: FaqItem[] = [
     answer:
       "Sí. Diseñamos talleres y programas in-company adaptados a los procesos, herramientas y políticas de seguridad específicas de tu organización. Diseñamos los flujos con controles, fuentes verificadas y supervisión humana para reducir errores y evitar que acciones críticas se ejecuten sin revisión.",
   },
+  {
+    question: "¿Puedo llevar un proceso real de mi empresa?",
+    answer:
+      "Sí, y de hecho lo recomendamos. En los talleres y programas modulares trabajamos sobre problemas reales que tú eliges: un correo que quieres automatizar, un documento que necesitas procesar o un flujo que quieres conectar. Así el aprendizaje se convierte directamente en valor para tu día a día.",
+  },
 ];
 
 interface FaqSectionProps {
