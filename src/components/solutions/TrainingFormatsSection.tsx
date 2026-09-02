@@ -20,7 +20,7 @@ const FORMATS = [
       "Sales de la sesión con el sistema operando",
     ],
     ctaText: "Ver talleres",
-    ctaHref: "/formaciones#talleres",
+    ctaHref: "/formaciones/talleres-intensivos",
     isFeatured: false,
   },
   {
@@ -36,7 +36,7 @@ const FORMATS = [
       "Acceso directo a sesiones de mentoría",
     ],
     ctaText: "Ver programa",
-    ctaHref: "/formaciones#programa",
+    ctaHref: "/formaciones/curso-modular",
     isFeatured: true,
   },
   {
@@ -52,7 +52,7 @@ const FORMATS = [
       "Supervisión y métricas de adopción",
     ],
     ctaText: "Formar a mi equipo",
-    ctaHref: "/contacto?modalidad=in-company",
+    ctaHref: "/formaciones/in-company",
     isFeatured: false,
   },
 ];

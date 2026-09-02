@@ -43,17 +43,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones#talleres" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/talleres-intensivos" className="hover:text-blue-400 transition-colors">
                   Talleres Intensivos (2-4h)
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones#programa" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/curso-modular" className="hover:text-blue-400 transition-colors">
                   Programa Modular (4 Semanas)
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones#in-company" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/in-company" className="hover:text-blue-400 transition-colors">
                   Formación In-Company
                 </Link>
               </li>
