@@ -1,77 +1,58 @@
 import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
-// 2. Social Proof / Resultados
-import AuthorityBar from "@/components/social-proof/AuthorityBar";
-
-// 3. Filosofía & Identidad Académica
-import MissionVisionValues from "@/components/brand/MissionVisionValues";
-
-// 4. Scaffolding Educativo
-import PillarsSection from "@/components/pillars/PillarsSection";
-
-// 5. Catálogo de Formaciones
-import SolutionsMatrix from "@/components/solutions/SolutionsMatrix";
-
-// 6. Metodología de Aprendizaje (Interactive Flow)
-import ProcessFlowEngine from "@/components/interactive/ProcessFlowEngine";
-
-// 7. Calculadora ROTI (Return on Time Invested)
+import ToolsMarquee from "@/components/social-proof/ToolsMarquee";
+import BuildSkillsSection from "@/components/skills/BuildSkillsSection";
+import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
+import MethodStepper from "@/components/method/MethodStepper";
+import ResultsSection from "@/components/results/ResultsSection";
 import RoiCalculator from "@/components/calculator/RoiCalculator";
-
-// 8. Testimonios por Audiencia
-import UseCasesSection from "@/components/use-cases/UseCasesSection";
-import TeamSection from "@/components/team/TeamSection";
-// 9. Lead Magnet (Kit de Inicio)
+import TeamSummarySection from "@/components/team/TeamSummarySection";
 import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
 import FaqSection from "@/components/faq/FaqSection";
-// 10. Formulario de Admisión / Contacto
-import DiagnosticForm from "@/components/contact/DiagnosticForm";
+import FinalCtaSection from "@/components/cta/FinalCtaSection";
 import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-slate-900 relative selection:bg-blue-600/20 selection:text-slate-900">
-      {/* Navigation Header */}
+      {/* 01. NAVBAR */}
       <Navbar />
 
-      {/* Hero Section with Interactive Agent Orchestrator Simulator */}
+      {/* 02. HERO (Copy, 3 Trust Indicators, Live Agent Workflow) */}
       <HeroSection />
 
-      {/* Quantitative Social Proof & Technology Ecosystem */}
-      <AuthorityBar />
+      {/* 03. SOCIAL PROOF (Tools Marquee: Herramientas Reales, Casos Reales) */}
+      <ToolsMarquee />
 
-      {/* Brand Identity & Core Ethos: Misión, Visión, Valores & Reglas de Oro */}
-      <MissionVisionValues />
+      {/* 04. QUÉ APRENDERÁS A CONSTRUIR (4 Cards: Prompting, Vibe Coding, Automatización, Agentes) */}
+      <BuildSkillsSection />
 
-      {/* 01. Four Pillars of Operative Transformation */}
-      <PillarsSection />
+      {/* 05. FORMATOS DE FORMACIÓN (3 Tarjetas Grandes estilo Maven) */}
+      <TrainingFormatsSection />
 
-      {/* 02. Solutions Matrix (Productized vs Consultative vs Governance) */}
-      <SolutionsMatrix />
+      {/* 06. MÉTODO SYNTIQ (Stepper: Detecta, Diseña, Construye, Despliega) */}
+      <MethodStepper />
 
-      {/* 03. Interactive Engine (Data -> Intelligence -> Automation -> Results) */}
-      <ProcessFlowEngine />
+      {/* 07. RESULTADOS / TESTIMONIOS (1 Testimonio Principal + 3 Casos Antes/Construyó/Después) */}
+      <ResultsSection />
 
-      {/* 04. Capital Leakage & ROI Calculator */}
+      {/* 08. CALCULADORA ROTI (Copy Sobrio + Interpolación Numérica) */}
       <RoiCalculator />
 
-      {/* 05. Use Cases by Industry */}
-      <UseCasesSection />
+      {/* 09. EQUIPO (4 Tarjetas Compactas + Frase de Marca + Enlace a /nosotros) */}
+      <TeamSummarySection />
 
-      {/* 06. Founding Team & Professional Leadership Authority */}
-      <TeamSection />
-
-      {/* Lead Magnet: The Autonomous Agent Architecture Blueprint */}
+      {/* RECURSO GRATUITO: Blueprint del Agente Autónomo */}
       <BlueprintSection />
 
-      {/* 07. Frequently Asked Questions (WAI-ARIA Accordion & Schema.org FAQPage) */}
+      {/* 10. FAQ REDUCIDO (4 Preguntas Prácticas de Formación) */}
       <FaqSection />
 
-      {/* 08. Interactive Operative Diagnostic & Strategic Contact */}
-      <DiagnosticForm />
+      {/* 11. CTA FINAL (Deja de aprender IA en abstracto. Construye algo útil.) */}
+      <FinalCtaSection />
 
-      {/* Corporate Enterprise Footer */}
+      {/* 12. FOOTER */}
       <Footer />
     </main>
   );

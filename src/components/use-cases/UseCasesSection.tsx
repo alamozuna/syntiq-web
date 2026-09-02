@@ -142,7 +142,7 @@ export default function UseCasesSection() {
                 <Quote className="w-12 h-12 text-slate-200 mb-6" />
                 
                 <p className="text-xl sm:text-2xl text-slate-700 font-light leading-relaxed mb-10 italic">
-                  "{currentCase.testimonial}"
+                  &ldquo;{currentCase.testimonial}&rdquo;
                 </p>
                 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-8 border-t border-slate-100">

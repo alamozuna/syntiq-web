@@ -106,7 +106,7 @@ export default function PrivacidadPage() {
               6. Seguridad y Cifrado
             </h2>
             <p>
-              Implementamos protocolos de cifrado de datos en tránsito (TLS/SSL) y en reposo, aislamiento de entornos de ejecución y control estricto de acceso basado en roles con el protocolo 'Human-in-the-Loop'.
+              Implementamos protocolos de cifrado de datos en tránsito (TLS/SSL) y en reposo, aislamiento de entornos de ejecución y control estricto de acceso basado en roles con el protocolo &ldquo;Human-in-the-Loop&rdquo;.
             </p>
           </div>
         </div>

@@ -2,117 +2,132 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, GraduationCap, BookOpen, Zap } from "lucide-react";
-import AgentOrchestratorVisual from "./AgentOrchestratorVisual";
+import { ArrowRight, BookOpen, Users, CheckCircle2, Clock } from "lucide-react";
+import LiveAgentWorkflow from "./LiveAgentWorkflow";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-32 overflow-hidden bg-white">
-      {/* Background Decorative Atmosphere & Laser Lines */}
+    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-white">
+      {/* Background Subtle Atmosphere */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-blue-100/50 blur-[140px] rounded-full" />
-        <div className="absolute top-1/3 right-10 w-[500px] h-[400px] bg-indigo-50/60 blur-[120px] rounded-full" />
-        <div className="absolute top-20 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-200 to-transparent" />
-        <div className="absolute inset-0 bg-grid-pattern-light opacity-60" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-blue-100/40 blur-[130px] rounded-full" />
+        <div className="absolute inset-0 bg-grid-pattern-light opacity-40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Eyebrow Pill */}
+        {/* Eyebrow */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center mb-6"
+          transition={{ duration: 0.4 }}
+          className="flex justify-center mb-5"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50/90 border border-blue-200 text-blue-700 backdrop-blur-md shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span className="brand-label text-[10px] sm:text-[11px] tracking-widest uppercase">
-              APRENDE · CONSTRUYE · AUTOMATIZA — SYNTIQ ACADEMY
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-xs">
+            <span className="brand-label text-[10px] tracking-widest uppercase font-semibold">
+              APRENDE · CONSTRUYE · AUTOMATIZA
             </span>
           </div>
         </motion.div>
 
-        {/* Display H1 */}
+        {/* H1 Principal (2-3 lines intentional breaks on desktop) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-center max-w-5xl mx-auto mb-6"
+          transition={{ duration: 0.5, delay: 0.08 }}
+          className="text-center max-w-4xl mx-auto mb-6"
         >
-          <h1 className="font-brand-display text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light text-[#0F172A] tracking-tight leading-[1.06]">
-            Domina la IA que Trabaja por Ti:{" "}
-            <span className="italic font-normal text-blue-600 inline-block">
-              Talleres y Formaciones Prácticas.
-            </span>
+          <h1 className="font-brand-display text-4xl sm:text-6xl md:text-7xl font-light text-[#0F172A] tracking-tight leading-[1.08]">
+            Aprende IA construyendo <br className="hidden sm:inline" />
+            <span className="italic font-normal text-blue-600">sistemas que trabajan por ti.</span>
           </h1>
         </motion.div>
 
-        {/* Subtitle Value Proposition */}
+        {/* Subheadline (23 words) */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto text-center font-light leading-relaxed mb-8 sm:mb-10"
+          transition={{ duration: 0.5, delay: 0.16 }}
+          className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto text-center font-light leading-relaxed mb-8 sm:mb-10"
         >
-          Construye sistemas operativos reales y automatiza tus flujos en menos de 20 minutos.
-          Pasa de <span className="text-slate-900 font-medium">chatear con la IA</span> a
-          dirigir una fuerza laboral digital con agentes autónomos que trabajan 24/7.
+          Talleres prácticos para convertir tareas repetitivas en automatizaciones, aplicaciones y agentes útiles. Sales con algo funcionando.
         </motion.p>
 
         {/* CTAs */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          transition={{ duration: 0.5, delay: 0.24 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-12 sm:mb-14"
         >
           <a
             href="#formaciones"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.01] active:scale-[0.98]"
           >
-            <span>Explorar Talleres en Vivo</span>
-            <ArrowRight className="w-4 h-4" />
+            <span>Ver próximos talleres</span>
+            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </a>
 
           <a
             href="#blueprint"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-medium text-sm sm:text-base px-6 py-3.5 rounded-full border border-slate-200 shadow-sm hover:border-blue-300 transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-medium text-sm sm:text-base px-6 py-3.5 rounded-full border border-slate-200 shadow-xs hover:border-slate-300 transition-all duration-200"
           >
             <BookOpen className="w-4 h-4 text-blue-600" />
-            <span>Descargar Blueprint Gratuito</span>
+            <span>Descargar Blueprint</span>
           </a>
         </motion.div>
 
-        {/* Trust Badges */}
+        {/* 3 Trust Indicators */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-slate-600 text-xs sm:text-sm font-mono mb-12"
+          transition={{ duration: 0.6, delay: 0.32 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12 sm:mb-14 text-center sm:text-left"
         >
-          <div className="flex items-center gap-2">
-            <GraduationCap className="w-4 h-4 text-blue-600" />
-            <span>+500 Profesionales Formados</span>
+          <div className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-2xl bg-slate-50/70 border border-slate-200/70">
+            <div className="w-9 h-9 rounded-xl bg-blue-100/60 text-blue-600 flex items-center justify-center shrink-0">
+              <Users className="w-4 h-4" />
+            </div>
+            <div>
+              <span className="font-brand-display text-xl sm:text-2xl font-light text-slate-900 block leading-tight">
+                +500
+              </span>
+              <span className="text-[11px] text-slate-500 font-medium">Profesionales formados</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Zap className="w-4 h-4 text-emerald-600" />
-            <span>98% Satisfacción Post-Taller</span>
+
+          <div className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-2xl bg-slate-50/70 border border-slate-200/70">
+            <div className="w-9 h-9 rounded-xl bg-emerald-100/60 text-emerald-600 flex items-center justify-center shrink-0">
+              <CheckCircle2 className="w-4 h-4" />
+            </div>
+            <div>
+              <span className="font-brand-display text-xl sm:text-2xl font-light text-slate-900 block leading-tight">
+                98%
+              </span>
+              <span className="text-[11px] text-slate-500 font-medium">Satisfacción</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-indigo-600" />
-            <span>100% Casos Prácticos Reales</span>
+
+          <div className="flex items-center justify-center sm:justify-start gap-3 p-3 rounded-2xl bg-slate-50/70 border border-slate-200/70">
+            <div className="w-9 h-9 rounded-xl bg-indigo-100/60 text-indigo-600 flex items-center justify-center shrink-0">
+              <Clock className="w-4 h-4" />
+            </div>
+            <div>
+              <span className="font-brand-display text-xl sm:text-2xl font-light text-slate-900 block leading-tight">
+                &lt; 20 min
+              </span>
+              <span className="text-[11px] text-slate-500 font-medium">Para crear tu primer flujo</span>
+            </div>
           </div>
         </motion.div>
 
-        {/* Hero Interactive Visual Showcase */}
+        {/* Hero Visual: Live Agent Workflow */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="relative max-w-5xl mx-auto"
+          transition={{ duration: 0.7, delay: 0.38 }}
+          className="relative max-w-4xl mx-auto"
         >
-          <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-200/50 via-indigo-100/50 to-blue-200/50 rounded-3xl blur-xl opacity-75 -z-10" />
-          <AgentOrchestratorVisual />
+          <LiveAgentWorkflow />
         </motion.div>
       </div>
     </section>

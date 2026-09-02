@@ -67,6 +67,7 @@ const config: Config = {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "float-slow": "float 6s ease-in-out infinite",
         "shimmer": "shimmer 2.5s linear infinite",
+        "marquee": "marquee 32s linear infinite",
       },
       keyframes: {
         float: {
@@ -76,6 +77,10 @@ const config: Config = {
         shimmer: {
           from: { backgroundPosition: "0 0" },
           to: { backgroundPosition: "-200% 0" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

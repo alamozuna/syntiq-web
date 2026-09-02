@@ -28,24 +28,23 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://syntiq.ai"),
   title: {
-    default: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
-    template: "%s | SyntIQ Academy",
+    default: "SyntIQ | Formación práctica en Inteligencia Artificial",
+    template: "%s | SyntIQ",
   },
   description:
-    "Talleres prácticos, cursos modulares y formación corporativa en Inteligencia Artificial. Aprende a construir agentes autónomos, automatizar flujos con n8n y dominar el prompting avanzado. Aprende · Construye · Automatiza.",
+    "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales, equipos y empresas. Aprende · Construye · Automatiza.",
   keywords: [
     "SyntIQ",
-    "Talleres de IA",
-    "Cursos de Inteligencia Artificial",
+    "Formación IA práctica",
+    "Talleres de Inteligencia Artificial",
+    "Aprender a construir agentes de IA",
+    "Automatización con n8n",
+    "Vibe coding",
+    "Prompting estructurado",
+    "Cursos de IA aplicada",
     "Formación IA para empresas",
-    "Bootcamp IA",
-    "Capacitación en IA",
-    "Talleres prácticos IA",
-    "Curso de Agentes Autónomos",
-    "Formación n8n",
-    "Prompting avanzado",
   ],
-  authors: [{ name: "SyntIQ Academy" }],
+  authors: [{ name: "SyntIQ" }],
   creator: "SyntIQ",
   publisher: "SyntIQ",
   alternates: {
@@ -59,10 +58,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://syntiq.ai",
-    siteName: "SyntIQ Academy",
-    title: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
+    siteName: "SyntIQ",
+    title: "SyntIQ | Formación práctica en Inteligencia Artificial",
     description:
-      "Domina la IA que trabaja por ti. Talleres hands-on, cursos modulares y formación In-Company para profesionales y equipos que quieren resultados reales.",
+      "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales, equipos y empresas.",
     images: [
       {
         url: "/assets/logo-syntiq.png",
@@ -74,9 +73,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyntIQ | Formaciones, Talleres y Cursos Prácticos de IA",
+    title: "SyntIQ | Formación práctica en Inteligencia Artificial",
     description:
-      "Domina la IA que trabaja por ti. Talleres prácticos para construir agentes autónomos y automatizar tu operativa.",
+      "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales y empresas.",
     images: ["/assets/logo-syntiq.png"],
   },
   robots: {

@@ -135,7 +135,7 @@ export default function MotorConsultivoPage() {
               </div>
               <h3 className="text-lg font-semibold text-[#0F172A]">Validación Estadística & Despliegue</h3>
               <p className="text-xs text-slate-600 font-light leading-relaxed">
-                Supervisión con 'Human-in-the-Loop', pruebas de no-alucinación, capacitación del equipo y entrega de documentación técnica homologada.
+                Supervisión con &ldquo;Human-in-the-Loop&rdquo;, pruebas de no-alucinación, capacitación del equipo y entrega de documentación técnica homologada.
               </p>
             </div>
           </div>
