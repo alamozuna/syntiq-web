@@ -102,3 +102,4 @@ body {
   background-image: radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+@import '../components/hero/SyntIQHeroVisual.css';
