@@ -1,20 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Send,
   User,
   Building2,
   CheckCircle2,
-  ChevronRight,
-  ArrowRight,
   Mail,
   GraduationCap
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { formaciones } from "@/data/formaciones";
 
-// Formularios adaptados a la cualificación de alumnos y prospectos B2B
 const STUDENT_PROFILES = [
   { id: "freelance", label: "Profesional Independiente", icon: User },
   { id: "team", label: "Equipo Empresarial", icon: Building2 },
@@ -36,7 +35,14 @@ const AI_LEVEL = [
   { id: "teacher", label: "Quiero enseñar/liderar IA en mi empresa" },
 ];
 
-export default function DiagnosticForm() {
+function DiagnosticFormContent() {
+  const searchParams = useSearchParams();
+  const formacionParam = searchParams.get("formacion");
+  
+  const [selectedCourse, setSelectedCourse] = useState(
+    formacionParam ? formaciones.find(f => f.slug === formacionParam) : null
+  );
+
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -76,12 +82,26 @@ export default function DiagnosticForm() {
           <span className="brand-label text-blue-600 mb-4 block">
             CONTACTO & ADMISIÓN
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-4xl lg:text-5xl text-[#0F172A] font-light tracking-tight leading-tight mb-4">
-            Reserva tu plaza o solicita una propuesta formativa
-          </h2>
-          <p className="text-slate-600 font-light text-lg">
-            Completa este breve cuestionario para entender tu nivel actual y enviarte la opción que mejor se adapte a ti.
-          </p>
+          {selectedCourse ? (
+            <>
+              <h2 className="font-brand-display text-3xl sm:text-4xl lg:text-5xl text-[#0F172A] font-light tracking-tight leading-tight mb-4">
+                Solicitud de plaza: <span className="font-normal text-blue-600">{selectedCourse.title}</span>
+              </h2>
+              <p className="text-slate-600 font-light text-lg max-w-2xl mx-auto">
+                Estás a un paso de asegurar tu plaza. Cuéntanos un poco sobre tu perfil para 
+                validar que esta formación es adecuada para ti.
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="font-brand-display text-3xl sm:text-4xl lg:text-5xl text-[#0F172A] font-light tracking-tight leading-tight mb-4">
+                Reserva tu plaza o solicita una propuesta formativa
+              </h2>
+              <p className="text-slate-600 font-light text-lg">
+                Completa este breve cuestionario para entender tu nivel actual y enviarte la opción que mejor se adapte a ti.
+              </p>
+            </>
+          )}
         </div>
 
         <div className="bg-white rounded-[2rem] p-6 sm:p-10 shadow-elevation-2 border border-slate-200 relative overflow-hidden">
@@ -260,7 +280,7 @@ export default function DiagnosticForm() {
               >
                 <div className="mb-8">
                   <span className="text-xs font-mono text-slate-400 font-semibold tracking-wider uppercase">Paso 4 de 4</span>
-                  <h3 className="text-xl sm:text-2xl font-medium text-[#0F172A] mt-2">Último paso. ¿Dónde te enviamos la propuesta formativa?</h3>
+                  <h3 className="text-xl sm:text-2xl font-medium text-[#0F172A] mt-2">Último paso. ¿Dónde te enviamos los detalles?</h3>
                 </div>
                 
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -318,7 +338,7 @@ export default function DiagnosticForm() {
                         </>
                       ) : (
                         <>
-                          <span>Solicitar Propuesta</span>
+                          <span>{selectedCourse ? "Confirmar Interés" : "Solicitar Propuesta"}</span>
                           <Send className="w-4 h-4" />
                         </>
                       )}
@@ -355,7 +375,17 @@ export default function DiagnosticForm() {
                   ¡Solicitud recibida con éxito!
                 </h3>
                 <p className="text-slate-600 font-light max-w-md mx-auto mb-8">
-                  Hemos analizado tu perfil (<b>{formData.profile === 'freelance' ? 'Profesional Independiente' : formData.profile === 'team' ? 'Equipo Empresarial' : formData.profile === 'university' ? 'Universidad' : 'Empresa'}</b>). En las próximas 24 horas te enviaremos una propuesta formativa personalizada a <b>{formData.email}</b>.
+                  {selectedCourse ? (
+                    <>
+                      Hemos registrado tu interés en <b>{selectedCourse.title}</b>. 
+                      Pronto te contactaremos en <b>{formData.email}</b> con los detalles para tu inscripción.
+                    </>
+                  ) : (
+                    <>
+                      Hemos analizado tu perfil. En las próximas 24 horas te enviaremos una propuesta 
+                      formativa personalizada a <b>{formData.email}</b>.
+                    </>
+                  )}
                 </p>
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-500">
                   <Mail className="w-4 h-4" />
@@ -367,5 +397,13 @@ export default function DiagnosticForm() {
         </div>
       </div>
     </section>
+  );
+}
+
+export default function DiagnosticForm() {
+  return (
+    <Suspense fallback={<div className="py-24 text-center">Cargando...</div>}>
+      <DiagnosticFormContent />
+    </Suspense>
   );
 }

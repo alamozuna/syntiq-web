@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { Clock, Calendar, Building, ArrowRight, Check, Sparkles } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CourseCatalog from "@/components/solutions/CourseCatalog";
 
 export const metadata: Metadata = {
   title: "Formaciones | SyntIQ — Talleres prácticos de IA",
@@ -245,21 +246,11 @@ export default function FormacionesPage() {
             })}
           </div>
 
-          {/* Bottom note */}
-          <div className="mt-12 text-center">
-            <p className="text-sm text-slate-500 font-light mb-4">
-              ¿No sabes cuál es la mejor opción para ti?
-            </p>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
-            >
-              <span>Contacta con nosotros y te orientamos</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+          {/* The bottom note has been removed as per the new design, CourseCatalog goes below */}
         </div>
       </section>
+
+      <CourseCatalog />
 
       <Footer />
     </main>
