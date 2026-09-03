@@ -7,7 +7,7 @@ import SyntIQHeroVisual from "./SyntIQHeroVisual";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-white">
+    <section id="inicio" className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 overflow-hidden bg-white">
       {/* Background Subtle Atmosphere */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[400px] bg-blue-100/40 blur-[130px] rounded-full" />
