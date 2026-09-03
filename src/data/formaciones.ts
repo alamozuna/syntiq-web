@@ -71,7 +71,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -115,7 +115,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "DRAFT",
+    status: "COMING_SOON",
     date: null,
     schedule: null,
     price: null,
@@ -162,7 +162,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -209,7 +209,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "DRAFT",
+    status: "COMING_SOON",
     date: null,
     schedule: null,
     price: null,
@@ -257,7 +257,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -304,7 +304,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -351,7 +351,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -397,7 +397,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "DRAFT",
+    status: "COMING_SOON",
     date: null,
     schedule: null,
     price: null,
@@ -443,7 +443,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "AVAILABLE",
+    status: "WAITLIST",
     date: null,
     schedule: null,
     price: null,
@@ -488,7 +488,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "DRAFT",
+    status: "COMING_SOON",
     date: null,
     schedule: null,
     price: null,
@@ -534,7 +534,7 @@ export const formaciones: Formacion[] = [
       { title: "05 — DEPLOY" }
     ],
     instructor: null,
-    status: "DRAFT",
+    status: "COMING_SOON",
     date: null,
     schedule: null,
     price: null,

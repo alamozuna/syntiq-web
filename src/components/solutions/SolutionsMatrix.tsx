@@ -25,7 +25,7 @@ const FORMATIONS = [
       "Sesiones prácticas de 2 a 4 horas donde construyes una solución específica en vivo. Sales del taller con la automatización funcionando.",
     targetAudience: "Freelancers, marketers, analistas y profesionales independientes.",
     features: [
-      "100% práctico y guiado paso a paso",
+      "Completamente práctico y guiado paso a paso",
       "Plantillas ejecutables listas para usar",
       "Resultados funcionales en la misma sesión",
       "Temáticas: AntiGravity, Vibe Coding, Inbox Autopilot",
@@ -44,7 +44,7 @@ const FORMATIONS = [
       "Programa estructurado en cohortes que cubre los 4 pilares de la metodología SyntIQ. Desde los fundamentos del prompting hasta la orquestación avanzada en n8n.",
     targetAudience: "Líderes de equipo, consultores tech y profesionales en transición a IA.",
     features: [
-      "Cohortes en vivo con plazas limitadas",
+      "Cohortes en vivo de aforo reducido",
       "Proyectos prácticos semanales con feedback",
       "Comunidad privada de alumnos (Discord)",
       "Certificado de finalización oficial",
@@ -93,7 +93,7 @@ export default function SolutionsMatrix() {
           </h2>
           <p className="text-lg text-slate-600 font-light leading-relaxed">
             Elige el formato que mejor se adapte a tu disponibilidad y objetivos.
-            Todas nuestras formaciones comparten el mismo rigor metodológico 100% práctico.
+            Todas nuestras formaciones comparten el mismo rigor metodológico completamente práctico.
           </p>
         </div>
 
@@ -232,7 +232,7 @@ export default function SolutionsMatrix() {
                         </a>
                         
                         <p className="mt-4 text-[11px] text-slate-500 font-light">
-                          Plazas limitadas por sesión para asegurar la calidad de la enseñanza.
+                          Grupos reducidos para asegurar la atención personalizada.
                         </p>
                       </div>
                     </div>

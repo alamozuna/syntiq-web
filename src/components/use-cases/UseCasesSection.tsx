@@ -24,7 +24,7 @@ const AUDIENCES = [
     testimonial: "El curso modular nos dio el vocabulario y la metodología común que necesitábamos. Todo el departamento de operaciones ahora entiende cómo documentar un proceso para delegarlo a n8n.",
     author: "Carlos R.",
     role: "Director de Operaciones",
-    result: "Adopción de IA al 100% en el equipo",
+    result: "Adopción efectiva de IA en el equipo",
   },
   {
     id: "trader",

@@ -70,7 +70,7 @@ export default function BlueprintSection() {
                 <div>
                   <h4 className="text-xs sm:text-sm font-semibold text-white">Prompt estructurado</h4>
                   <p className="text-xs text-slate-400 font-light">
-                    Plantilla de instrucciones deterministas para clasificar y extraer datos sin alucinaciones.
+                    Plantilla de instrucciones deterministas para clasificar y extraer datos con respuestas fundamentadas.
                   </p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function BlueprintSection() {
 
               <div className="flex items-center justify-between text-xs text-slate-400 font-mono">
                 <span>Tiempo de lectura: ~15 min</span>
-                <span className="text-emerald-400">100% Práctico</span>
+                <span className="text-emerald-400">Práctico</span>
               </div>
             </div>
           </div>

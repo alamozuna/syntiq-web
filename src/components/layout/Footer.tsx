@@ -97,7 +97,7 @@ export default function Footer() {
               FILOSOFÍA ACADÉMICA
             </span>
             <p className="text-[11px] text-slate-400 leading-relaxed">
-              <strong className="text-slate-200">Mayordomía Radical:</strong> Operamos bajo la premisa de buscar la máxima excelencia para honrar el encargo recibido.
+              <strong className="text-slate-200">Excelencia en la ejecución:</strong> Operamos bajo la premisa de buscar la máxima excelencia para honrar el encargo recibido.
             </p>
             <p className="text-[11px] text-slate-400 leading-relaxed">
               <strong className="text-slate-200">Integridad Innegociable:</strong> La verdad y los resultados aplicables son nuestro activo más valioso.

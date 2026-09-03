@@ -4,7 +4,6 @@ import HeroSection from "@/components/hero/HeroSection";
 import ToolsMarquee from "@/components/social-proof/ToolsMarquee";
 import BuildSkillsSection from "@/components/skills/BuildSkillsSection";
 import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
-import MethodStepper from "@/components/method/MethodStepper";
 import ResultsSection from "@/components/results/ResultsSection";
 import RoiCalculator from "@/components/calculator/RoiCalculator";
 import TeamSummarySection from "@/components/team/TeamSummarySection";
@@ -31,10 +30,7 @@ export default function Home() {
       {/* 05. FORMATOS DE FORMACIÓN (3 Tarjetas Grandes estilo Maven) */}
       <TrainingFormatsSection />
 
-      {/* 06. MÉTODO SYNTIQ (Stepper: Detecta, Diseña, Construye, Despliega) */}
-      <MethodStepper />
-
-      {/* 07. RESULTADOS / TESTIMONIOS (1 Testimonio Principal + 3 Casos Antes/Construyó/Después) */}
+      {/* 06. RESULTADOS / TESTIMONIOS (1 Testimonio Principal + 3 Casos Antes/Construyó/Después) */}
       <ResultsSection />
 
       {/* 08. CALCULADORA ROTI (Copy Sobrio + Interpolación Numérica) */}

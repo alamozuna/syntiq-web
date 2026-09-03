@@ -24,7 +24,7 @@ const SKILLS = [
         <div className="text-blue-600 font-medium">rol: Analista Financiero</div>
         <div className="text-slate-600">salida: JSON estricto sin relleno</div>
         <div className="text-emerald-600 flex items-center gap-1 text-[10px]">
-          <CheckCircle2 className="w-3 h-3" /> 100% Determinista
+          <CheckCircle2 className="w-3 h-3" /> Flujos estructurados
         </div>
       </div>
     ),
@@ -45,7 +45,7 @@ const SKILLS = [
           <span className="text-blue-600 font-medium">&quot;Crea un dashboard de leads...&quot;</span>
         </div>
         <div className="text-slate-500 text-[10px] pt-1 border-t border-slate-200">
-          Componente funcional generado en 2 min
+          Prototipado rápido asistido por IA
         </div>
       </div>
     ),
@@ -66,7 +66,7 @@ const SKILLS = [
           <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">CRM</span>
         </div>
         <div className="text-[10px] text-slate-500 mt-1 text-center">
-          Sincronización continua 24/7
+          Automatización continua sin intervención manual
         </div>
       </div>
     ),

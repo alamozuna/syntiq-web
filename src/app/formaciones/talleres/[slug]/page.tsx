@@ -60,7 +60,7 @@ export default function CoursePage({ params }: Props) {
   if (course.status === "WAITLIST") {
     ctaText = "Unirme a la lista de interés";
   } else if (course.status === "COMING_SOON" || (course.status === "AVAILABLE" && !course.date)) {
-    ctaText = "Quiero participar";
+    ctaText = "Avisarme de la próxima edición";
   }
 
   return (
@@ -240,8 +240,8 @@ export default function CoursePage({ params }: Props) {
                     </p>
                   </div>
                   <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
-                    <h4 className="font-semibold text-slate-900 mb-2">¿Las sesiones quedan grabadas?</h4>
-                    <p className="text-slate-600 text-sm">Sí, todas las sesiones se graban y tendrás acceso de por vida al material, las plantillas y el código generado durante el taller.</p>
+                    <h4 className="font-semibold text-slate-900 mb-2">¿Tendré acceso al material después del taller?</h4>
+                    <p className="text-slate-600 text-sm">Sí, tendrás acceso al proyecto construido durante la sesión y a los recursos principales del taller.</p>
                   </div>
                 </div>
               </div>
