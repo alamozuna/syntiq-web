@@ -40,7 +40,7 @@ export default function MethodStepper() {
   const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
-    <section id="metodo" className="relative py-20 sm:py-28 bg-white border-t border-slate-200/80">
+    <section id="metodo" className="scroll-mt-24 relative py-20 sm:py-28 bg-white border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">

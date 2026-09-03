@@ -27,7 +27,7 @@ const CASES = [
 
 export default function ResultsSection() {
   return (
-    <section id="resultados" className="relative py-20 sm:py-28 bg-slate-50/50 border-t border-slate-200/80">
+    <section id="resultados" className="scroll-mt-24 relative py-20 sm:py-28 bg-slate-50/50 border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">

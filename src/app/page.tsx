@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
 import ToolsMarquee from "@/components/social-proof/ToolsMarquee";
 import BuildSkillsSection from "@/components/skills/BuildSkillsSection";
+import MethodStepper from "@/components/method/MethodStepper";
 import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
 import ResultsSection from "@/components/results/ResultsSection";
 import RoiCalculator from "@/components/calculator/RoiCalculator";
@@ -26,6 +27,9 @@ export default function Home() {
 
       {/* 04. QUÉ APRENDERÁS A CONSTRUIR (4 Cards: Prompting, Vibe Coding, Automatización, Agentes) */}
       <BuildSkillsSection />
+
+      {/* MÉTODO SYNTIQ */}
+      <MethodStepper />
 
       {/* 05. FORMATOS DE FORMACIÓN (3 Tarjetas Grandes estilo Maven) */}
       <TrainingFormatsSection />

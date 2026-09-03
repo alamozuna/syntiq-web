@@ -18,11 +18,11 @@ import {
 const VALUES_DATA = [
   {
     id: "mayordomia",
-    title: "Mayordomía Radical",
+    title: "Excelencia en la ejecución",
     icon: Compass,
     tagline: "Excelencia con propósito superior",
     description:
-      "Operamos bajo la premisa de que el negocio es un encargo de Dios. Buscamos la excelencia técnica y operativa no para vanagloria propia, sino para honrar el propósito y la confianza depositada en nosotros.",
+      "Cuidamos el tiempo y los recursos de nuestros clientes como propios. No entregamos teoría; entregamos sistemas que funcionan desde el primer día.",
     badge: "Brújula Ética",
   },
   {
