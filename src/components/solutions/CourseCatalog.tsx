@@ -6,14 +6,12 @@ import CourseCard from "./CourseCard";
 
 const CATEGORIES = [
   "TODOS",
+  "PROMPTING",
   "PRODUCTIVIDAD",
-  "AUTOMATIZACIÓN",
-  "AGENTES",
   "VIBE CODING",
-  "DATOS & CONOCIMIENTO",
-  "ADVANCED",
-  "ESTRATEGIA",
-  "PROMPTING"
+  "AUTOMATIZACIÓN",
+  "CONOCIMIENTO",
+  "AGENTES",
 ];
 
 export default function CourseCatalog() {

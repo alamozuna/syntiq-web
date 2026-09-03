@@ -149,6 +149,24 @@ export default function InCompanyPage() {
           </div>
         </div>
       </section>
+      {/* Final CTA */}
+      <section className="py-20 lg:py-24 bg-white border-t border-slate-200">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 mb-4">
+            ¿Listo para formar a tu equipo?
+          </h2>
+          <p className="text-slate-600 font-light mb-8 max-w-xl mx-auto">
+            Cuéntanos sobre tu equipo y diseñaremos una propuesta de formación adaptada a vuestros objetivos.
+          </p>
+          <Link
+            href="/contacto?modalidad=in-company"
+            className="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-900/20"
+          >
+            Hablar sobre mi equipo
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </section>
 
       <Footer />
     </main>

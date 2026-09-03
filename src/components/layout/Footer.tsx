@@ -25,10 +25,12 @@ export default function Footer() {
               Aprende a construir agentes autónomos y automatiza tu operativa real.
             </p>
 
-            <div className="flex items-center gap-2 text-[11px] font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1 rounded-full w-fit">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>Próximo Taller: Plazas Disponibles</span>
-            </div>
+            <Link
+              href="/formaciones"
+              className="inline-flex items-center gap-2 text-[11px] font-mono text-blue-400 bg-blue-950/40 border border-blue-500/30 px-3 py-1 rounded-full w-fit hover:bg-blue-950/60 transition-colors"
+            >
+              <span>Explora nuestras formaciones →</span>
+            </Link>
           </div>
 
           {/* Col 3: Formaciones */}
@@ -44,12 +46,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/formaciones/talleres-intensivos" className="hover:text-blue-400 transition-colors">
-                  Talleres Intensivos (2-4h)
+                  Talleres Intensivos
                 </Link>
               </li>
               <li>
                 <Link href="/formaciones/curso-modular" className="hover:text-blue-400 transition-colors">
-                  Programa Modular (4 Semanas)
+                  Programa Modular
                 </Link>
               </li>
               <li>
@@ -60,7 +62,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4: Recursos & Casos */}
+          {/* Col 4: Recursos */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
               ACADEMIA & RECURSOS
@@ -83,13 +85,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contacto" className="hover:text-blue-400 transition-colors">
-                  Reservar Plaza o Asesoría
+                  Contacto & Admisión
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 5: Principios Fundacionales */}
+          {/* Col 5: Filosofía */}
           <div className="space-y-3">
             <span className="brand-label text-slate-200 block text-[10px]">
               FILOSOFÍA ACADÉMICA
