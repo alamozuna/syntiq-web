@@ -193,7 +193,33 @@ export default function FormacionesPage() {
         </div>
       </section>
 
-      <CourseCatalog />
+      {/* Empieza Aquí Section */}
+      <section className="py-20 bg-white border-t border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-3">
+              EMPIEZA AQUÍ
+            </span>
+            <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 font-light mb-4">
+              Próximas experiencias para aprender IA construyendo algo útil.
+            </h2>
+            <p className="text-base text-slate-600 font-light max-w-2xl mx-auto mb-8">
+              Actualmente estamos preparando las próximas fechas de nuestros talleres presenciales y virtuales. Únete a la lista para recibir acceso anticipado cuando abramos inscripciones.
+            </p>
+            <Link
+              href="#catalogo"
+              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm sm:text-base px-8 py-3.5 rounded-full transition-all duration-200 shadow-md"
+            >
+              <span>Quiero enterarme del próximo taller</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <div id="catalogo">
+        <CourseCatalog />
+      </div>
 
       <Footer />
     </main>

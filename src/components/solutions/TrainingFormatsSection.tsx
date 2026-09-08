@@ -8,50 +8,50 @@ import { cn } from "@/lib/utils";
 
 const FORMATS = [
   {
-    id: "taller",
-    badge: "2–4 horas",
-    badgeIcon: Clock,
-    title: "Taller Intensivo",
-    outcome: "Construye una solución funcional en una sola sesión.",
-    target: "Profesionales y equipos que quieren empezar rápido.",
+    id: "presencial",
+    badge: "100% Inmersivo",
+    badgeIcon: Building,
+    title: "Presencial",
+    outcome: "Talleres prácticos y experiencias de aprendizaje cercanas.",
+    target: "Profesionales que valoran el networking y la guía en persona.",
     points: [
-      "1 flujo específico resuelto de principio a fin",
-      "Plantilla ejecutable lista para tu día a día",
-      "Sales de la sesión con el sistema operando",
+      "Interacción directa con los instructores",
+      "Resolución de dudas en tiempo real",
+      "Networking con otros profesionales",
     ],
     ctaText: "Ver talleres",
-    ctaHref: "/formaciones/talleres-intensivos",
-    isFeatured: false,
+    ctaHref: "/formaciones",
+    isFeatured: true,
   },
   {
-    id: "modular",
-    badge: "4 semanas",
-    badgeIcon: Calendar,
-    title: "Programa Modular",
-    outcome: "Pasa de los fundamentos a construir tu propio sistema con IA.",
-    target: "Profesionales que quieren dominar prompting, código y agentes.",
+    id: "virtual",
+    badge: "En vivo",
+    badgeIcon: Clock,
+    title: "Virtual en vivo",
+    outcome: "Participa desde cualquier lugar mientras construyes junto a los formadores.",
+    target: "Personas que buscan flexibilidad sin perder la interactividad.",
     points: [
-      "De tareas simples a fuerza laboral de agentes",
-      "Proyecto personal guiado y validado",
-      "Acceso directo a sesiones de mentoría",
+      "Transmisión en alta calidad",
+      "Soporte y QA en vivo",
+      "Acceso a las grabaciones",
     ],
-    ctaText: "Ver programa",
-    ctaHref: "/formaciones/curso-modular",
-    isFeatured: true,
+    ctaText: "Ver talleres",
+    ctaHref: "/formaciones",
+    isFeatured: false,
   },
   {
     id: "incompany",
     badge: "Para equipos",
-    badgeIcon: Building,
-    title: "Formación In-Company",
-    outcome: "Aplicamos la formación directamente sobre procesos reales de tu empresa.",
-    target: "Equipos corporativos y departamentos que necesitan capacitarse juntos.",
+    badgeIcon: Calendar,
+    title: "In-Company",
+    outcome: "Llevamos la formación al contexto, procesos y herramientas de tu equipo.",
+    target: "Empresas que necesitan capacitar a departamentos enteros de forma alineada.",
     points: [
-      "Adaptado a vuestras herramientas y políticas",
-      "Enfoque en erradicar cuellos de botella reales",
-      "Supervisión y métricas de adopción",
+      "Adaptado a vuestras políticas y herramientas",
+      "Ejercicios basados en sus procesos reales",
+      "Alineación de equipo inmediata",
     ],
-    ctaText: "Formar a mi equipo",
+    ctaText: "Solicitar propuesta",
     ctaHref: "/formaciones/in-company",
     isFeatured: false,
   },
@@ -61,16 +61,15 @@ export default function TrainingFormatsSection() {
   return (
     <section id="formaciones" className="relative py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
-            FORMATOS DE FORMACIÓN
+            MODALIDADES
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
-            Elige cómo <span className="italic font-normal text-blue-600">quieres aprender.</span>
+            Aprende como <span className="italic font-normal text-blue-600">realmente trabajas.</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-light mt-4 max-w-xl mx-auto leading-relaxed">
-            Formaciones enfocadas en construir soluciones reales desde la primera sesión.
+            Formaciones enfocadas en construir soluciones reales desde la primera sesión. Elige el formato que mejor se adapte a ti.
           </p>
         </div>
 
@@ -160,6 +159,16 @@ export default function TrainingFormatsSection() {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Accompaniment Note */}
+        <div className="mt-16 sm:mt-20 max-w-3xl mx-auto text-center p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200/60">
+          <h3 className="font-brand-display text-lg sm:text-xl font-medium text-slate-900 mb-2">
+            El aprendizaje no termina cuando termina el taller.
+          </h3>
+          <p className="text-sm sm:text-base text-slate-600 font-light leading-relaxed">
+            Tendrás acceso a una comunidad exclusiva de ex-alumnos para resolver dudas, compartir nuevos flujos de trabajo y seguir optimizando tus sistemas mes a mes.
+          </p>
         </div>
       </div>
     </section>

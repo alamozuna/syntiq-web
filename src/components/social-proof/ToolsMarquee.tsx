@@ -19,10 +19,16 @@ const TOOLS = [
 export default function ToolsMarquee() {
   return (
     <section className="relative py-10 sm:py-14 border-y border-[#0F172A]/10 bg-[#EFF6FF] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
-        <span className="brand-label text-slate-500 font-semibold tracking-wider text-[10px] sm:text-[11px]">
-          HERRAMIENTAS REALES. CASOS REALES.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+        <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] block mb-3">
+          IA GLOBAL. APLICACIÓN LOCAL.
         </span>
+        <h2 className="font-brand-display text-xl sm:text-2xl text-slate-900 font-light max-w-3xl mx-auto leading-relaxed mb-3">
+          Aprendemos con herramientas de clase mundial y las aplicamos a problemas, profesiones y empresas de nuestra realidad.
+        </h2>
+        <p className="text-[11px] sm:text-xs text-slate-500 font-mono tracking-wide">
+          Diseñado desde República Dominicana
+        </p>
       </div>
 
       {/* Marquee Wrapper with side fade gradients */}

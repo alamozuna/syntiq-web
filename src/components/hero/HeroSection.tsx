@@ -53,7 +53,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.16 }}
               className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed mb-8 sm:mb-10"
             >
-              Talleres prácticos para convertir tareas repetitivas en automatizaciones, aplicaciones y agentes útiles. Sales con algo funcionando.
+              Formación práctica en Inteligencia Artificial para aprender haciendo. Convierte tareas repetitivas en automatizaciones, aplicaciones y sistemas útiles que puedas aplicar de verdad en tu trabajo, negocio o carrera.
             </motion.p>
 
             {/* CTAs */}
@@ -72,11 +72,11 @@ export default function HeroSection() {
               </a>
 
               <a
-                href="#blueprint"
+                href="#formaciones"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white font-medium text-sm sm:text-base px-6 py-3.5 rounded-full border border-white/25 hover:border-white/40 transition-all duration-200"
               >
                 <BookOpen className="w-4 h-4 text-blue-400" />
-                <span>Descargar Blueprint</span>
+                <span>Explorar formaciones</span>
               </a>
             </motion.div>
 
@@ -93,9 +93,9 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
-                    +500
+                    4.7/5
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Profesionales formados</span>
+                  <span className="text-[11px] text-slate-400 font-medium">Valoración media</span>
                 </div>
               </div>
 
@@ -105,9 +105,9 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
-                    98%
+                    12/13
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Satisfacción</span>
+                  <span className="text-[11px] text-slate-400 font-medium">Mayor claridad en IA</span>
                 </div>
               </div>
 
@@ -117,9 +117,9 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
-                    &lt; 20 min
+                    11/13
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Para crear tu primer flujo</span>
+                  <span className="text-[11px] text-slate-400 font-medium">Intención de aplicar hoy</span>
                 </div>
               </div>
             </motion.div>

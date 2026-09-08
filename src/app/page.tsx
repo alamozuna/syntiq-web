@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
 import ToolsMarquee from "@/components/social-proof/ToolsMarquee";
+import AudienceSegmentsSection from "@/components/segments/AudienceSegmentsSection";
 import BuildSkillsSection from "@/components/skills/BuildSkillsSection";
 import MethodStepper from "@/components/method/MethodStepper";
 import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
@@ -9,6 +10,7 @@ import ResultsSection from "@/components/results/ResultsSection";
 import RoiCalculator from "@/components/calculator/RoiCalculator";
 import TeamSummarySection from "@/components/team/TeamSummarySection";
 import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
+import CommunitySection from "@/components/community/CommunitySection";
 import FaqSection from "@/components/faq/FaqSection";
 import FinalCtaSection from "@/components/cta/FinalCtaSection";
 import Footer from "@/components/layout/Footer";
@@ -25,7 +27,10 @@ export default function Home() {
       {/* 03. SOCIAL PROOF (Tools Marquee: Herramientas Reales, Casos Reales) */}
       <ToolsMarquee />
 
-      {/* 04. QUÉ APRENDERÁS A CONSTRUIR (4 Cards: Prompting, Vibe Coding, Automatización, Agentes) */}
+      {/* 04. PARA QUIÉN ES (IA aplicada a tu realidad) */}
+      <AudienceSegmentsSection />
+
+      {/* 05. QUÉ APRENDERÁS A CONSTRUIR (4 Cards: Prompting, Vibe Coding, Automatización, Agentes) */}
       <BuildSkillsSection />
 
       {/* MÉTODO SYNTIQ */}
@@ -45,6 +50,9 @@ export default function Home() {
 
       {/* RECURSO GRATUITO: Blueprint del Agente Autónomo */}
       <BlueprintSection />
+
+      {/* COMUNIDAD: Aprende, Construye, Comparte */}
+      <CommunitySection />
 
       {/* 10. FAQ REDUCIDO (4 Preguntas Prácticas de Formación) */}
       <FaqSection />
