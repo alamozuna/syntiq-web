@@ -9,6 +9,7 @@ const TEAM = [
     name: "Bryan Villar Sánchez",
     role: "Ingeniero de Operaciones e IA",
     image: "/assets/team-bryan.jpg",
+    imageClass: "object-cover object-top",
     credentials: "Ops & AI Engineer · Experto ISO 13485 & FDA",
     bio: "Perfil técnico de alto impacto especializado en maximizar la rentabilidad mediante la ciencia de datos y la optimización algorítmica de procesos (Python/Minitab). Avalado por su experiencia supervisando operaciones bajo estrictas normativas internacionales ISO 13485 y de la FDA, garantiza arquitecturas de IA robustas, escalables y adoptables.",
     tags: ["Control Estadístico", "Ingeniería de Prompts", "ISO 13485 / FDA", "Python"],
@@ -17,6 +18,7 @@ const TEAM = [
     name: "Alam Antonio Ozuna Silva",
     role: "Estrategia de Negocios & Análisis de Datos",
     image: "/assets/team-alam.jpg",
+    imageClass: "object-cover object-[center_20%] scale-110",
     credentials: "MBA Ciencia de Datos & IA (CESTE) · Estratega B2B",
     bio: "Especialista en fusionar el rigor del análisis de datos con la estrategia de negocios internacionales y la gestión del cambio. Actúa como el puente vital entre la alta tecnología y el retorno financiero de la empresa, asegurando que cada agente inteligente responda a retos comerciales concretos y altamente rentables.",
     tags: ["Estrategia Comercial", "Retorno de Inversión", "Análisis Financiero", "Transformación Digital"],
@@ -25,6 +27,7 @@ const TEAM = [
     name: "Laura Nicole Espino Andújar",
     role: "Legal, Cumplimiento & Propiedad Intelectual",
     image: "/assets/team-laura.jpg",
+    imageClass: "object-cover object-top",
     credentials: "Máster Ciencia de Datos & IA · Formadora OMA",
     bio: "Pilar jurídico y de gobernanza estratégica. Especialista en propiedad intelectual y litigios tecnológicos, ha actuado como instructora experta ante la Organización Mundial de Aduanas (OMA). Su formación en Ciencia de Datos e IA le permite auditar el código desde su origen, blindando la innovación contra riesgos regulatorios y ciberseguridad.",
     tags: ["Gobernanza de IA", "Propiedad Intelectual", "Ciberseguridad", "Cumplimiento OMA"],
@@ -33,6 +36,7 @@ const TEAM = [
     name: "Karyleydi Ortiz Segura",
     role: "Comercio Internacional & Experiencia de Cliente",
     image: "/assets/team-karyleydi.jpg",
+    imageClass: "object-cover object-top",
     credentials: "MBA Ciencia de Datos & IA (CESTE) · Operaciones",
     bio: "Especialista en comercio internacional y optimización operativa con experiencia en multinacionales de primer nivel gestionando cuentas corporativas e incidencias críticas. En SyntIQ lidera la adopción exitosa y la excelencia en la experiencia del cliente, garantizando resultados tangibles en cada implementación.",
     tags: ["Gestión Operativa", "Experiencia de Cliente", "Comercio Global", "Adopción de IA"],
@@ -79,7 +83,7 @@ export default function TeamSection() {
                       alt={`${member.name} — ${member.role} de SyntIQ`}
                       fill
                       sizes="(max-width: 640px) 80px, 96px"
-                      className="object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-500"
+                      className={`${member.imageClass} filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-500`}
                     />
                   </div>
 

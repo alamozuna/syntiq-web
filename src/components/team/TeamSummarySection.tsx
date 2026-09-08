@@ -12,6 +12,7 @@ const TEAM_MEMBERS = [
     expertise: "Optimización de flujos y arquitecturas de automatización con IA.",
     image: "/assets/team-bryan.jpg",
     tags: ["Operaciones", "Python", "n8n"],
+    imageClass: "object-cover object-top",
   },
   {
     name: "Alam Antonio Ozuna Silva",
@@ -19,6 +20,7 @@ const TEAM_MEMBERS = [
     expertise: "Convierte tecnología en resultados de negocio medibles.",
     image: "/assets/team-alam.jpg",
     tags: ["Estrategia", "Data", "Negocio"],
+    imageClass: "object-cover object-[center_20%] scale-110",
   },
   {
     name: "Laura Nicole Espino Andújar",
@@ -26,6 +28,7 @@ const TEAM_MEMBERS = [
     expertise: "Auditoría de flujos, propiedad intelectual y seguridad.",
     image: "/assets/team-laura.jpg",
     tags: ["Gobernanza", "Legal", "Seguridad"],
+    imageClass: "object-cover object-top",
   },
   {
     name: "Karyleydi Ortiz Segura",
@@ -33,6 +36,7 @@ const TEAM_MEMBERS = [
     expertise: "Acompañamiento en la adopción y soporte operativo continuo.",
     image: "/assets/team-karyleydi.jpg",
     tags: ["Adopción", "Operaciones", "Soporte"],
+    imageClass: "object-cover object-top",
   },
 ];
 
@@ -66,7 +70,7 @@ export default function TeamSummarySection() {
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    className="object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-300"
+                    className={`${member.imageClass} filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-300`}
                   />
                 </div>
                 <div className="w-full h-0.5 bg-blue-500 mb-3" />
