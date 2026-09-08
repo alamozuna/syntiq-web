@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 const FORMATS = [
   {
     id: "presencial",
-    badge: "100% Inmersivo",
+    badge: "Intensivo",
     badgeIcon: Building,
     title: "Presencial",
     outcome: "Talleres prácticos y experiencias de aprendizaje cercanas.",
@@ -33,7 +33,6 @@ const FORMATS = [
     points: [
       "Transmisión en alta calidad",
       "Soporte y QA en vivo",
-      "Acceso a las grabaciones",
     ],
     ctaText: "Ver talleres",
     ctaHref: "/formaciones",
@@ -96,7 +95,7 @@ export default function TrainingFormatsSection() {
                 {format.isFeatured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                     <span className="px-3.5 py-1 rounded-full bg-blue-600 text-white text-[10px] font-mono font-semibold tracking-wider uppercase shadow-xs">
-                      Más elegido
+                      Presencial
                     </span>
                   </div>
                 )}
@@ -167,7 +166,7 @@ export default function TrainingFormatsSection() {
             El aprendizaje no termina cuando termina el taller.
           </h3>
           <p className="text-sm sm:text-base text-slate-600 font-light leading-relaxed">
-            Tendrás acceso a una comunidad exclusiva de ex-alumnos para resolver dudas, compartir nuevos flujos de trabajo y seguir optimizando tus sistemas mes a mes.
+            Después de cada formación seguimos en contacto con los participantes para resolver dudas, recoger feedback y compartir próximas oportunidades de aprendizaje.
           </p>
         </div>
       </div>

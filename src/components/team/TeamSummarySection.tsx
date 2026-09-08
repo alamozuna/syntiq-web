@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 const TEAM_MEMBERS = [
   {
     name: "Bryan Villar Sánchez",
-    role: "Operaciones & IA",
+    role: "Operaciones, Automatización & Formación",
     expertise: "Optimización de flujos y arquitecturas de automatización con IA.",
     image: "/assets/team-bryan.jpg",
     tags: ["Operaciones", "Python", "n8n"],
@@ -16,7 +16,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: "Alam Antonio Ozuna Silva",
-    role: "Estrategia & Data",
+    role: "Estrategia, Data & Formación",
     expertise: "Convierte tecnología en resultados de negocio medibles.",
     image: "/assets/team-alam.jpg",
     tags: ["Estrategia", "Data", "Negocio"],
@@ -24,7 +24,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: "Laura Nicole Espino Andújar",
-    role: "Gobernanza & Legal",
+    role: "Legal & Gobernanza",
     expertise: "Auditoría de flujos, propiedad intelectual y seguridad.",
     image: "/assets/team-laura.jpg",
     tags: ["Gobernanza", "Legal", "Seguridad"],
@@ -32,7 +32,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: "Karyleydi Ortiz Segura",
-    role: "Experiencia & Adopción",
+    role: "Marketing & Comunicación",
     expertise: "Acompañamiento en la adopción y soporte operativo continuo.",
     image: "/assets/team-karyleydi.jpg",
     tags: ["Adopción", "Operaciones", "Soporte"],

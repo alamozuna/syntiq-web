@@ -107,7 +107,7 @@ export default function HeroSection() {
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
                     12/13
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Mayor claridad en IA</span>
+                  <span className="text-[11px] text-slate-400 font-medium">Calificaron la explicación como excelente</span>
                 </div>
               </div>
 

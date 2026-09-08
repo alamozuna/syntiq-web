@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const TEAM = [
   {
     name: "Bryan Villar Sánchez",
-    role: "Ingeniero de Operaciones e IA",
+    role: "Operaciones, Automatización & Formación",
     image: "/assets/team-bryan.jpg",
     imageClass: "object-cover object-top",
     credentials: "Ops & AI Engineer · Experto ISO 13485 & FDA",
@@ -16,7 +16,7 @@ const TEAM = [
   },
   {
     name: "Alam Antonio Ozuna Silva",
-    role: "Estrategia de Negocios & Análisis de Datos",
+    role: "Estrategia, Data & Formación",
     image: "/assets/team-alam.jpg",
     imageClass: "object-cover object-[center_20%] scale-110",
     credentials: "MBA Ciencia de Datos & IA (CESTE) · Estratega B2B",
@@ -25,7 +25,7 @@ const TEAM = [
   },
   {
     name: "Laura Nicole Espino Andújar",
-    role: "Legal, Cumplimiento & Propiedad Intelectual",
+    role: "Legal & Gobernanza",
     image: "/assets/team-laura.jpg",
     imageClass: "object-cover object-top",
     credentials: "Máster Ciencia de Datos & IA · Formadora OMA",
@@ -34,7 +34,7 @@ const TEAM = [
   },
   {
     name: "Karyleydi Ortiz Segura",
-    role: "Comercio Internacional & Experiencia de Cliente",
+    role: "Marketing & Comunicación",
     image: "/assets/team-karyleydi.jpg",
     imageClass: "object-cover object-top",
     credentials: "MBA Ciencia de Datos & IA (CESTE) · Operaciones",

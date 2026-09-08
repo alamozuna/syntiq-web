@@ -99,17 +99,6 @@ export default function MethodStepper() {
                     <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-1">
                       PASO {step.number}
                     </span>
-                    <h3
-                      className={cn(
-                        "text-sm font-bold tracking-wide transition-colors font-mono mb-1.5",
-                        isActive ? "text-slate-900" : "text-slate-600"
-                      )}
-                    >
-                      {step.label}
-                    </h3>
-                    <p className="text-xs text-slate-500 font-light leading-snug max-w-[180px]">
-                      &ldquo;{step.tagline}&rdquo;
-                    </p>
                   </button>
                 );
               })}
