@@ -18,39 +18,39 @@ import {
 const VALUES_DATA = [
   {
     id: "mayordomia",
-    title: "Excelencia en la ejecución",
+    title: "Mayordomía Radical",
     icon: Compass,
     tagline: "Excelencia con propósito superior",
     description:
-      "Cuidamos el tiempo y los recursos de nuestros clientes como propios. No entregamos teoría; entregamos sistemas que funcionan desde el primer día.",
-    badge: "Brújula Ética",
+      "Operamos bajo la premisa de que el negocio es de Dios. Buscamos la excelencia no para nosotros, sino para honrar el encargo recibido.",
+    badge: "01",
   },
   {
     id: "integridad",
-    title: "Integridad Innegociable",
+    title: "Integridad",
     icon: ShieldCheck,
     tagline: "La verdad es nuestro activo más caro",
     description:
-      "Preferimos perder un cliente antes que inflar métricas o prometer IA que no ha sido auditada y validada en producción. Cero humo, cero falsas expectativas.",
-    badge: "Transparencia Total",
+      "Preferimos perder un cliente que inflar resultados o prometer IA que no hemos validado. La verdad es nuestro activo más caro.",
+    badge: "02",
   },
   {
-    id: "aprendizaje",
-    title: "Aprendizaje Validado",
+    id: "mejora",
+    title: "Mejora continua",
     icon: Database,
     tagline: "Los datos mandan, no las opiniones",
     description:
-      "No nos interesa tener la razón de forma dogmática; nos importa lo que demuestran los datos y los resultados de negocio. 'Construir-Medir-Aprender' es nuestra disciplina inamovible.",
-    badge: "Data-Driven",
+      "No nos importa tener la razón; nos importa lo que dicen los datos. 'Construir-Medir-Aprender' es nuestra religión operativa.",
+    badge: "03",
   },
   {
     id: "empatia",
-    title: "Empatía con el Operador",
+    title: "Empatía",
     icon: HeartHandshake,
     tagline: "IA para liberar potencial humano",
     description:
-      "No diseñamos agentes de IA para desplazar a las personas, sino para erradicar las tareas mecánicas repetitivas y liberar al profesional de la mediocridad administrativa.",
-    badge: "Human-Centric",
+      "No diseñamos IA para reemplazar humanos, sino para liberar a la secretaria/médico/abogado de la mediocridad administrativa.",
+    badge: "04",
   },
 ];
 
@@ -161,8 +161,8 @@ export default function MissionVisionValues() {
                   </div>
                 </div>
 
-                <p className="text-lg text-slate-700 font-light leading-relaxed mb-6">
-                  <span className="font-medium text-[#0F172A]">Capacitar y transformar</span> a profesionales y equipos empresariales mediante formación práctica, aplicable y de alto impacto en Inteligencia Artificial, cerrando la brecha entre el potencial de la IA y su adopción real.
+                <p className="text-base sm:text-lg text-slate-700 font-light leading-relaxed mb-6">
+                  <span className="font-medium text-[#0F172A]">Impulsar a personas, profesionales y empresas hispanas</span> a dominar la Inteligencia Artificial mediante formación práctica, cercana y adaptada a nuestra realidad, convirtiendo horas de trabajo repetitivo en productividad, oportunidades y rentabilidad real.
                 </p>
 
                 <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
@@ -184,8 +184,8 @@ export default function MissionVisionValues() {
                   </div>
                 </div>
 
-                <p className="text-lg text-slate-700 font-light leading-relaxed mb-6">
-                  Ser la <span className="font-medium text-[#0F172A]">academia y centro de formación referente</span> que democratiza y capacita en la adopción real de la IA en el mundo hispanohablante, formando a los líderes que diseñarán el futuro del trabajo.
+                <p className="text-base sm:text-lg text-slate-700 font-light leading-relaxed mb-6">
+                  <span className="font-medium text-[#0F172A]">Ser el referente de adopción de Inteligencia Artificial en América Latina:</span> la escuela donde cada profesional aprende a usar IA con criterio, y el socio con el que cada empresa evoluciona de la formación a sistemas inteligentes que ejecutan, optimizan y escalan su operación.
                 </p>
 
                 <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-mono">
