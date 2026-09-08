@@ -59,7 +59,7 @@ const FORMATS = [
 
 export default function TrainingFormatsSection() {
   return (
-    <section id="formaciones" className="relative py-20 sm:py-28 bg-slate-50/60 border-t border-slate-200/80">
+    <section id="formaciones" className="relative py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
@@ -89,7 +89,7 @@ export default function TrainingFormatsSection() {
                 className={cn(
                   "relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-200 bg-white",
                   format.isFeatured
-                    ? "border-2 border-blue-500 shadow-md ring-4 ring-blue-50/70"
+                    ? "border-[1.5px] border-blue-500 shadow-[0_8px_24px_rgba(59,130,246,0.12)]"
                     : "border border-slate-200/90 shadow-xs hover:border-slate-300 hover:shadow-sm"
                 )}
               >

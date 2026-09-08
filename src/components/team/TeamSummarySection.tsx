@@ -38,7 +38,7 @@ const TEAM_MEMBERS = [
 
 export default function TeamSummarySection() {
   return (
-    <section id="equipo" className="relative py-20 sm:py-28 bg-white border-t border-slate-200/80">
+    <section id="equipo" className="relative py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
@@ -60,7 +60,7 @@ export default function TeamSummarySection() {
             >
               <div>
                 {/* Photo */}
-                <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-4 bg-slate-100 border border-slate-200/80">
+                <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-1 bg-slate-100 border border-slate-200/80">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -69,6 +69,7 @@ export default function TeamSummarySection() {
                     className="object-cover object-top filter grayscale contrast-105 group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
+                <div className="w-full h-0.5 bg-blue-500 mb-3" />
 
                 {/* Name & Role */}
                 <h3 className="font-brand-display text-xl text-slate-900 font-medium">

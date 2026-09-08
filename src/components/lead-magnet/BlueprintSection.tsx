@@ -35,7 +35,7 @@ export default function BlueprintSection() {
   };
 
   return (
-    <section id="blueprint" className="relative py-20 sm:py-28 bg-slate-900 text-white overflow-hidden">
+    <section id="blueprint" className="relative py-20 sm:py-28 bg-[#0F172A] text-white overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue-500 rounded-full blur-[140px]" />

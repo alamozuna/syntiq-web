@@ -75,7 +75,7 @@ export default function FaqSection({
   };
 
   return (
-    <section className={cn("relative py-20 sm:py-28 bg-white border-t border-slate-200/80", className)}>
+    <section className={cn("relative py-20 sm:py-28 bg-[#EFF6FF]", className)}>
       <JsonLd data={faqSchemaData} />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

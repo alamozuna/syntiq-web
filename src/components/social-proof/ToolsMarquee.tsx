@@ -18,7 +18,7 @@ const TOOLS = [
 
 export default function ToolsMarquee() {
   return (
-    <section className="relative py-10 sm:py-14 border-y border-slate-200/80 bg-slate-50/60 overflow-hidden">
+    <section className="relative py-10 sm:py-14 border-y border-[#0F172A]/10 bg-[#EFF6FF] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
         <span className="brand-label text-slate-500 font-semibold tracking-wider text-[10px] sm:text-[11px]">
           HERRAMIENTAS REALES. CASOS REALES.

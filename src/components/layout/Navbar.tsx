@@ -45,13 +45,18 @@ export default function Navbar() {
           className="group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg"
           aria-label="SyntIQ - Inicio"
         >
-          <BrandLogo size="md" variant="dark" />
+          <BrandLogo size="md" variant={isScrolled ? "dark" : "light"} />
         </Link>
 
         {/* Desktop Navigation - 4 Clean Links */}
         <nav
           aria-label="Navegación principal"
-          className="hidden md:flex items-center gap-1 bg-slate-50/80 border border-slate-200/80 rounded-full px-4 py-1.5 backdrop-blur-sm"
+          className={cn(
+            "hidden md:flex items-center gap-1 rounded-full px-4 py-1.5 backdrop-blur-sm",
+            isScrolled
+              ? "bg-slate-50/80 border border-slate-200/80"
+              : "bg-white/10 border border-white/15"
+          )}
         >
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -61,8 +66,16 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  "text-xs font-medium text-slate-600 hover:text-blue-600 px-3.5 py-1.5 rounded-full transition-colors duration-150 hover:bg-white/70",
-                  isActive && "text-blue-600 font-semibold bg-white shadow-xs"
+                  "text-xs font-medium px-3.5 py-1.5 rounded-full transition-colors duration-150",
+                  isScrolled
+                    ? cn(
+                        "text-slate-600 hover:text-blue-600 hover:bg-white/70",
+                        isActive && "text-blue-600 font-semibold bg-white shadow-xs"
+                      )
+                    : cn(
+                        "text-slate-300 hover:text-blue-400 hover:bg-white/10",
+                        isActive && "text-blue-400 font-semibold bg-white/15"
+                      )
                 )}
               >
                 {link.name}
@@ -86,7 +99,12 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-900 shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 flex items-center justify-center"
+          className={cn(
+            "md:hidden min-h-[44px] min-w-[44px] p-2.5 rounded-xl shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 flex items-center justify-center",
+            isScrolled
+              ? "bg-white border border-slate-200 text-slate-700 hover:text-slate-900"
+              : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
+          )}
           aria-expanded={mobileMenuOpen}
           aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
         >
@@ -124,3 +142,4 @@ export default function Navbar() {
     </header>
   );
 }
+

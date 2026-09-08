@@ -75,7 +75,7 @@ export default function RoiCalculator() {
   };
 
   return (
-    <section id="calculadora" className="relative py-20 sm:py-28 bg-white border-t border-slate-200/80">
+    <section id="calculadora" className="relative py-20 sm:py-28 bg-[#EFF6FF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
@@ -94,7 +94,7 @@ export default function RoiCalculator() {
               </p>
             </div>
 
-            <div className="space-y-6 bg-slate-50/80 p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xs">
+            <div className="space-y-6 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xs">
               {/* Input 1: Team Size */}
               <div>
                 <div className="flex justify-between items-center mb-2.5">

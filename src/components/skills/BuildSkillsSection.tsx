@@ -125,7 +125,7 @@ export default function BuildSkillsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="rounded-3xl bg-white border border-slate-200/90 p-6 flex flex-col justify-between hover:border-blue-300 hover:shadow-[0_12px_24px_-8px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-all duration-200 group"
+              className="rounded-3xl bg-[#EFF6FF]/40 border border-slate-200/80 border-t-[3px] border-t-blue-500 p-6 flex flex-col justify-between hover:border-blue-300 hover:shadow-[0_12px_24px_-8px_rgba(15,23,42,0.06)] hover:-translate-y-1 transition-all duration-200 group"
               >
                 <div>
                   {/* Top: Number & Badge */}

@@ -27,39 +27,39 @@ const CASES = [
 
 export default function ResultsSection() {
   return (
-    <section id="resultados" className="scroll-mt-24 relative py-20 sm:py-28 bg-slate-50/50 border-t border-slate-200/80">
+    <section id="resultados" className="scroll-mt-24 relative py-20 sm:py-28 bg-[#0F172A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-400 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
             RESULTADOS
           </span>
-          <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
+          <h2 className="font-brand-display text-3xl sm:text-5xl text-white font-light mt-3 leading-tight">
             Menos teoría. <br />
-            <span className="italic font-normal text-blue-600">Más cosas funcionando.</span>
+            <span className="italic font-normal text-blue-400">Más cosas funcionando.</span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-light mt-4 max-w-xl mx-auto leading-relaxed">
+          <p className="text-slate-300 text-sm sm:text-base font-light mt-4 max-w-xl mx-auto leading-relaxed">
             Casos concretos de flujos construidos por profesionales en nuestras formaciones.
           </p>
         </div>
 
         {/* 1 Principal Testimonial Card */}
         <div className="max-w-4xl mx-auto mb-14">
-          <div className="relative rounded-3xl bg-white border border-slate-200/90 p-8 sm:p-10 shadow-xs">
-            <Quote className="w-10 h-10 text-blue-100 mb-4" />
+          <div className="relative rounded-3xl bg-slate-800/60 border border-slate-700/80 p-8 sm:p-10">
+            <Quote className="w-10 h-10 text-blue-500/30 mb-4" />
 
-            <p className="text-base sm:text-xl text-slate-800 font-light leading-relaxed mb-6 italic">
+            <p className="text-base sm:text-xl text-slate-200 font-light leading-relaxed mb-6 italic">
               &ldquo;Pasaba 15 horas a la semana leyendo correos de clientes y presupuestando. En el taller de 4 horas construí un agente que clasifica leads y redacta respuestas base. Ahora me dedico a cerrar ventas.&rdquo;
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-100">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-slate-700/60">
               <div>
-                <span className="font-semibold text-slate-900 text-sm block">María G.</span>
-                <span className="text-xs text-slate-500 font-light">Consultora de Marketing y Operaciones</span>
+                <span className="font-semibold text-white text-sm block">María G.</span>
+                <span className="text-xs text-slate-400 font-light">Consultora de Marketing y Operaciones</span>
               </div>
 
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-mono font-medium">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/40 border border-emerald-700/60 text-emerald-300 text-xs font-mono font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
                 <span>15 h/semana recuperadas</span>
               </div>
             </div>
@@ -75,39 +75,39 @@ export default function ResultsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="rounded-3xl bg-white border border-slate-200/90 p-6 flex flex-col justify-between shadow-xs hover:border-slate-300 transition-all duration-200"
+              className="rounded-3xl bg-slate-800/50 border border-slate-700/60 p-6 flex flex-col justify-between hover:border-slate-600 transition-all duration-200"
             >
               <div>
-                <span className="text-[10px] font-mono text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider block w-fit mb-4">
+                <span className="text-[10px] font-mono text-blue-400 bg-blue-900/40 px-2.5 py-1 rounded-full uppercase tracking-wider block w-fit mb-4">
                   {item.category}
                 </span>
 
                 {/* Antes */}
                 <div className="mb-4">
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                  <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mb-1">
                     Antes:
                   </span>
-                  <p className="text-xs text-slate-600 font-light">
+                  <p className="text-xs text-slate-300 font-light">
                     {item.before}
                   </p>
                 </div>
 
                 {/* Construyó */}
-                <div className="mb-4 p-3 rounded-xl bg-slate-50 border border-slate-200/70">
-                  <span className="text-[10px] font-mono text-blue-600 font-medium uppercase tracking-wider block mb-1">
+                <div className="mb-4 p-3 rounded-xl bg-slate-900/60 border border-slate-700/50">
+                  <span className="text-[10px] font-mono text-blue-400 font-medium uppercase tracking-wider block mb-1">
                     Construyó:
                   </span>
-                  <p className="text-xs font-medium text-slate-800">
+                  <p className="text-xs font-medium text-white">
                     {item.built}
                   </p>
                 </div>
 
                 {/* Después */}
                 <div>
-                  <span className="text-[10px] font-mono text-emerald-600 font-medium uppercase tracking-wider block mb-1">
+                  <span className="text-[10px] font-mono text-emerald-400 font-medium uppercase tracking-wider block mb-1">
                     Después:
                   </span>
-                  <p className="text-xs text-slate-700 font-light">
+                  <p className="text-xs text-slate-300 font-light">
                     {item.after}
                   </p>
                 </div>
@@ -119,3 +119,4 @@ export default function ResultsSection() {
     </section>
   );
 }
+
