@@ -41,6 +41,9 @@ export default function HeroSection() {
               className="max-w-3xl mx-auto lg:mx-0 mb-6"
             >
               <h1 className="font-brand-display text-4xl sm:text-6xl md:text-7xl lg:text-[4.25rem] font-light text-white tracking-tight leading-[1.08]">
+                <span className="block text-sm sm:text-base md:text-lg text-slate-300 font-sans tracking-wide mb-3 font-normal opacity-80">
+                  SyntIQ Group: Formación práctica en Inteligencia Artificial
+                </span>
                 Aprende IA construyendo <br className="hidden sm:inline" />
                 <span className="italic font-normal text-blue-500">sistemas que trabajan por ti.</span>
               </h1>

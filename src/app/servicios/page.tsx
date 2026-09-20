@@ -17,14 +17,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Soluciones & Arquitectura de IA para Empresas",
+  title: "Servicios de Inteligencia Artificial | SyntIQ Group",
   description:
     "Descubre los modelos de implementación de SyntIQ: Motor Productizado para PyMEs, Motor Consultivo Enterprise y Capa de Gobernanza Legal e ISO 13485 / FDA.",
   alternates: {
     canonical: "/servicios",
   },
   openGraph: {
-    title: "Soluciones & Arquitectura de IA para Empresas | SyntIQ",
+    title: "Servicios de Inteligencia Artificial | SyntIQ Group",
     description:
       "Modelos de implementación rápida y consultoría técnica de alta ingeniería para erradicar cuellos de botella operativos.",
     url: "https://www.syntiqgroup.com/servicios",
@@ -91,12 +91,12 @@ const serviceHubSchema = {
   serviceType: "Enterprise Artificial Intelligence & Automation",
   provider: {
     "@type": "Organization",
-    name: "SyntIQ Enterprise AI",
+    name: "SyntIQ Group",
     url: "https://www.syntiqgroup.com",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Catálogo de Soluciones SyntIQ",
+    name: "Catálogo de Soluciones SyntIQ Group",
     itemListElement: SERVICES.map((s) => ({
       "@type": "Offer",
       itemOffered: {

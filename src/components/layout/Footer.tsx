@@ -108,10 +108,19 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-mono">
           <div>
-            © {new Date().getFullYear()} SyntIQ Academy. Todos los derechos reservados.
+            © {new Date().getFullYear()} SyntIQ Group. Todos los derechos reservados.
           </div>
 
           <div className="flex items-center gap-6">
+            <a 
+              href="https://www.instagram.com/synt.iqgroup/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition-colors"
+              aria-label="Instagram de SyntIQ Group"
+            >
+              Instagram
+            </a>
             <Link href="/privacidad" className="hover:text-slate-200 transition-colors">
               Privacidad & RGPD
             </Link>

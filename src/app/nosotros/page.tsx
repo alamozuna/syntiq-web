@@ -10,14 +10,14 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Sparkles, ArrowRight, ShieldCheck, Award, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sobre Nosotros & Equipo Directivo",
+  title: "Sobre SyntIQ Group | Inteligencia Artificial y Formación",
   description:
     "Conoce la historia, misión, valores y al equipo directivo de SyntIQ Enterprise AI: ingeniería de operaciones, rigor legal, estrategia comercial y comercio internacional.",
   alternates: {
     canonical: "/nosotros",
   },
   openGraph: {
-    title: "Sobre Nosotros & Equipo Directivo | SyntIQ",
+    title: "Sobre SyntIQ Group | Inteligencia Artificial y Formación",
     description:
       "Conoce la visión y al equipo detrás de la infraestructura tecnológica de agentes autónomos y gobernanza de IA en SyntIQ.",
     url: "https://www.syntiqgroup.com/nosotros",
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "Sobre SyntIQ Enterprise AI",
+  name: "Sobre SyntIQ Group",
   description:
     "Empresa de infraestructura tecnológica, ciencia de datos y agentes autónomos de Inteligencia Artificial.",
   mainEntity: {
     "@type": "Organization",
-    name: "SyntIQ Enterprise AI",
+    name: "SyntIQ Group",
     slogan: "Conecta · Ordena · Impulsa",
     founder: [
       {

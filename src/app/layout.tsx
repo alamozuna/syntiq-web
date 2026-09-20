@@ -28,8 +28,8 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.syntiqgroup.com"),
   title: {
-    default: "SyntIQ | Formación práctica en Inteligencia Artificial",
-    template: "%s | SyntIQ",
+    default: "SyntIQ Group | Formación en Inteligencia Artificial",
+    template: "%s | SyntIQ Group",
   },
   description:
     "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales, equipos y empresas. Aprende · Construye · Automatiza.",
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_ES",
     url: "https://www.syntiqgroup.com",
-    siteName: "SyntIQ",
-    title: "SyntIQ | Formación práctica en Inteligencia Artificial",
+    siteName: "SyntIQ Group",
+    title: "SyntIQ Group | Formación en Inteligencia Artificial",
     description:
       "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales, equipos y empresas.",
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SyntIQ | Formación práctica en Inteligencia Artificial",
+    title: "SyntIQ Group | Formación en Inteligencia Artificial",
     description:
       "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales y empresas.",
     images: ["/assets/logo-syntiq.png"],
@@ -103,7 +103,8 @@ const organizationSchema = {
     {
       "@type": "Organization",
       "@id": "https://www.syntiqgroup.com/#organization",
-      name: "SyntIQ Academy",
+      name: "SyntIQ Group",
+      alternateName: "SyntIQ",
       url: "https://www.syntiqgroup.com",
       logo: "https://www.syntiqgroup.com/assets/logo-syntiq.png",
       description:
@@ -131,13 +132,14 @@ const organizationSchema = {
           jobTitle: "Coordinadora de Experiencia del Alumno & Operaciones",
         },
       ],
-      sameAs: [],
+      sameAs: ["https://www.instagram.com/synt.iqgroup/"],
     },
     {
       "@type": "WebSite",
       "@id": "https://www.syntiqgroup.com/#website",
       url: "https://www.syntiqgroup.com",
-      name: "SyntIQ",
+      name: "SyntIQ Group",
+      alternateName: "SyntIQ",
       publisher: {
         "@id": "https://www.syntiqgroup.com/#organization",
       },

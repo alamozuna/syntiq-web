@@ -7,11 +7,11 @@ import Footer from "@/components/layout/Footer";
 import CourseCatalog from "@/components/solutions/CourseCatalog";
 
 export const metadata: Metadata = {
-  title: "Formaciones | SyntIQ — Talleres prácticos de IA",
+  title: "Formaciones en Inteligencia Artificial | SyntIQ Group",
   description:
     "Elige tu formato: talleres intensivos de 2-4 horas, programa modular o formación in-company para equipos. Aprende IA construyendo soluciones reales.",
   openGraph: {
-    title: "Formaciones | SyntIQ — Talleres prácticos de IA",
+    title: "Formaciones en Inteligencia Artificial | SyntIQ Group",
     description:
       "Elige tu formato: talleres intensivos, programa modular o formación in-company. Aprende IA construyendo.",
   },

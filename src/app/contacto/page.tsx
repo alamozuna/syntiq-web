@@ -8,14 +8,14 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contacto & Admisión | SyntIQ",
+  title: "Contacto | SyntIQ Group",
   description:
     "Cuéntanos qué quieres aprender o qué necesita tu equipo. Te orientamos hacia la formación de IA adecuada para ti.",
   alternates: {
     canonical: "/contacto",
   },
   openGraph: {
-    title: "Contacto & Admisión | SyntIQ",
+    title: "Contacto | SyntIQ Group",
     description:
       "Cuéntanos qué quieres aprender o qué necesita tu equipo y te orientaremos hacia la formación adecuada.",
     url: "https://www.syntiqgroup.com/contacto",
@@ -25,12 +25,12 @@ export const metadata: Metadata = {
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contacto y Admisión SyntIQ",
+  name: "Contacto y Admisión SyntIQ Group",
   description:
     "Página de contacto y solicitud de admisión para formaciones de Inteligencia Artificial de SyntIQ Academy.",
   mainEntity: {
     "@type": "Organization",
-    name: "SyntIQ Academy",
+    name: "SyntIQ Group",
     url: "https://www.syntiqgroup.com",
     contactPoint: {
       "@type": "ContactPoint",
