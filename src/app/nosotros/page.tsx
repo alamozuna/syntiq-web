@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "Sobre Nosotros & Equipo Directivo | SyntIQ",
     description:
       "Conoce la visión y al equipo detrás de la infraestructura tecnológica de agentes autónomos y gobernanza de IA en SyntIQ.",
-    url: "https://syntiq.ai/nosotros",
+    url: "https://www.syntiqgroup.com/nosotros",
   },
 };
 

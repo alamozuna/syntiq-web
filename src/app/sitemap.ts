@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://syntiq.ai";
+  const baseUrl = "https://www.syntiqgroup.com";
   const lastModified = new Date();
 
   return [

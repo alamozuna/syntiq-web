@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Auditoría & Consultoría de IA Enterprise | SyntIQ",
     description:
       "Modernización profunda de la cadena de valor operativa mediante pipelines de datos seguros y agentes autónomos conectados a ERP.",
-    url: "https://syntiq.ai/servicios/motor-consultivo",
+    url: "https://www.syntiqgroup.com/servicios/motor-consultivo",
   },
 };
 
@@ -35,11 +35,11 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "SyntIQ Enterprise AI",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
   },
   description:
     "Consultoría técnica, auditoría en planta, control estadístico algorítmico y despliegue de agentes conectados a ERPs corporativos para grandes organizaciones.",
-  termsOfService: "https://syntiq.ai/terminos",
+  termsOfService: "https://www.syntiqgroup.com/terminos",
 };
 
 export default function MotorConsultivoPage() {

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Gobernanza & Blindaje Legal de IA | SyntIQ",
     description:
       "Garantizamos que la IA opere de forma ética, segura, sin alucinaciones y con estricta conformidad regulatoria.",
-    url: "https://syntiq.ai/servicios/gobernanza-compliance",
+    url: "https://www.syntiqgroup.com/servicios/gobernanza-compliance",
   },
 };
 
@@ -38,11 +38,11 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "SyntIQ Enterprise AI",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
   },
   description:
     "Auditoría continua de logs, anonimización PII, protección de propiedad intelectual y cumplimiento regulatorio internacional para sistemas de Inteligencia Artificial.",
-  termsOfService: "https://syntiq.ai/terminos",
+  termsOfService: "https://www.syntiqgroup.com/terminos",
 };
 
 export default function GobernanzaCompliancePage() {

@@ -26,7 +26,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://syntiq.ai"),
+  metadataBase: new URL("https://www.syntiqgroup.com"),
   title: {
     default: "SyntIQ | Formación práctica en Inteligencia Artificial",
     template: "%s | SyntIQ",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
     siteName: "SyntIQ",
     title: "SyntIQ | Formación práctica en Inteligencia Artificial",
     description:
@@ -102,10 +102,10 @@ const organizationSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://syntiq.ai/#organization",
+      "@id": "https://www.syntiqgroup.com/#organization",
       name: "SyntIQ Academy",
-      url: "https://syntiq.ai",
-      logo: "https://syntiq.ai/assets/logo-syntiq.png",
+      url: "https://www.syntiqgroup.com",
+      logo: "https://www.syntiqgroup.com/assets/logo-syntiq.png",
       description:
         "Formaciones prácticas, talleres y cursos de Inteligencia Artificial para profesionales y empresas. Aprende a construir agentes autónomos y automatizar flujos reales.",
       slogan: "Aprende · Construye · Automatiza",
@@ -135,11 +135,11 @@ const organizationSchema = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://syntiq.ai/#website",
-      url: "https://syntiq.ai",
+      "@id": "https://www.syntiqgroup.com/#website",
+      url: "https://www.syntiqgroup.com",
       name: "SyntIQ",
       publisher: {
-        "@id": "https://syntiq.ai/#organization",
+        "@id": "https://www.syntiqgroup.com/#organization",
       },
       inLanguage: "es",
     },

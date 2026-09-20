@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Soluciones & Arquitectura de IA para Empresas | SyntIQ",
     description:
       "Modelos de implementación rápida y consultoría técnica de alta ingeniería para erradicar cuellos de botella operativos.",
-    url: "https://syntiq.ai/servicios",
+    url: "https://www.syntiqgroup.com/servicios",
   },
 };
 
@@ -92,7 +92,7 @@ const serviceHubSchema = {
   provider: {
     "@type": "Organization",
     name: "SyntIQ Enterprise AI",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",

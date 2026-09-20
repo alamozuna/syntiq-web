@@ -22,7 +22,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://syntiq.ai${item.href}`,
+      item: `https://www.syntiqgroup.com${item.href}`,
     })),
   };
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Motor de IA Productizado para PyMEs | SyntIQ",
     description:
       "Despliegue rápido de agentes inteligentes que rescatan el lucro cesante nocturno y de fin de semana.",
-    url: "https://syntiq.ai/servicios/motor-productizado",
+    url: "https://www.syntiqgroup.com/servicios/motor-productizado",
   },
 };
 
@@ -39,11 +39,11 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "SyntIQ Enterprise AI",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
   },
   description:
     "Infraestructura de agentes de IA para PyMEs, despachos y clínicas. Despliegue en 7 a 14 días con conexión a WhatsApp Cloud, CRM y calendarios.",
-  termsOfService: "https://syntiq.ai/terminos",
+  termsOfService: "https://www.syntiqgroup.com/terminos",
 };
 
 export default function MotorProductizadoPage() {

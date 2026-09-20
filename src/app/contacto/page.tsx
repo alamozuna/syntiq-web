@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Contacto & Admisión | SyntIQ",
     description:
       "Cuéntanos qué quieres aprender o qué necesita tu equipo y te orientaremos hacia la formación adecuada.",
-    url: "https://syntiq.ai/contacto",
+    url: "https://www.syntiqgroup.com/contacto",
   },
 };
 
@@ -31,7 +31,7 @@ const contactSchema = {
   mainEntity: {
     "@type": "Organization",
     name: "SyntIQ Academy",
-    url: "https://syntiq.ai",
+    url: "https://www.syntiqgroup.com",
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Admisiones",
