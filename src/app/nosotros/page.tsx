@@ -10,16 +10,16 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Sparkles, ArrowRight, ShieldCheck, Award, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sobre SyntIQ Group | Inteligencia Artificial y Formación",
+  title: "Sobre SyntIQ Group | Formación e Inteligencia Artificial",
   description:
-    "Conoce la historia, misión, valores y al equipo directivo de SyntIQ Enterprise AI: ingeniería de operaciones, rigor legal, estrategia comercial y comercio internacional.",
+    "Conoce la historia, misión, valores y al equipo directivo de SyntIQ Group: formación práctica en IA, ingeniería de operaciones y estrategia comercial.",
   alternates: {
     canonical: "/nosotros",
   },
   openGraph: {
-    title: "Sobre SyntIQ Group | Inteligencia Artificial y Formación",
+    title: "Sobre SyntIQ Group | Formación e Inteligencia Artificial",
     description:
-      "Conoce la visión y al equipo detrás de la infraestructura tecnológica de agentes autónomos y gobernanza de IA en SyntIQ.",
+      "Conoce la visión y al equipo detrás de SyntIQ Group: formación práctica en IA, agentes autónomos y gobernanza.",
     url: "https://www.syntiqgroup.com/nosotros",
   },
 };
@@ -77,11 +77,15 @@ export default function NosotrosPage() {
             </div>
 
             <h1 className="font-brand-display text-4xl sm:text-6xl text-[#0F172A] font-light leading-tight">
-              Tecnología de vanguardia sobre{" "}
-              <span className="italic text-blue-600 font-normal">principios inquebrantables</span>
+              Sobre{" "}
+              <span className="italic text-blue-600 font-normal">SyntIQ Group</span>
             </h1>
 
-            <p className="mt-6 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
+            <p className="mt-4 text-xl sm:text-2xl text-slate-700 font-light leading-snug">
+              Tecnología de vanguardia sobre principios inquebrantables
+            </p>
+
+            <p className="mt-4 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
               En SyntIQ transformamos el caos operativo de las empresas mediante agentes autónomos, gobernanza estricta y modelos de datos de alta precisión. Existimos para liberar al ser humano de la mediocridad de las tareas mecánicas.
             </p>
           </div>
@@ -149,6 +153,15 @@ export default function NosotrosPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+          <p className="text-xs text-slate-400 font-light pt-2">
+            También ofrecemos{" "}
+            <Link
+              href="/formacion-inteligencia-artificial-republica-dominicana"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+            >
+              formación de IA en República Dominicana
+            </Link>
+          </p>
         </div>
       </section>
 

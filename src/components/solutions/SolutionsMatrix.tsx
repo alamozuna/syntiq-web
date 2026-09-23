@@ -66,7 +66,7 @@ const FORMATIONS = [
       "Auditoría previa de necesidades operativas",
       "Temario adaptado a las herramientas de la empresa",
       "Instructor dedicado para la organización",
-      "Casos de uso reales de vuestro sector",
+      "Casos de uso reales de su sector",
       "Métricas de adopción y evaluación post-formación",
     ],
     priceLabel: "Presupuesto a medida",

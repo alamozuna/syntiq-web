@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "es_ES",
+    locale: "es_DO",
     url: "https://www.syntiqgroup.com",
     siteName: "SyntIQ Group",
     title: "SyntIQ Group | Formación en Inteligencia Artificial",
@@ -105,7 +105,7 @@ const organizationSchema = {
       "@id": "https://www.syntiqgroup.com/#organization",
       name: "SyntIQ Group",
       alternateName: "SyntIQ",
-      url: "https://www.syntiqgroup.com",
+      url: "https://www.syntiqgroup.com/",
       logo: "https://www.syntiqgroup.com/assets/logo-syntiq.png",
       description:
         "Formaciones prácticas, talleres y cursos de Inteligencia Artificial para profesionales y empresas. Aprende a construir agentes autónomos y automatizar flujos reales.",

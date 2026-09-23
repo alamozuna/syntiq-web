@@ -44,7 +44,7 @@ function useInterpolatedNumber(targetValue: number, durationMs = 280) {
 export default function RoiCalculator() {
   const [teamSize, setTeamSize] = useState(3);
   const [hoursPerWeek, setHoursPerWeek] = useState(12);
-  const [hourlyRate, setHourlyRate] = useState(25);
+  const [hourlyRate, setHourlyRate] = useState(400);
   const [isUpdating, setIsUpdating] = useState(false);
 
   // Trigger brief highlight on slider change
@@ -59,7 +59,7 @@ export default function RoiCalculator() {
   const AUTOMATION_FACTOR = 0.6;
   const totalHoursYearly = Math.round(teamSize * hoursPerWeek * WEEKS_PER_YEAR * AUTOMATION_FACTOR);
   const totalSavingsYearly = Math.round(totalHoursYearly * hourlyRate);
-  const estimatedCourseInvestment = Math.max(teamSize * 250, 250);
+  const estimatedCourseInvestment = Math.max(teamSize * 15000, 15000);
   const rotiMultiplier = Math.round((totalSavingsYearly / estimatedCourseInvestment) * 10) / 10;
 
   // Interpolated values
@@ -67,9 +67,9 @@ export default function RoiCalculator() {
   const animatedSavings = useInterpolatedNumber(totalSavingsYearly);
 
   const formatCurrency = (val: number) => {
-    return new Intl.NumberFormat("es-ES", {
+    return new Intl.NumberFormat("es-DO", {
       style: "currency",
-      currency: "EUR",
+      currency: "DOP",
       maximumFractionDigits: 0,
     }).format(val);
   };
@@ -158,15 +158,15 @@ export default function RoiCalculator() {
                     Costo medio / hora
                   </label>
                   <span className="text-xs font-mono font-semibold text-blue-600 bg-white border border-blue-200 px-2.5 py-0.5 rounded-full shadow-xs">
-                    {hourlyRate} €/h
+                    {hourlyRate} RD$/h
                   </span>
                 </div>
                 <input
                   id="rate-slider"
                   type="range"
-                  min="15"
-                  max="120"
-                  step="5"
+                  min="200"
+                  max="2000"
+                  step="50"
                   value={hourlyRate}
                   onChange={(e) => {
                     setHourlyRate(parseInt(e.target.value, 10));
@@ -175,8 +175,8 @@ export default function RoiCalculator() {
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 />
                 <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
-                  <span>15 €/h</span>
-                  <span>120 €/h</span>
+                  <span>200 RD$/h</span>
+                  <span>2,000 RD$/h</span>
                 </div>
               </div>
             </div>

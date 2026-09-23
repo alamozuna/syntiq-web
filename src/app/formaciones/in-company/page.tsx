@@ -6,8 +6,11 @@ import Footer from "@/components/layout/Footer";
 import { Sparkles, ArrowRight, Building2, CheckCircle2, ShieldCheck, Users, Briefcase } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Formación In-Company | SyntIQ",
+  title: "Formación en IA para Empresas",
   description: "Enseñamos a tu equipo a construir y utilizar sistemas de Inteligencia Artificial aplicados a procesos reales de tu empresa.",
+  alternates: {
+    canonical: "/formaciones/in-company",
+  },
 };
 
 const AREAS = [
@@ -39,12 +42,13 @@ export default function InCompanyPage() {
           </div>
 
           <h1 className="font-brand-display text-4xl sm:text-5xl lg:text-7xl font-light text-slate-900 tracking-tight leading-tight mb-6">
-            Formación aplicada a <span className="font-normal text-emerald-600">procesos reales.</span>
+            Formación en Inteligencia Artificial{" "}
+            <span className="font-normal text-emerald-600">para empresas</span>
           </h1>
 
           <p className="text-xl text-slate-600 font-light leading-relaxed max-w-3xl mx-auto mb-10">
-            No te construimos la infraestructura. Enseñamos a tu equipo a construir y 
-            utilizar sistemas de IA adaptados a vuestras herramientas, políticas y cuellos de botella.
+            No construimos la infraestructura por ti. Enseñamos a tu equipo a construir y 
+            utilizar sistemas de IA adaptados a las herramientas, políticas y cuellos de botella de tu empresa.
           </p>
 
           <Link
@@ -156,7 +160,7 @@ export default function InCompanyPage() {
             ¿Listo para formar a tu equipo?
           </h2>
           <p className="text-slate-600 font-light mb-8 max-w-xl mx-auto">
-            Cuéntanos sobre tu equipo y diseñaremos una propuesta de formación adaptada a vuestros objetivos.
+            Cuéntanos sobre tu equipo y diseñaremos una propuesta de formación adaptada a los objetivos de su organización.
           </p>
           <Link
             href="/contacto?modalidad=in-company"
@@ -165,6 +169,15 @@ export default function InCompanyPage() {
             Hablar sobre mi equipo
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
+          <p className="text-xs text-slate-400 font-light mt-6">
+            ¿Tu empresa está en República Dominicana?{" "}
+            <Link
+              href="/formacion-inteligencia-artificial-republica-dominicana"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+            >
+              Conoce nuestro programa local
+            </Link>
+          </p>
         </div>
       </section>
 

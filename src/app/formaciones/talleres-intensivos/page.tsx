@@ -7,8 +7,11 @@ import CourseCard from "@/components/solutions/CourseCard";
 import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Talleres Intensivos | SyntIQ",
-  description: "Construye una solución funcional en una sola sesión de 2 a 4 horas. Talleres prácticos de IA.",
+  title: "Talleres de Inteligencia Artificial",
+  description: "Construye una solución funcional en una sola sesión de 2 a 4 horas. Talleres prácticos de IA para profesionales y equipos.",
+  alternates: {
+    canonical: "/formaciones/talleres-intensivos",
+  },
 };
 
 export default function TalleresIntensivosPage() {
@@ -33,7 +36,8 @@ export default function TalleresIntensivosPage() {
           </div>
 
           <h1 className="font-brand-display text-4xl sm:text-5xl font-light text-[#0F172A] tracking-tight leading-tight mb-5">
-            Talleres <span className="font-normal text-blue-600">Intensivos</span>
+            Talleres intensivos de{" "}
+            <span className="font-normal text-blue-600">Inteligencia Artificial</span>
           </h1>
 
           <p className="text-lg text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">

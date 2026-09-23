@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/contact/DiagnosticForm";
@@ -8,7 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contacto | SyntIQ Group",
+  title: "Contacto",
   description:
     "Cuéntanos qué quieres aprender o qué necesita tu equipo. Te orientamos hacia la formación de IA adecuada para ti.",
   alternates: {
@@ -94,7 +95,7 @@ export default function ContactoPage() {
 
       {/* Alternative Contact */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
           <p className="text-sm text-slate-500 font-light">
             ¿Prefieres escribirnos directamente?{" "}
             <a
@@ -103,6 +104,15 @@ export default function ContactoPage() {
             >
               syntiqgroup@gmail.com
             </a>
+          </p>
+          <p className="text-xs text-slate-400 font-light">
+            También puedes conocer nuestra{" "}
+            <Link
+              href="/formacion-inteligencia-artificial-republica-dominicana"
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+            >
+              formación de IA en República Dominicana
+            </Link>
           </p>
         </div>
       </section>

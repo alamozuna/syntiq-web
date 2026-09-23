@@ -7,13 +7,17 @@ import Footer from "@/components/layout/Footer";
 import CourseCatalog from "@/components/solutions/CourseCatalog";
 
 export const metadata: Metadata = {
-  title: "Formaciones en Inteligencia Artificial | SyntIQ Group",
+  title: "Formaciones en Inteligencia Artificial",
   description:
     "Elige tu formato: talleres intensivos de 2-4 horas, programa modular o formación in-company para equipos. Aprende IA construyendo soluciones reales.",
+  alternates: {
+    canonical: "/formaciones",
+  },
   openGraph: {
     title: "Formaciones en Inteligencia Artificial | SyntIQ Group",
     description:
       "Elige tu formato: talleres intensivos, programa modular o formación in-company. Aprende IA construyendo.",
+    url: "https://www.syntiqgroup.com/formaciones",
   },
 };
 
@@ -61,7 +65,7 @@ const FORMATS = [
     target:
       "Equipos corporativos y departamentos que necesitan capacitarse juntos.",
     points: [
-      "Adaptado a vuestras herramientas y políticas",
+      "Adaptado a sus herramientas y políticas",
       "Enfoque en erradicar cuellos de botella reales",
       "Supervisión y métricas de adopción",
     ],
@@ -91,11 +95,15 @@ export default function FormacionesPage() {
           </div>
 
           <h1 className="font-brand-display text-4xl sm:text-6xl font-light text-[#0F172A] tracking-tight leading-[1.08] mb-5">
-            Elige cómo{" "}
+            Formaciones en{" "}
             <span className="italic font-normal text-blue-600">
-              quieres aprender.
+              Inteligencia Artificial
             </span>
           </h1>
+
+          <p className="text-xl sm:text-2xl text-slate-700 font-light mb-2">
+            Elige cómo quieres aprender.
+          </p>
 
           <p className="text-base sm:text-lg text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">
             Formaciones enfocadas en construir soluciones reales desde la
@@ -220,6 +228,22 @@ export default function FormacionesPage() {
       <div id="catalogo">
         <CourseCatalog />
       </div>
+
+      {/* Enlace contextual a landing RD */}
+      <section className="py-12 bg-blue-50/60 border-t border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-sm text-slate-600 font-light mb-3">
+            ¿Buscas formación de IA en República Dominicana?
+          </p>
+          <Link
+            href="/formacion-inteligencia-artificial-republica-dominicana"
+            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+          >
+            <span>Conoce nuestro programa para profesionales y empresas dominicanas</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </section>
 
       <Footer />
     </main>

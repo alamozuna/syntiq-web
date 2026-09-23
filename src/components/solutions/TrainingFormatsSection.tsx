@@ -46,7 +46,7 @@ const FORMATS = [
     outcome: "Llevamos la formación al contexto, procesos y herramientas de tu equipo.",
     target: "Empresas que necesitan capacitar a departamentos enteros de forma alineada.",
     points: [
-      "Adaptado a vuestras políticas y herramientas",
+      "Adaptado a sus políticas y herramientas",
       "Ejercicios basados en sus procesos reales",
       "Alineación de equipo inmediata",
     ],

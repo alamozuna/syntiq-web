@@ -6,8 +6,11 @@ import Footer from "@/components/layout/Footer";
 import { Sparkles, ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Programa Modular | SyntIQ AI Builder",
+  title: "Programa de Inteligencia Artificial",
   description: "Un recorrido guiado para dominar la IA: desde prompting hasta agentes autónomos, con un proyecto personal validado.",
+  alternates: {
+    canonical: "/formaciones/curso-modular",
+  },
 };
 
 const MODULES = [
