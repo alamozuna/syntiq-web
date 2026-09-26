@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Servicios de Inteligencia Artificial | SyntIQ Group",
+  title: "Servicios de Inteligencia Artificial",
   description:
     "Descubre los modelos de implementación de SyntIQ: Motor Productizado para PyMEs, Motor Consultivo Enterprise y Capa de Gobernanza Legal e ISO 13485 / FDA.",
   alternates: {
@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     description:
       "Modelos de implementación rápida y consultoría técnica de alta ingeniería para erradicar cuellos de botella operativos.",
     url: "https://www.syntiqgroup.com/servicios",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     description:
       "Despliegue rápido de agentes inteligentes que rescatan el lucro cesante nocturno y de fin de semana.",
     url: "https://www.syntiqgroup.com/servicios/motor-productizado",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

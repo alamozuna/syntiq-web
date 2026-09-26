@@ -24,6 +24,14 @@ export const metadata: Metadata = {
     description:
       "Modernización profunda de la cadena de valor operativa mediante pipelines de datos seguros y agentes autónomos conectados a ERP.",
     url: "https://www.syntiqgroup.com/servicios/motor-consultivo",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

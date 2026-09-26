@@ -40,9 +40,21 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: course.seoTitle,
     description: course.seoDescription,
+    alternates: {
+      canonical: `/formaciones/talleres/${course.slug}`,
+    },
     openGraph: {
       title: course.seoTitle,
       description: course.seoDescription,
+      url: `https://www.syntiqgroup.com/formaciones/talleres/${course.slug}`,
+      images: [
+        {
+          url: "/assets/logo-syntiq.png",
+          width: 1200,
+          height: 630,
+          alt: "SyntIQ - Aprende · Construye · Automatiza",
+        },
+      ],
     },
   };
 }
@@ -132,9 +144,9 @@ export default function CoursePage({ params }: Props) {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl bg-slate-900/50 border border-slate-800 p-8 overflow-hidden backdrop-blur-sm">
                 <div className="absolute inset-0 bg-linear-to-b from-blue-500/5 to-transparent opacity-50" />
-                <h3 className="text-blue-400 font-mono text-sm uppercase tracking-wider mb-4 relative z-10">
+                <h2 className="text-blue-400 font-mono text-sm uppercase tracking-wider mb-4 relative z-10">
                   Resultado del taller
-                </h3>
+                </h2>
                 <p className="text-2xl text-white font-light leading-snug relative z-10 italic">
                   &ldquo;{course.outcome}&rdquo;
                 </p>
@@ -209,7 +221,7 @@ export default function CoursePage({ params }: Props) {
                 <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
                   {course.agenda.map((item, idx) => (
                     <div key={idx} className="border-b border-slate-100 last:border-0 p-5">
-                      <h4 className="font-mono text-slate-800 font-medium">{item.title}</h4>
+                      <h3 className="font-mono text-slate-800 font-medium">{item.title}</h3>
                       {item.items && (
                         <ul className="mt-3 space-y-2 pl-4 border-l-2 border-slate-100">
                           {item.items.map((sub, i) => (
@@ -232,7 +244,7 @@ export default function CoursePage({ params }: Props) {
                 </div>
                 <div className="space-y-4">
                   <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
-                    <h4 className="font-semibold text-slate-900 mb-2">¿Necesito conocimientos previos de programación?</h4>
+                    <h3 className="font-semibold text-slate-900 mb-2">¿Necesito conocimientos previos de programación?</h3>
                     <p className="text-slate-600 text-sm">
                       {course.level.includes("Avanzado") 
                         ? "Sí, este taller asume conocimientos técnicos intermedios y familiaridad con conceptos de APIs." 
@@ -240,7 +252,7 @@ export default function CoursePage({ params }: Props) {
                     </p>
                   </div>
                   <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
-                    <h4 className="font-semibold text-slate-900 mb-2">¿Tendré acceso al material después del taller?</h4>
+                    <h3 className="font-semibold text-slate-900 mb-2">¿Tendré acceso al material después del taller?</h3>
                     <p className="text-slate-600 text-sm">Sí, tendrás acceso al proyecto construido durante la sesión y a los recursos principales del taller.</p>
                   </div>
                 </div>

@@ -1,8 +1,18 @@
 import { MetadataRoute } from "next";
+import { formaciones } from "@/data/formaciones";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.syntiqgroup.com";
   const lastModified = new Date();
+
+  const coursePages = formaciones
+    .filter((f) => f.status !== "DRAFT")
+    .map((f) => ({
+      url: `${baseUrl}/formaciones/talleres/${f.slug}`,
+      lastModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    }));
 
   return [
     {
@@ -31,6 +41,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/formaciones/in-company`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    ...coursePages,
+    {
+      url: `${baseUrl}/servicios`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/servicios/motor-productizado`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/servicios/motor-consultivo`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/servicios/gobernanza-compliance`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.85,

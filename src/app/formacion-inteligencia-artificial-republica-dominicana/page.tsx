@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     description:
       "Talleres prácticos y formación profesional de IA en República Dominicana. Aprende IA construyendo soluciones reales.",
     url: "https://www.syntiqgroup.com/formacion-inteligencia-artificial-republica-dominicana",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

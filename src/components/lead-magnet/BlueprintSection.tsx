@@ -68,7 +68,7 @@ export default function BlueprintSection() {
                   <FileCode className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white">Prompt estructurado</h4>
+                  <h3 className="text-xs sm:text-sm font-semibold text-white">Prompt estructurado</h3>
                   <p className="text-xs text-slate-400 font-light">
                     Plantilla de instrucciones deterministas para clasificar y extraer datos con respuestas fundamentadas.
                   </p>
@@ -80,7 +80,7 @@ export default function BlueprintSection() {
                   <Workflow className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white">Flujo n8n</h4>
+                  <h3 className="text-xs sm:text-sm font-semibold text-white">Flujo n8n</h3>
                   <p className="text-xs text-slate-400 font-light">
                     Archivo JSON listo para importar y conectar tu correo con tu primer modelo de IA.
                   </p>
@@ -92,7 +92,7 @@ export default function BlueprintSection() {
                   <FileText className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white">Guía paso a paso</h4>
+                  <h3 className="text-xs sm:text-sm font-semibold text-white">Guía paso a paso</h3>
                   <p className="text-xs text-slate-400 font-light">
                     Documento visual para configurar claves API y barandillas de supervisión.
                   </p>

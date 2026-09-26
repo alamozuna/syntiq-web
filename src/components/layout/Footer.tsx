@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#0F172A] text-slate-300 text-xs font-light pt-16 pb-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Col 1 & 2: Brand & Ethos */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block" aria-label="SyntIQ - Inicio">
@@ -57,6 +57,35 @@ export default function Footer() {
               <li>
                 <Link href="/formaciones/in-company" className="hover:text-blue-400 transition-colors">
                   Formación In-Company
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col: Servicios */}
+          <div className="space-y-3">
+            <span className="brand-label text-slate-200 block text-[10px]">
+              SERVICIOS
+            </span>
+            <ul className="space-y-2 text-slate-300">
+              <li>
+                <Link href="/servicios" className="hover:text-blue-400 transition-colors">
+                  Todos los Servicios
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicios/motor-productizado" className="hover:text-blue-400 transition-colors">
+                  Motor Productizado
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicios/motor-consultivo" className="hover:text-blue-400 transition-colors">
+                  Motor Consultivo
+                </Link>
+              </li>
+              <li>
+                <Link href="/servicios/gobernanza-compliance" className="hover:text-blue-400 transition-colors">
+                  Gobernanza & Compliance
                 </Link>
               </li>
             </ul>

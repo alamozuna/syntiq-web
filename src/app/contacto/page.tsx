@@ -20,6 +20,14 @@ export const metadata: Metadata = {
     description:
       "Cuéntanos qué quieres aprender o qué necesita tu equipo y te orientaremos hacia la formación adecuada.",
     url: "https://www.syntiqgroup.com/contacto",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

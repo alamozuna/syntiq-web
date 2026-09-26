@@ -1,0 +1,25 @@
+# SyntIQ Group
+
+> Formación práctica en Inteligencia Artificial para profesionales, estudiantes, emprendedores y empresas en República Dominicana. Talleres, programas modulares y formación in-company donde los participantes construyen automatizaciones, agentes y aplicaciones reales con IA, en lugar de solo aprender teoría.
+
+SyntIQ Group también ofrece servicios de implementación de IA para empresas: un motor productizado de despliegue rápido para PyMEs, un motor consultivo para gran empresa e industria, y una capa de gobernanza, ciberseguridad y cumplimiento regulatorio para IA.
+
+## Formaciones
+
+- [Todas las formaciones](https://www.syntiqgroup.com/formaciones): talleres intensivos, programa modular y formación in-company
+- [Talleres intensivos](https://www.syntiqgroup.com/formaciones/talleres-intensivos): sesiones de 2 a 4 horas para construir una solución funcional
+- [Programa modular](https://www.syntiqgroup.com/formaciones/curso-modular): recorrido completo de prompting a agentes autónomos
+- [Formación in-company](https://www.syntiqgroup.com/formaciones/in-company): programas adaptados a los procesos y herramientas de una empresa
+- [Formación en IA en República Dominicana](https://www.syntiqgroup.com/formacion-inteligencia-artificial-republica-dominicana)
+
+## Servicios
+
+- [Todos los servicios](https://www.syntiqgroup.com/servicios)
+- [Motor Productizado](https://www.syntiqgroup.com/servicios/motor-productizado): infraestructura de IA plug-and-play para PyMEs y despachos
+- [Motor Consultivo](https://www.syntiqgroup.com/servicios/motor-consultivo): auditoría y desarrollo estratégico de IA para gran empresa
+- [Gobernanza y Compliance](https://www.syntiqgroup.com/servicios/gobernanza-compliance): gobernanza, ciberseguridad y blindaje legal de IA
+
+## Compañía
+
+- [Sobre Nosotros](https://www.syntiqgroup.com/nosotros): historia, misión y equipo fundador
+- [Contacto](https://www.syntiqgroup.com/contacto)

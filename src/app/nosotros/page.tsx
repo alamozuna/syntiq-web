@@ -10,7 +10,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { Sparkles, ArrowRight, ShieldCheck, Award, GraduationCap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Sobre SyntIQ Group | Formación e Inteligencia Artificial",
+  title: "Sobre Nosotros | Formación e Inteligencia Artificial",
   description:
     "Conoce la historia, misión, valores y al equipo directivo de SyntIQ Group: formación práctica en IA, ingeniería de operaciones y estrategia comercial.",
   alternates: {
@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     description:
       "Conoce la visión y al equipo detrás de SyntIQ Group: formación práctica en IA, agentes autónomos y gobernanza.",
     url: "https://www.syntiqgroup.com/nosotros",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 

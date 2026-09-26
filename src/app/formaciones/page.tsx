@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     description:
       "Elige tu formato: talleres intensivos, programa modular o formación in-company. Aprende IA construyendo.",
     url: "https://www.syntiqgroup.com/formaciones",
+    images: [
+      {
+        url: "/assets/logo-syntiq.png",
+        width: 1200,
+        height: 630,
+        alt: "SyntIQ - Aprende · Construye · Automatiza",
+      },
+    ],
   },
 };
 
