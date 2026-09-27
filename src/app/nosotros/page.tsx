@@ -1,4 +1,4 @@
-import React from "react";
+import HeroReveal from "@/components/nosotros/HeroReveal";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
@@ -78,25 +78,27 @@ export default function NosotrosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={[{ name: "Sobre Nosotros", href: "/nosotros" }]} />
 
-          <div className="max-w-3xl mt-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>FILOSOFÍA, RIGOR & EQUIPO FUNDADOR</span>
+          <HeroReveal>
+            <div className="max-w-3xl mt-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                <span>FILOSOFÍA, RIGOR & EQUIPO FUNDADOR</span>
+              </div>
+
+              <h1 className="font-brand-display text-4xl sm:text-6xl text-[#0F172A] font-light leading-tight">
+                Sobre{" "}
+                <span className="italic text-blue-600 font-normal">SyntIQ Group</span>
+              </h1>
+
+              <p className="mt-4 text-xl sm:text-2xl text-slate-700 font-light leading-snug">
+                Tecnología de vanguardia sobre principios inquebrantables
+              </p>
+
+              <p className="mt-4 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
+                En SyntIQ transformamos el caos operativo de las empresas mediante agentes autónomos, gobernanza estricta y modelos de datos de alta precisión. Existimos para liberar al ser humano de la mediocridad de las tareas mecánicas.
+              </p>
             </div>
-
-            <h1 className="font-brand-display text-4xl sm:text-6xl text-[#0F172A] font-light leading-tight">
-              Sobre{" "}
-              <span className="italic text-blue-600 font-normal">SyntIQ Group</span>
-            </h1>
-
-            <p className="mt-4 text-xl sm:text-2xl text-slate-700 font-light leading-snug">
-              Tecnología de vanguardia sobre principios inquebrantables
-            </p>
-
-            <p className="mt-4 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
-              En SyntIQ transformamos el caos operativo de las empresas mediante agentes autónomos, gobernanza estricta y modelos de datos de alta precisión. Existimos para liberar al ser humano de la mediocridad de las tareas mecánicas.
-            </p>
-          </div>
+          </HeroReveal>
         </div>
       </section>
 

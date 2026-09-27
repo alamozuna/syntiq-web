@@ -43,7 +43,13 @@ export default function MethodStepper() {
     <section id="metodo" className="scroll-mt-24 relative py-20 sm:py-28 bg-[#EFF6FF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
+        >
           <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
             MÉTODO SYNTIQ
           </span>
@@ -54,7 +60,7 @@ export default function MethodStepper() {
           <p className="text-slate-600 text-sm sm:text-base font-light mt-4 max-w-xl mx-auto leading-relaxed">
             El método SyntIQ convierte un problema real en una solución funcional.
           </p>
-        </div>
+        </motion.div>
 
         {/* Desktop Stepper (Horizontal with connector progress line) */}
         <div className="hidden md:block max-w-5xl mx-auto mb-12">
