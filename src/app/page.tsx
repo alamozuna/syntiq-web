@@ -8,7 +8,6 @@ import MethodStepper from "@/components/method/MethodStepper";
 import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
 import ResultsSection from "@/components/results/ResultsSection";
 import TeamSummarySection from "@/components/team/TeamSummarySection";
-import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
 import CommunitySection from "@/components/community/CommunitySection";
 import FaqSection from "@/components/faq/FaqSection";
 import FinalCtaSection from "@/components/cta/FinalCtaSection";
@@ -43,9 +42,6 @@ export default function Home() {
 
       {/* 09. EQUIPO (4 Tarjetas Compactas + Frase de Marca + Enlace a /nosotros) */}
       <TeamSummarySection />
-
-      {/* RECURSO GRATUITO: Blueprint del Agente Autónomo */}
-      <BlueprintSection />
 
       {/* COMUNIDAD: Aprende, Construye, Comparte */}
       <CommunitySection />
