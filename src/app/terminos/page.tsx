@@ -8,7 +8,7 @@ import { AlertCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Términos y Condiciones de Servicio",
   description:
-    "Términos generales de contratación, alcance de los servicios de arquitectura de IA, acuerdos de nivel de servicio (SLA) y propiedad intelectual en SyntIQ.",
+    "Términos generales de inscripción y participación en las formaciones, talleres y programas de SyntIQ Group, y propiedad intelectual sobre los materiales.",
   alternates: {
     canonical: "/terminos",
   },
@@ -35,7 +35,7 @@ export default function TerminosPage() {
               Términos y Condiciones de Servicio
             </h1>
             <p className="mt-3 text-xs sm:text-sm font-mono text-slate-500">
-              Última actualización: Agosto {new Date().getFullYear()} · Versión 1.2
+              Última actualización: Septiembre {new Date().getFullYear()} · Versión 1.3
             </p>
           </div>
         </div>
@@ -49,25 +49,25 @@ export default function TerminosPage() {
             <AlertCircle className="w-5 h-5 shrink-0 text-amber-700 mt-0.5" />
             <div>
               <strong className="block font-semibold mb-0.5">Nota de Validación Jurídica:</strong>
-              Estos términos constituyen el marco general de uso de la web y servicios informativos de SyntIQ. Las condiciones específicas de entrega, pagos, hitos y SLAs se determinan en la propuesta técnico-comercial y contrato firmado con cada entidad.
+              Estos términos constituyen el marco general de uso de la web y de las formaciones de SyntIQ Group. Las condiciones específicas de fecha, precio, cupo y modalidad de cada formación se confirman al momento de la inscripción.
             </div>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-brand-display text-2xl text-[#0F172A] font-normal">
-              1. Objeto y Alcance de los Servicios
+              1. Objeto y Alcance de las Formaciones
             </h2>
             <p>
-              SyntIQ Enterprise AI proporciona servicios profesionales de consultoría, diseño de arquitectura de datos, desarrollo de flujos automatizados (n8n), implementación de agentes autónomos basados en Inteligencia Artificial y auditoría de gobernanza operativa.
+              SyntIQ Group ofrece formación práctica en Inteligencia Artificial mediante talleres intensivos, programas modulares y formaciones in-company, dirigidos a profesionales, estudiantes, emprendedores y equipos de empresa que buscan aprender a construir automatizaciones, agentes y aplicaciones reales con herramientas de IA.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-brand-display text-2xl text-[#0F172A] font-normal">
-              2. Propiedad Intelectual y Titularidad de los Desarrollos
+              2. Propiedad Intelectual sobre los Materiales de Formación
             </h2>
             <p>
-              Salvo pacto en contrario expresado en el contrato de prestación de servicios, todo el código personalizado, los esquemas de bases de datos, los prompts estructurados y las integraciones desarrolladas específicamente para el cliente final serán transferidos en titularidad al cliente una vez completada la liquidación de honorarios correspondiente.
+              El material didáctico, las plantillas, los blueprints, las diapositivas y la metodología de enseñanza de SyntIQ Group son propiedad intelectual de SyntIQ Group y se entregan al participante para su uso personal o interno de su empresa, no para reventa o redistribución. Los flujos, prototipos o aplicaciones que el participante construya durante la formación, con sus propios datos y cuentas, son de su titularidad.
             </p>
           </div>
 
@@ -76,16 +76,16 @@ export default function TerminosPage() {
               3. Garantía &quot;Human-in-the-Loop&quot; y Mitigación de Riesgos
             </h2>
             <p>
-              SyntIQ implementa rigurosos protocolos de validación para mitigar sesgos y prevenir alucinaciones de modelos LLM. Sin embargo, el cliente acepta que los sistemas de IA son herramientas de asistencia y automatización que deben complementarse con la supervisión de los responsables designados por la empresa.
+              Durante las formaciones, SyntIQ enseña buenas prácticas de validación y supervisión humana para mitigar sesgos y prevenir alucinaciones de modelos LLM. El participante entiende que cualquier sistema, flujo o agente de IA que construya o implemente, durante o después de la formación, es de su responsabilidad operativa, y que las herramientas de IA son asistentes que requieren supervisión humana.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-brand-display text-2xl text-[#0F172A] font-normal">
-              4. Acuerdos de Nivel de Servicio (SLAs) y Disponibilidad
+              4. Inscripción, Reprogramación y Acceso a Materiales
             </h2>
             <p>
-              Para los clientes con planes de mantenimiento y soporte de ingeniería activo, SyntIQ establece compromisos de disponibilidad de cluster de hasta 99.98% y tiempos de respuesta prioritarios para incidencias críticas, especificados en su anexo contractual.
+              El cupo de cada formación se confirma con el pago de la inscripción. Las condiciones de cancelación, reprogramación o reembolso para cada edición se comunican al participante al momento de inscribirse. El acceso a las grabaciones y materiales de la formación, cuando aplique, se otorga por el período indicado en la confirmación de inscripción.
             </p>
           </div>
 
@@ -94,7 +94,7 @@ export default function TerminosPage() {
               5. Confidencialidad Comercial y No Divulgación
             </h2>
             <p>
-              Ambas partes se comprometen a tratar con estricta confidencialidad toda la información técnica, financiera y comercial a la que tengan acceso durante la ejecución de los servicios de auditoría e integración.
+              Ambas partes se comprometen a tratar con confidencialidad la información técnica, financiera y de procesos internos que el participante o su empresa compartan durante formaciones in-company o talleres personalizados.
             </p>
           </div>
         </div>

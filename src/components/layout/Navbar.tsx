@@ -24,7 +24,6 @@ export default function Navbar() {
   const navLinks = [
     { name: "Inicio", href: isHome ? "#inicio" : "/" },
     { name: "Formaciones", href: "/formaciones" },
-    { name: "Servicios", href: "/servicios" },
     { name: "Método", href: isHome ? "#metodo" : "/#metodo" },
     { name: "Resultados", href: isHome ? "#resultados" : "/#resultados" },
     { name: "Nosotros", href: "/nosotros" },

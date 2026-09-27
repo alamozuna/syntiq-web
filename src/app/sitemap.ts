@@ -47,30 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...coursePages,
     {
-      url: `${baseUrl}/servicios`,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/servicios/motor-productizado`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/servicios/motor-consultivo`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/servicios/gobernanza-compliance`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/formacion-inteligencia-artificial-republica-dominicana`,
       lastModified,
       changeFrequency: "weekly",

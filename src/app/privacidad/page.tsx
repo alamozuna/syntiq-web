@@ -8,7 +8,7 @@ import { AlertCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Política de Privacidad & Protección de Datos",
   description:
-    "Conoce cómo SyntIQ protege la información corporativa, anonimiza datos PII y garantiza el cumplimiento normativo internacional (RGPD / LOPD).",
+    "Conoce cómo SyntIQ Group protege tus datos personales al inscribirte a una formación, contactarnos o participar en un taller, conforme a RGPD / LOPD.",
   alternates: {
     canonical: "/privacidad",
   },
@@ -35,7 +35,7 @@ export default function PrivacidadPage() {
               Política de Privacidad y Protección de Datos
             </h1>
             <p className="mt-3 text-xs sm:text-sm font-mono text-slate-500">
-              Última actualización: Agosto {new Date().getFullYear()} · Versión 1.2
+              Última actualización: Septiembre {new Date().getFullYear()} · Versión 1.3
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function PrivacidadPage() {
             <AlertCircle className="w-5 h-5 shrink-0 text-amber-700 mt-0.5" />
             <div>
               <strong className="block font-semibold mb-0.5">Aviso de Validación Legal:</strong>
-              Este documento establece los principios de privacidad y protección de datos que rigen la infraestructura técnica de SyntIQ. Las cláusulas comerciales definitivas se formalizan en el Acuerdo de Nivel de Servicio (SLA) y contrato de confidencialidad (NDA) específico de cada cliente.
+              Este documento establece los principios de privacidad y protección de datos que rigen el sitio web y las formaciones de SyntIQ Group. Las condiciones específicas de cada formación in-company, incluyendo confidencialidad de la información compartida, se formalizan en el acuerdo firmado con la empresa contratante.
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export default function PrivacidadPage() {
               1. Responsable del Tratamiento de Datos
             </h2>
             <p>
-              El responsable del tratamiento de los datos recabados a través de esta plataforma es <strong>SyntIQ Enterprise AI</strong>, equipo especializado en arquitectura tecnológica, inteligencia artificial y orquestación de datos para organizaciones.
+              El responsable del tratamiento de los datos recabados a través de esta plataforma es <strong>SyntIQ Group</strong>, equipo de formación práctica en Inteligencia Artificial para profesionales, estudiantes, emprendedores y empresas.
             </p>
           </div>
 
@@ -67,16 +67,16 @@ export default function PrivacidadPage() {
               2. Principio de Mayordomía de Datos & Cero Reentrenamiento
             </h2>
             <p>
-              En SyntIQ operamos bajo el principio fundacional de que la información de tu empresa es un activo confidencial e inalienable. Bajo ninguna circunstancia los datos, flujos conversacionales, registros de clientes o documentos corporativos procesados por nuestros agentes se utilizan para reentrenar modelos públicos de terceros ni se comercializan.
+              En SyntIQ operamos bajo el principio fundacional de que tu información personal y la de tu empresa es un activo confidencial e inalienable. Bajo ninguna circunstancia los datos que nos compartes al inscribirte, contactarnos o participar en una formación in-company se utilizan para reentrenar modelos públicos de terceros ni se comercializan.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-brand-display text-2xl text-[#0F172A] font-normal">
-              3. Anonimización de Información de Identificación Personal (PII)
+              3. Minimización de Información de Identificación Personal (PII)
             </h2>
             <p>
-              Nuestra arquitectura técnica incluye capas automatizadas de filtrado previo de PII (Personally Identifiable Information). Antes de que un prompt o consulta sea procesada por modelos cognitivos, los datos sensibles (números de tarjeta, identificaciones personales, historiales médicos críticos) son tokenizados o anonimizados para cumplir con las normativas <strong>RGPD</strong>, <strong>LOPD</strong> y directrices de calidad <strong>ISO 13485</strong>.
+              Solo recabamos los datos necesarios para gestionar tu inscripción, comunicarnos contigo y facturar cuando aplique (nombre, correo, teléfono y, para empresas, datos de facturación). No solicitamos ni almacenamos datos sensibles (números de tarjeta, identificaciones oficiales, información médica) a través de nuestros formularios. El procesamiento de estos datos cumple con <strong>RGPD</strong> y <strong>LOPD</strong>.
             </p>
           </div>
 
@@ -85,10 +85,10 @@ export default function PrivacidadPage() {
               4. Finalidad del Tratamiento de Datos
             </h2>
             <ul className="list-disc pl-5 space-y-2">
-              <li>Evaluar la viabilidad técnica y operativa a través del formulario de diagnóstico.</li>
-              <li>Diseñar arquitecturas de agentes autónomos y pipelines de datos personalizadas.</li>
-              <li>Prestar soporte de ingeniería, monitoreo 24/7 y auditoría de logs acordada con el cliente.</li>
-              <li>Cumplir con los requerimientos regulatorios y de ciberseguridad aplicables.</li>
+              <li>Gestionar tu inscripción, confirmación de cupo y comunicación sobre la formación.</li>
+              <li>Diseñar y coordinar programas de formación in-company adaptados a tu empresa.</li>
+              <li>Enviarte información sobre próximas formaciones, cuando hayas dado tu consentimiento.</li>
+              <li>Cumplir con los requerimientos legales, fiscales y regulatorios aplicables.</li>
             </ul>
           </div>
 
@@ -106,7 +106,7 @@ export default function PrivacidadPage() {
               6. Seguridad y Cifrado
             </h2>
             <p>
-              Implementamos protocolos de cifrado de datos en tránsito (TLS/SSL) y en reposo, aislamiento de entornos de ejecución y control estricto de acceso basado en roles con el protocolo &ldquo;Human-in-the-Loop&rdquo;.
+              Implementamos protocolos de cifrado de datos en tránsito (TLS/SSL) y en reposo, y control de acceso basado en roles para el equipo interno que administra estos datos.
             </p>
           </div>
         </div>
