@@ -7,7 +7,6 @@ import BuildSkillsSection from "@/components/skills/BuildSkillsSection";
 import MethodStepper from "@/components/method/MethodStepper";
 import TrainingFormatsSection from "@/components/solutions/TrainingFormatsSection";
 import ResultsSection from "@/components/results/ResultsSection";
-import RoiCalculator from "@/components/calculator/RoiCalculator";
 import TeamSummarySection from "@/components/team/TeamSummarySection";
 import BlueprintSection from "@/components/lead-magnet/BlueprintSection";
 import CommunitySection from "@/components/community/CommunitySection";
@@ -41,9 +40,6 @@ export default function Home() {
 
       {/* 06. RESULTADOS / TESTIMONIOS (1 Testimonio Principal + 3 Casos Antes/Construyó/Después) */}
       <ResultsSection />
-
-      {/* 08. CALCULADORA ROTI (Copy Sobrio + Interpolación Numérica) */}
-      <RoiCalculator />
 
       {/* 09. EQUIPO (4 Tarjetas Compactas + Frase de Marca + Enlace a /nosotros) */}
       <TeamSummarySection />

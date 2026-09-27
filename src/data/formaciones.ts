@@ -450,8 +450,8 @@ export const formaciones: Formacion[] = [
     currency: null,
     seats: null,
     featured: true,
-    seoTitle: "Agentes que revisan su propio trabajo | Taller SyntIQ",
-    seoDescription: "Pasa de un prompt lineal a workflows que evalúan resultados antes de continuar."
+    seoTitle: "Agentes de IA para Empresas: Evaluación Automática",
+    seoDescription: "Taller de agentes de IA para empresas: diseña un agente evaluador que revisa el trabajo de otro antes de aprobarlo. Nivel intermedio/avanzado, con n8n."
   },
   {
     id: "f-10",

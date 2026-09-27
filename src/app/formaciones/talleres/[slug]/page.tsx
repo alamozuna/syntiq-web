@@ -5,6 +5,7 @@ import Link from "next/link";
 import { formaciones } from "@/data/formaciones";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/seo/JsonLd";
 import { 
   ArrowRight, 
   Clock, 
@@ -75,8 +76,28 @@ export default function CoursePage({ params }: Props) {
     ctaText = "Avisarme de la próxima edición";
   }
 
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.title,
+    description: course.seoDescription,
+    provider: {
+      "@type": "Organization",
+      name: "SyntIQ Group",
+      url: "https://www.syntiqgroup.com",
+    },
+    educationalLevel: course.level,
+    inLanguage: "es",
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: course.format === "Formación In-Company" ? "onsite" : "blended",
+      courseWorkload: course.duration || undefined,
+    },
+  };
+
   return (
     <main className="min-h-screen bg-white text-slate-900 selection:bg-blue-600/20 selection:text-slate-900">
+      <JsonLd data={courseSchema} />
       <Navbar />
 
       {/* Hero Section */}
