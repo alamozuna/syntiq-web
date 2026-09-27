@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const TEAM_MEMBERS = [
@@ -45,7 +46,13 @@ export default function TeamSummarySection() {
     <section id="equipo" className="relative py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
+          className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
+        >
           <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
             EQUIPO FUNDADOR
           </span>
@@ -53,13 +60,17 @@ export default function TeamSummarySection() {
             IA desde negocio, datos, <br className="hidden sm:inline" />
             <span className="italic font-normal text-blue-600">operaciones y gobernanza.</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* 4 Compact Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-          {TEAM_MEMBERS.map((member) => (
-            <div
+          {TEAM_MEMBERS.map((member, idx) => (
+            <motion.div
               key={member.name}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: idx * 0.1 }}
               className="rounded-3xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between shadow-xs hover:border-blue-300 hover:shadow-sm transition-all duration-200 group"
             >
               <div>
@@ -100,7 +111,7 @@ export default function TeamSummarySection() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

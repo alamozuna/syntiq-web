@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const TOOLS = [
@@ -19,7 +20,13 @@ const TOOLS = [
 export default function ToolsMarquee() {
   return (
     <section className="relative py-10 sm:py-14 border-y border-[#0F172A]/10 bg-[#EFF6FF] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4 }}
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center"
+      >
         <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] block mb-3">
           IA GLOBAL. APLICACIÓN LOCAL.
         </span>
@@ -29,7 +36,7 @@ export default function ToolsMarquee() {
         <p className="text-[11px] sm:text-xs text-slate-600 font-mono tracking-wide">
           Diseñado desde República Dominicana
         </p>
-      </div>
+      </motion.div>
 
       {/* Marquee Wrapper with side fade gradients */}
       <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">

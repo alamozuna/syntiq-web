@@ -17,14 +17,14 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Servicios de Inteligencia Artificial",
+  title: "Servicios de IA para Empresas: Implementación en Días",
   description:
-    "Descubre los modelos de implementación de SyntIQ: Motor Productizado para PyMEs, Motor Consultivo Enterprise y Capa de Gobernanza Legal e ISO 13485 / FDA.",
+    "Servicios de Inteligencia Artificial para empresas: implementación en días, no meses. Gobernanza con ISO 13485 y FDA incluida. Agenda tu diagnóstico gratuito.",
   alternates: {
     canonical: "/servicios",
   },
   openGraph: {
-    title: "Servicios de Inteligencia Artificial | SyntIQ Group",
+    title: "Servicios de IA para Empresas: Implementación en Días | SyntIQ Group",
     description:
       "Modelos de implementación rápida y consultoría técnica de alta ingeniería para erradicar cuellos de botella operativos.",
     url: "https://www.syntiqgroup.com/servicios",
@@ -194,14 +194,37 @@ export default function ServiciosPage() {
 
                   <Link
                     href={service.href}
-                    className="inline-flex items-center justify-center gap-2 w-full bg-slate-50 hover:bg-blue-600 text-slate-800 hover:text-white font-medium text-xs sm:text-sm py-3 rounded-xl border border-slate-200 hover:border-blue-600 transition-all duration-200"
+                    className="inline-flex items-center justify-center gap-2 w-full bg-slate-50 hover:bg-blue-600 text-slate-800 hover:text-white font-medium text-xs sm:text-sm py-3 rounded-xl border border-slate-200 hover:border-blue-600 transition-all duration-200 hover:scale-[1.01] active:scale-[0.98]"
                   >
-                    <span>Explorar Solución Detallada</span>
+                    <span>Explorar {service.title.split(" (")[0]}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
               );
             })}
+          </div>
+
+          {/* Comparison table - same data as the cards above, structured for quick scanning */}
+          <div className="overflow-x-auto rounded-2xl border border-slate-200">
+            <table className="w-full text-left text-xs sm:text-sm">
+              <caption className="sr-only">Comparación de los tres modelos de servicio de SyntIQ Group</caption>
+              <thead className="bg-slate-50">
+                <tr>
+                  <th scope="col" className="px-4 py-3 font-mono text-[10px] uppercase tracking-wider text-slate-600">Modelo</th>
+                  <th scope="col" className="px-4 py-3 font-mono text-[10px] uppercase tracking-wider text-slate-600">Para quién</th>
+                  <th scope="col" className="px-4 py-3 font-mono text-[10px] uppercase tracking-wider text-slate-600">Tiempo de despliegue</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {SERVICES.map((service) => (
+                  <tr key={service.id}>
+                    <th scope="row" className="px-4 py-3 font-medium text-slate-900">{service.title}</th>
+                    <td className="px-4 py-3 text-slate-600">{service.audience}</td>
+                    <td className="px-4 py-3 text-slate-600">{service.timeframe}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
 
           {/* Quick CTA Banner */}
@@ -220,7 +243,7 @@ export default function ServiciosPage() {
 
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full transition-all shadow-sm hover:shadow-md shrink-0"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full transition-all shadow-sm hover:shadow-md shrink-0 hover:scale-[1.01] active:scale-[0.98]"
             >
               <span>Solicitar Diagnóstico</span>
               <ArrowRight className="w-4 h-4" />

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight, Users } from "lucide-react";
 
 export default function FinalCtaSection() {
@@ -13,7 +14,13 @@ export default function FinalCtaSection() {
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[250px] bg-indigo-600/10 blur-[100px] rounded-full" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
         {/* Headings */}
         <h2 className="font-brand-display text-3xl sm:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.1] mb-2">
           Deja de aprender IA en abstracto.
@@ -45,7 +52,7 @@ export default function FinalCtaSection() {
             <span>Formar a mi equipo</span>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

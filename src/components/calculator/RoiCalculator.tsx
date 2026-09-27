@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { Calculator, ArrowRight, Clock, TrendingUp, Target } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -80,7 +81,13 @@ export default function RoiCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           
           {/* Left Column: Sliders & Copy */}
-          <div className="lg:col-span-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="lg:col-span-6"
+          >
             <div className="mb-8">
               <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-2">
                 CALCULADORA ROTI
@@ -180,10 +187,16 @@ export default function RoiCalculator() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Output Card */}
-          <div className="lg:col-span-6">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.15 }}
+            className="lg:col-span-6"
+          >
             <div
               className={cn(
                 "rounded-3xl bg-[#0F172A] text-white p-7 sm:p-9 shadow-lg border border-slate-800 transition-all duration-300",
@@ -263,7 +276,7 @@ export default function RoiCalculator() {
                 </Link>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
