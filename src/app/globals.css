@@ -111,6 +111,7 @@ body {
 }
 
 @import '../components/hero/SyntIQHeroVisual.css';
+@import '../components/nosotros/SyntIQTeamVisual.css';
 
 @media (prefers-reduced-motion: reduce) {
   *,
