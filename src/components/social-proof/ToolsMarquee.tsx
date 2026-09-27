@@ -26,7 +26,7 @@ export default function ToolsMarquee() {
         <h2 className="font-brand-display text-xl sm:text-2xl text-slate-900 font-light max-w-3xl mx-auto leading-relaxed mb-3">
           Aprendemos con herramientas de clase mundial y las aplicamos a problemas, profesiones y empresas de nuestra realidad.
         </h2>
-        <p className="text-[11px] sm:text-xs text-slate-500 font-mono tracking-wide">
+        <p className="text-[11px] sm:text-xs text-slate-600 font-mono tracking-wide">
           Diseñado desde República Dominicana
         </p>
       </div>
@@ -43,7 +43,7 @@ export default function ToolsMarquee() {
               <span className="text-xs sm:text-sm font-medium text-slate-900">
                 {tool.name}
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
                 {tool.badge}
               </span>
             </div>
@@ -58,7 +58,7 @@ export default function ToolsMarquee() {
               <span className="text-xs sm:text-sm font-medium text-slate-900">
                 {tool.name}
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-500">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
                 {tool.badge}
               </span>
             </div>

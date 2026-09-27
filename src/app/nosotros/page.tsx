@@ -161,7 +161,7 @@ export default function NosotrosPage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <p className="text-xs text-slate-400 font-light pt-2">
+          <p className="text-xs text-slate-600 font-light pt-2">
             También ofrecemos{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

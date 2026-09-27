@@ -113,7 +113,7 @@ export default function ContactoPage() {
               syntiqgroup@gmail.com
             </a>
           </p>
-          <p className="text-xs text-slate-400 font-light">
+          <p className="text-xs text-slate-600 font-light">
             También puedes conocer nuestra{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

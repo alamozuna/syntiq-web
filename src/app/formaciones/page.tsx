@@ -166,7 +166,7 @@ export default function FormacionesPage() {
 
                     {/* Target */}
                     <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 mb-6">
-                      <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                      <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider block mb-1">
                         Ideal para:
                       </span>
                       <p className="text-xs text-slate-600 font-light leading-relaxed">

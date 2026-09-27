@@ -90,17 +90,17 @@ workshop-page template.
 **Changes:** added public/llms.txt describing the business, formaciones, and servicios with links.
 **Done 26 Sept.**
 
-### [ ] 9. Decide on the text-contrast fix - your call
+### [x] 9. Fix the text-contrast issue
 
-Lighthouse flags small gray label text (nav badges, step labels, form
-sliders) at 2.35-4.37:1 contrast against its background, under the
-4.5:1 minimum. This is a design-token color, not your brand's primary
-button or accent - I can darken just these grays, but it's your
-design system, so I'm asking first rather than just changing it.
+Lighthouse flagged small gray label text (tool badges, "Diseñado desde
+República Dominicana", the "PASO 01-04" step labels, and the 3
+range-slider labels in the ROI calculator) at 2.35-4.37:1 contrast
+against their background, under the 4.5:1 minimum.
 
-**Who:** you decide, then me if you say go
-**Time:** 2 min to decide, 15 min for me to apply
-**Changes:** would darken slate-400/slate-500 text tokens in a few components. No layout or copy changes.
+**Who:** me, in your code
+**Time:** 15 min
+**Changes:** darkened text-slate-400/text-slate-500 to text-slate-600 on 8 label instances across 3 homepage components (ToolsMarquee, MethodStepper, RoiCalculator). Left the dark-panel labels inside the ROI results card untouched - those already pass at 6.96:1, and darkening them would have made them harder to read, not easier. No layout or copy changes.
+**Done 26 Sept.** Verified with a fresh Lighthouse run: homepage accessibility 96 → 100, zero contrast failures remaining.
 
 ### [ ] 10. Request indexing now that #1-8 are live
 

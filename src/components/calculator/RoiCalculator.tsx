@@ -117,7 +117,7 @@ export default function RoiCalculator() {
                   }}
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+                <div className="flex justify-between text-[10px] text-slate-600 font-mono mt-1">
                   <span>1 persona</span>
                   <span>30 personas</span>
                 </div>
@@ -145,7 +145,7 @@ export default function RoiCalculator() {
                   }}
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+                <div className="flex justify-between text-[10px] text-slate-600 font-mono mt-1">
                   <span>2 h/sem</span>
                   <span>30 h/sem</span>
                 </div>
@@ -174,7 +174,7 @@ export default function RoiCalculator() {
                   }}
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 />
-                <div className="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+                <div className="flex justify-between text-[10px] text-slate-600 font-mono mt-1">
                   <span>200 RD$/h</span>
                   <span>2,000 RD$/h</span>
                 </div>

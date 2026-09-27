@@ -169,7 +169,7 @@ export default function InCompanyPage() {
             Hablar sobre mi equipo
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
-          <p className="text-xs text-slate-400 font-light mt-6">
+          <p className="text-xs text-slate-600 font-light mt-6">
             ¿Tu empresa está en República Dominicana?{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

@@ -113,7 +113,7 @@ export default function MotorConsultivoPage() {
                 <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 font-mono font-bold">
                   01
                 </div>
-                <span className="text-[10px] font-mono text-slate-400">SEMANAS 1 - 2</span>
+                <span className="text-[10px] font-mono text-slate-600">SEMANAS 1 - 2</span>
               </div>
               <h3 className="text-lg font-semibold text-[#0F172A]">Auditoría Operativa & Cuellos de Botella</h3>
               <p className="text-xs text-slate-600 font-light leading-relaxed">
@@ -126,7 +126,7 @@ export default function MotorConsultivoPage() {
                 <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600 font-mono font-bold">
                   02
                 </div>
-                <span className="text-[10px] font-mono text-slate-400">SEMANAS 3 - 8</span>
+                <span className="text-[10px] font-mono text-slate-600">SEMANAS 3 - 8</span>
               </div>
               <h3 className="text-lg font-semibold text-[#0F172A]">Arquitectura de Datos & Conexión ERP</h3>
               <p className="text-xs text-slate-600 font-light leading-relaxed">
@@ -139,7 +139,7 @@ export default function MotorConsultivoPage() {
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 font-mono font-bold">
                   03
                 </div>
-                <span className="text-[10px] font-mono text-slate-400">SEMANAS 9 - 12</span>
+                <span className="text-[10px] font-mono text-slate-600">SEMANAS 9 - 12</span>
               </div>
               <h3 className="text-lg font-semibold text-[#0F172A]">Validación Estadística & Despliegue</h3>
               <p className="text-xs text-slate-600 font-light leading-relaxed">

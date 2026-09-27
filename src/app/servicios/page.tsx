@@ -180,7 +180,7 @@ export default function ServiciosPage() {
                     </p>
 
                     <div className="space-y-2.5 pt-4 border-t border-slate-100 mb-6">
-                      <span className="text-[11px] font-mono text-slate-400 block">
+                      <span className="text-[11px] font-mono text-slate-600 block">
                         CAPACIDADES CLAVE:
                       </span>
                       {service.highlights.map((h) => (

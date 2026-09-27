@@ -96,7 +96,7 @@ export default function MethodStepper() {
                     </div>
 
                     {/* Step label */}
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-1">
+                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider mb-1">
                       PASO {step.number}
                     </span>
                   </button>
@@ -142,7 +142,7 @@ export default function MethodStepper() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-mono text-slate-400">
+                    <span className="text-[10px] font-mono text-slate-600">
                       {step.number}
                     </span>
                     <h3 className="text-xs font-bold font-mono text-slate-900">

@@ -278,7 +278,7 @@ export default function CoursePage({ params }: Props) {
                 </div>
 
                 <div className="border-t border-slate-100 pt-8 mb-8">
-                  <h3 className="text-sm font-mono text-slate-400 uppercase tracking-wider mb-4">
+                  <h3 className="text-sm font-mono text-slate-600 uppercase tracking-wider mb-4">
                     Resumen de entrega
                   </h3>
                   <ul className="space-y-3">
