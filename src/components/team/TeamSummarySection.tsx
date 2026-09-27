@@ -21,7 +21,7 @@ const TEAM_MEMBERS = [
     expertise: "Convierte tecnología en resultados de negocio medibles.",
     image: "/assets/team-alam.jpg",
     tags: ["Estrategia", "Data", "Negocio"],
-    imageClass: "object-cover object-[center_20%] scale-110",
+    imageClass: "object-cover object-[center_75%]",
   },
   {
     name: "Laura Nicole Espino Andújar",

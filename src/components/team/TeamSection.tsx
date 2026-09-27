@@ -18,7 +18,7 @@ const TEAM = [
     name: "Alam Antonio Ozuna Silva",
     role: "Estrategia, Data & Formación",
     image: "/assets/team-alam.jpg",
-    imageClass: "object-cover object-[center_20%] scale-110",
+    imageClass: "object-cover object-[center_75%]",
     credentials: "MBA Ciencia de Datos & IA (CESTE) · Estratega B2B",
     bio: "Especialista en fusionar el rigor del análisis de datos con la estrategia de negocios internacionales y la gestión del cambio. Actúa como el puente vital entre la alta tecnología y el retorno financiero de la empresa, asegurando que cada agente inteligente responda a retos comerciales concretos y altamente rentables.",
     tags: ["Estrategia Comercial", "Retorno de Inversión", "Análisis Financiero", "Transformación Digital"],
