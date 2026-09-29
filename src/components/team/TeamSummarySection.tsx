@@ -53,7 +53,7 @@ export default function TeamSummarySection() {
           transition={{ duration: 0.4 }}
           className="text-center max-w-3xl mx-auto mb-14 sm:mb-16"
         >
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase">
             EQUIPO FUNDADOR
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
@@ -71,7 +71,7 @@ export default function TeamSummarySection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="rounded-3xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between shadow-xs hover:border-blue-300 hover:shadow-sm transition-all duration-200 group"
+              className="rounded-3xl bg-white border border-slate-200/90 p-5 flex flex-col justify-between shadow-sm hover:border-blue-300 hover:shadow-sm transition-all duration-200 group"
             >
               <div>
                 {/* Photo */}
@@ -95,7 +95,7 @@ export default function TeamSummarySection() {
                 </span>
 
                 {/* Expertise 1 line */}
-                <p className="text-xs text-slate-600 font-light leading-relaxed mb-4">
+                <p className="text-sm text-slate-600 font-light leading-relaxed mb-4">
                   &ldquo;{member.expertise}&rdquo;
                 </p>
               </div>
@@ -105,7 +105,7 @@ export default function TeamSummarySection() {
                 {member.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-50 text-slate-600 border border-slate-200"
+                    className="px-2 py-0.5 rounded text-xs font-mono bg-slate-50 text-slate-600 border border-slate-200"
                   >
                     {tag}
                   </span>
@@ -119,7 +119,7 @@ export default function TeamSummarySection() {
         <div className="text-center mb-14">
           <Link
             href="/nosotros"
-            className="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+            className="group inline-flex items-center gap-1.5 min-h-[44px] px-2 text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <span>Conocer al equipo completo y nuestra historia</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />

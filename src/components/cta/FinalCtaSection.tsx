@@ -37,16 +37,16 @@ export default function FinalCtaSection() {
         {/* Dual CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
           <Link
-            href="#formaciones"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs sm:text-sm py-3.5 px-7 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-[0.98]"
+            href="/formaciones"
+            className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold text-base py-3.5 px-7 rounded-full transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
           >
-            <span>Ver próximos talleres</span>
+            <span>Ver formaciones</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
 
           <Link
             href="/contacto?modalidad=in-company"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-xs sm:text-sm font-medium py-3.5 px-6 rounded-full transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-600 text-base font-medium py-3.5 px-6 rounded-full transition-colors min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
           >
             <Users className="w-4 h-4 text-slate-400" />
             <span>Formar a mi equipo</span>

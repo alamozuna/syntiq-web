@@ -142,7 +142,7 @@ export default function SolutionsMatrix() {
                   >
                     {/* Left Column: Description */}
                     <div className="lg:col-span-7 space-y-6">
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-[11px] font-mono mb-2">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-mono mb-2">
                         <Target className="w-3.5 h-3.5" />
                         <span>Ideal para: {form.targetAudience}</span>
                       </div>
@@ -199,7 +199,7 @@ export default function SolutionsMatrix() {
                         )}
                       >
                         <div className="mb-8">
-                          <span className="text-[10px] font-mono tracking-widest uppercase text-slate-500 mb-2 block">
+                          <span className="text-xs font-mono tracking-widest uppercase text-slate-500 mb-2 block">
                             Inversión / Estado
                           </span>
                           <span
@@ -231,7 +231,7 @@ export default function SolutionsMatrix() {
                           <ArrowRight className="w-4 h-4" />
                         </a>
                         
-                        <p className="mt-4 text-[11px] text-slate-500 font-light">
+                        <p className="mt-4 text-sm text-slate-500 font-light">
                           Grupos reducidos para asegurar la atención personalizada.
                         </p>
                       </div>

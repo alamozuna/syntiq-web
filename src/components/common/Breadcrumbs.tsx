@@ -31,7 +31,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       <JsonLd data={jsonLdData} />
       <nav
         aria-label="Migas de pan"
-        className="flex items-center space-x-2 text-xs font-mono text-slate-500 py-3"
+        className="flex items-center space-x-2 text-xs font-mono text-slate-600 py-3"
       >
         <ol className="flex items-center space-x-1.5 flex-wrap">
           {allItems.map((item, index) => {
@@ -51,7 +51,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 ) : (
                   <Link
                     href={item.href}
-                    className="hover:text-slate-900 transition-colors flex items-center gap-1 text-slate-600"
+                    className="inline-flex items-center gap-1 min-h-[24px] py-1 text-slate-600 hover:text-slate-900 transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                   >
                     {index === 0 && <Home className="w-3 h-3" aria-hidden="true" />}
                     <span>{item.name}</span>

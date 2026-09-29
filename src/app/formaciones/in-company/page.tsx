@@ -34,9 +34,9 @@ export default function InCompanyPage() {
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 shadow-xs mb-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 shadow-sm mb-6">
             <Building2 className="w-3.5 h-3.5" />
-            <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+            <span className="text-xs tracking-widest uppercase font-semibold font-mono">
               PARA EQUIPOS Y EMPRESAS
             </span>
           </div>
@@ -53,7 +53,7 @@ export default function InCompanyPage() {
 
           <Link
             href="/contacto?modalidad=in-company"
-            className="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-900/20"
+            className="inline-flex items-center justify-center px-8 py-4 min-h-[44px] bg-emerald-700 text-white rounded-full font-semibold hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-900/20"
           >
             Hablemos de tu equipo
             <ArrowRight className="ml-2 w-5 h-5" />
@@ -75,21 +75,21 @@ export default function InCompanyPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-xs">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm">
               <ShieldCheck className="w-8 h-8 text-emerald-600 mb-6" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Seguridad y Políticas</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Utilizamos los entornos y herramientas aprobadas por tu departamento de IT. Sin exponer datos sensibles.
               </p>
             </div>
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-xs">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm">
               <Briefcase className="w-8 h-8 text-emerald-600 mb-6" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Casos de Uso Reales</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
                 Las sesiones prácticas resuelven tareas que tu equipo hace todos los días, no ejemplos abstractos.
               </p>
             </div>
-            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-xs">
+            <div className="p-8 rounded-3xl bg-slate-50 border border-slate-200 shadow-sm">
               <Users className="w-8 h-8 text-emerald-600 mb-6" />
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Alineación de Equipo</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
@@ -107,7 +107,7 @@ export default function InCompanyPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-6">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+                <span className="text-xs tracking-widest uppercase font-semibold font-mono">
                   ÁREAS DE FORMACIÓN
                 </span>
               </div>
@@ -164,12 +164,12 @@ export default function InCompanyPage() {
           </p>
           <Link
             href="/contacto?modalidad=in-company"
-            className="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition-colors shadow-lg shadow-emerald-900/20"
+            className="inline-flex items-center justify-center px-8 py-4 min-h-[44px] bg-emerald-700 text-white rounded-full font-semibold hover:bg-emerald-800 transition-colors shadow-lg shadow-emerald-900/20"
           >
             Hablar sobre mi equipo
             <ArrowRight className="ml-2 w-5 h-5" />
           </Link>
-          <p className="text-xs text-slate-600 font-light mt-6">
+          <p className="text-sm text-slate-600 font-light mt-6">
             ¿Tu empresa está en República Dominicana?{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

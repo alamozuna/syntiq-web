@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://www.syntiqgroup.com/nosotros",
     images: [
       {
-        url: "/assets/logo-syntiq.png",
+        url: "/assets/og-syntiq.png",
         width: 1200,
         height: 630,
         alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -47,22 +47,22 @@ const aboutSchema = {
       {
         "@type": "Person",
         name: "Bryan Villar Sánchez",
-        jobTitle: "Ingeniero de Operaciones e IA",
+        jobTitle: "Operaciones, Automatización & Formación",
       },
       {
         "@type": "Person",
         name: "Alam Antonio Ozuna Silva",
-        jobTitle: "Estrategia de Negocios & Análisis de Datos",
+        jobTitle: "Estrategia, Data & Formación",
       },
       {
         "@type": "Person",
         name: "Laura Nicole Espino Andújar",
-        jobTitle: "Legal, Cumplimiento & Propiedad Intelectual",
+        jobTitle: "Legal & Gobernanza",
       },
       {
         "@type": "Person",
         name: "Karyleydi Ortiz Segura",
-        jobTitle: "Comercio Internacional & Experiencia de Cliente",
+        jobTitle: "Marketing & Comunicación",
       },
     ],
   },
@@ -97,7 +97,7 @@ export default function NosotrosPage() {
                 </p>
 
                 <p className="mt-4 text-base sm:text-lg text-slate-600 font-light leading-relaxed">
-                  En SyntIQ transformamos el caos operativo de las empresas mediante agentes autónomos, gobernanza estricta y modelos de datos de alta precisión. Existimos para liberar al ser humano de la mediocridad de las tareas mecánicas.
+                  SyntIQ es una escuela de Inteligencia Artificial aplicada. Enseñamos a profesionales, equipos y empresas hispanas a construir automatizaciones, aplicaciones y agentes reales, con criterio y supervisión humana, para que las horas de trabajo repetitivo se conviertan en tiempo para lo que de verdad importa.
                 </p>
               </div>
 
@@ -119,7 +119,7 @@ export default function NosotrosPage() {
               </div>
               <div>
                 <span className="text-xs font-semibold text-slate-900 block">CESTE Centro Universitario</span>
-                <span className="text-[11px] font-mono text-slate-500">Máster & MBA Ciencia de Datos e IA</span>
+                <span className="text-xs font-mono text-slate-600">Máster & MBA Ciencia de Datos e IA</span>
               </div>
             </div>
 
@@ -129,7 +129,7 @@ export default function NosotrosPage() {
               </div>
               <div>
                 <span className="text-xs font-semibold text-slate-900 block">Estándares Internacionales</span>
-                <span className="text-[11px] font-mono text-slate-500">ISO 13485 · FDA · RGPD Compliance</span>
+                <span className="text-xs font-mono text-slate-600">ISO 13485 · FDA · RGPD Compliance</span>
               </div>
             </div>
 
@@ -139,7 +139,7 @@ export default function NosotrosPage() {
               </div>
               <div>
                 <span className="text-xs font-semibold text-slate-900 block">Formación OMA</span>
-                <span className="text-[11px] font-mono text-slate-500">Organización Mundial de Aduanas</span>
+                <span className="text-xs font-mono text-slate-600">Organización Mundial de Aduanas</span>
               </div>
             </div>
           </div>
@@ -156,21 +156,27 @@ export default function NosotrosPage() {
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light leading-tight">
-            ¿Listo para construir un sistema inteligente para tu empresa?
+            ¿Listo para construir algo útil con IA?
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base font-light max-w-2xl mx-auto">
-            Hablemos sobre tus procesos actuales y analicemos cómo la arquitectura de SyntIQ puede erradicar tus cuellos de botella.
+          <p className="text-slate-600 text-base font-light max-w-2xl mx-auto">
+            Elige una formación para ti o cuéntanos qué necesita tu equipo y te orientamos hacia el formato adecuado.
           </p>
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base font-semibold px-8 py-4 rounded-full transition-all shadow-sm hover:shadow-md"
+              href="/formaciones"
+              className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold px-8 py-3.5 rounded-full transition-colors shadow-sm hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             >
-              <span>Solicitar Diagnóstico Operativo</span>
+              <span>Ver formaciones</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+            <Link
+              href="/contacto?modalidad=in-company"
+              className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-base font-medium px-7 py-3.5 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+            >
+              <span>Formar a mi equipo</span>
+            </Link>
           </div>
-          <p className="text-xs text-slate-600 font-light pt-2">
+          <p className="text-sm text-slate-600 font-light pt-2">
             También ofrecemos{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

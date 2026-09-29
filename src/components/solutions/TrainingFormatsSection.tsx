@@ -61,7 +61,7 @@ export default function TrainingFormatsSection() {
     <section id="formaciones" className="relative py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase">
             MODALIDADES
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
@@ -88,14 +88,14 @@ export default function TrainingFormatsSection() {
                   "relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-200 bg-white",
                   format.isFeatured
                     ? "border-[1.5px] border-blue-500 shadow-[0_8px_24px_rgba(59,130,246,0.12)]"
-                    : "border border-slate-200/90 shadow-xs hover:border-slate-300 hover:shadow-sm"
+                    : "border border-slate-200/90 shadow-sm hover:border-slate-300 hover:shadow-sm"
                 )}
               >
                 {/* Popular Pill */}
                 {format.isFeatured && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="px-3.5 py-1 rounded-full bg-blue-600 text-white text-[10px] font-mono font-semibold tracking-wider uppercase shadow-xs">
-                      Presencial
+                    <span className="px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
+                      Recomendado
                     </span>
                   </div>
                 )}
@@ -121,10 +121,10 @@ export default function TrainingFormatsSection() {
 
                   {/* Target Audience Pill */}
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 mb-6">
-                    <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                    <span className="text-xs font-mono text-slate-600 uppercase tracking-wider block mb-1">
                       Ideal para:
                     </span>
-                    <p className="text-xs text-slate-600 font-light leading-relaxed">
+                    <p className="text-sm text-slate-600 font-light leading-relaxed">
                       {format.target}
                     </p>
                   </div>
@@ -132,7 +132,7 @@ export default function TrainingFormatsSection() {
                   {/* Checkpoints */}
                   <ul className="space-y-2.5 mb-8">
                     {format.points.map((pt, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 font-light">
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-slate-600 font-light">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                         <span>{pt}</span>
                       </li>
@@ -145,7 +145,7 @@ export default function TrainingFormatsSection() {
                   <Link
                     href={format.ctaHref}
                     className={cn(
-                      "group w-full min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full py-3 px-5 text-xs sm:text-sm font-semibold transition-all duration-200 shadow-xs",
+                      "group w-full min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full py-3 px-5 text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm",
                       format.isFeatured
                         ? "bg-blue-600 hover:bg-blue-700 text-white hover:shadow-md"
                         : "bg-slate-900 hover:bg-slate-800 text-white"

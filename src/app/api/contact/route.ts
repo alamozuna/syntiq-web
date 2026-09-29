@@ -1,124 +1,148 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy");
-
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "syntiqgroup@gmail.com";
+import {
+  CONTACT_EMAIL,
+  EMAIL_RE,
+  clean,
+  escapeHtml,
+  isRateLimited,
+  row,
+  sendMail,
+  wrapHtml,
+} from "@/lib/server/mail";
 
 export async function POST(request: NextRequest) {
+  let body: Record<string, unknown>;
   try {
-    const body = await request.json();
+    body = await request.json();
+  } catch {
+    return NextResponse.json({ error: "Solicitud inválida." }, { status: 400 });
+  }
 
-    const {
-      type,
-      name,
-      email,
-      phone,
-      formacion,
-      formacionTitle,
-      level,
-      message,
-      company,
-      teamSize,
-      area,
-      objective,
-      origin,
-    } = body;
+  // Honeypot: real users never fill this hidden field. Answer 200 so bots don't adapt.
+  if (clean(body.website)) {
+    return NextResponse.json({ success: true });
+  }
 
-    if (!name || !email) {
-      return NextResponse.json(
-        { error: "Nombre y email son obligatorios." },
-        { status: 400 }
-      );
-    }
-
-    // Build subject
-    let subject = "[SyntIQ] Nuevo contacto desde la web";
-    if (type === "individual" && formacionTitle) {
-      subject = `[SyntIQ] Nuevo interés — ${formacionTitle}`;
-    } else if (type === "empresa" && company) {
-      subject = `[SyntIQ] Nueva solicitud In-Company — ${company}`;
-    } else if (type === "individual") {
-      subject = "[SyntIQ] Nueva solicitud de formación individual";
-    }
-
-    // Build email body
-    const lines: string[] = [];
-    lines.push(`TIPO DE SOLICITUD: ${type === "empresa" ? "Empresa / In-Company" : "Individual"}`);
-    lines.push("");
-    lines.push(`Nombre: ${name}`);
-    lines.push(`Email: ${email}`);
-
-    if (phone) lines.push(`Teléfono / WhatsApp: ${phone}`);
-    if (formacionTitle) lines.push(`Formación seleccionada: ${formacionTitle}`);
-    if (formacion) lines.push(`Slug: ${formacion}`);
-
-    lines.push(
-      `Modalidad: ${type === "empresa" ? "Empresa" : "Individual"}`
+  if (isRateLimited(request)) {
+    return NextResponse.json(
+      { error: "Demasiadas solicitudes. Inténtalo de nuevo en unos minutos." },
+      { status: 429 }
     );
+  }
 
-    if (company) lines.push(`Empresa: ${company}`);
-    if (teamSize) lines.push(`Tamaño del equipo: ${teamSize}`);
-    if (area) lines.push(`Área de interés: ${area}`);
-    if (level) lines.push(`Nivel actual: ${level}`);
-    if (message) {
-      lines.push("");
-      lines.push(`Objetivo / Mensaje:`);
-      lines.push(message);
-    }
-    if (objective) {
-      lines.push("");
-      lines.push(`Objetivo:`);
-      lines.push(objective);
-    }
+  const type = body.type === "empresa" ? "empresa" : "individual";
+  const name = clean(body.name, 120);
+  const email = clean(body.email, 200).toLowerCase();
+  const phone = clean(body.phone, 60);
+  const formacion = clean(body.formacion, 120);
+  const formacionTitle = clean(body.formacionTitle, 200);
+  const level = clean(body.level, 120);
+  const message = clean(body.message, 3000);
+  const company = clean(body.company, 160);
+  const teamSize = clean(body.teamSize, 60);
+  const area = clean(body.area, 120);
+  const objective = clean(body.objective, 3000);
+  const origin = clean(body.origin, 300);
+  const consent = body.consent === true;
 
-    lines.push("");
-    lines.push(`---`);
-    lines.push(`Página de origen: ${origin || "No disponible"}`);
-    lines.push(`Fecha: ${new Date().toISOString()}`);
+  if (!name || !email) {
+    return NextResponse.json({ error: "Nombre y email son obligatorios." }, { status: 400 });
+  }
+  if (!EMAIL_RE.test(email)) {
+    return NextResponse.json({ error: "El email no parece válido." }, { status: 400 });
+  }
+  if (!consent) {
+    return NextResponse.json(
+      { error: "Debes aceptar la política de privacidad para enviar el formulario." },
+      { status: 400 }
+    );
+  }
+  if (type === "empresa" && !company) {
+    return NextResponse.json({ error: "El nombre de la empresa es obligatorio." }, { status: 400 });
+  }
 
-    const textBody = lines.join("\n");
+  let subject = "[SyntIQ] Nuevo contacto desde la web";
+  if (type === "individual" && formacionTitle) {
+    subject = `[SyntIQ] Nuevo interés — ${formacionTitle}`;
+  } else if (type === "empresa" && company) {
+    subject = `[SyntIQ] Nueva solicitud In-Company — ${company}`;
+  } else if (type === "individual") {
+    subject = "[SyntIQ] Nueva solicitud de formación individual";
+  }
 
-    // Build HTML body
-    const htmlBody = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 24px;">
-        <div style="background: #0F172A; padding: 24px; border-radius: 12px 12px 0 0;">
-          <h1 style="color: white; font-size: 20px; margin: 0;">SyntIQ — ${type === "empresa" ? "Solicitud In-Company" : "Nuevo Interés"}</h1>
-        </div>
-        <div style="background: #F8FAFC; padding: 24px; border: 1px solid #E2E8F0; border-top: none; border-radius: 0 0 12px 12px;">
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Tipo</td><td style="padding: 8px 0; font-weight: 600;">${type === "empresa" ? "Empresa / In-Company" : "Individual"}</td></tr>
-            <tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Nombre</td><td style="padding: 8px 0; font-weight: 600;">${name}</td></tr>
-            <tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Email</td><td style="padding: 8px 0;"><a href="mailto:${email}">${email}</a></td></tr>
-            ${phone ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Teléfono</td><td style="padding: 8px 0;">${phone}</td></tr>` : ""}
-            ${formacionTitle ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Formación</td><td style="padding: 8px 0; font-weight: 600; color: #2563EB;">${formacionTitle}</td></tr>` : ""}
-            ${company ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Empresa</td><td style="padding: 8px 0; font-weight: 600;">${company}</td></tr>` : ""}
-            ${teamSize ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Equipo</td><td style="padding: 8px 0;">${teamSize}</td></tr>` : ""}
-            ${area ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Área</td><td style="padding: 8px 0;">${area}</td></tr>` : ""}
-            ${level ? `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Nivel IA</td><td style="padding: 8px 0;">${level}</td></tr>` : ""}
-          </table>
-          ${message ? `<div style="margin-top: 16px; padding: 16px; background: white; border-radius: 8px; border: 1px solid #E2E8F0;"><p style="color: #64748B; font-size: 12px; margin: 0 0 8px;">Mensaje</p><p style="margin: 0;">${message}</p></div>` : ""}
-          ${objective ? `<div style="margin-top: 16px; padding: 16px; background: white; border-radius: 8px; border: 1px solid #E2E8F0;"><p style="color: #64748B; font-size: 12px; margin: 0 0 8px;">Objetivo</p><p style="margin: 0;">${objective}</p></div>` : ""}
-          <p style="margin-top: 16px; font-size: 11px; color: #94A3B8;">Origen: ${origin || "N/A"} · ${new Date().toLocaleString("es-ES")}</p>
-        </div>
-      </div>
-    `;
+  const typeLabel = type === "empresa" ? "Empresa / In-Company" : "Individual";
+  const now = new Date();
 
-    await resend.emails.send({
-      from: "SyntIQ Web <onboarding@resend.dev>",
-      to: [CONTACT_EMAIL],
+  const lines: string[] = [
+    `TIPO DE SOLICITUD: ${typeLabel}`,
+    "",
+    `Nombre: ${name}`,
+    `Email: ${email}`,
+  ];
+  if (phone) lines.push(`Teléfono / WhatsApp: ${phone}`);
+  if (formacionTitle) lines.push(`Formación seleccionada: ${formacionTitle}`);
+  if (formacion) lines.push(`Slug: ${formacion}`);
+  if (company) lines.push(`Empresa: ${company}`);
+  if (teamSize) lines.push(`Tamaño del equipo: ${teamSize}`);
+  if (area) lines.push(`Área de interés: ${area}`);
+  if (level) lines.push(`Nivel actual: ${level}`);
+  if (message) lines.push("", "Objetivo / Mensaje:", message);
+  if (objective) lines.push("", "Objetivo:", objective);
+  lines.push(
+    "",
+    "---",
+    `Consentimiento RGPD: sí (${now.toISOString()})`,
+    `Página de origen: ${origin || "No disponible"}`,
+    `Fecha: ${now.toISOString()}`
+  );
+
+  // Every user-provided value goes through escapeHtml() before reaching the HTML body.
+  const rows = [
+    row("Tipo", typeLabel, { strong: true }),
+    row("Nombre", name, { strong: true }),
+    `<tr><td style="padding: 8px 0; color: #64748B; font-size: 13px;">Email</td><td style="padding: 8px 0;"><a href="mailto:${escapeHtml(
+      email
+    )}">${escapeHtml(email)}</a></td></tr>`,
+    phone && row("Teléfono", phone),
+    formacionTitle && row("Formación", formacionTitle, { strong: true, color: "#2563EB" }),
+    company && row("Empresa", company, { strong: true }),
+    teamSize && row("Equipo", teamSize),
+    area && row("Área", area),
+    level && row("Nivel IA", level),
+  ]
+    .filter(Boolean)
+    .join("");
+
+  const block = (label: string, value: string) =>
+    `<div style="margin-top: 16px; padding: 16px; background: white; border-radius: 8px; border: 1px solid #E2E8F0;"><p style="color: #64748B; font-size: 12px; margin: 0 0 8px;">${escapeHtml(
+      label
+    )}</p><p style="margin: 0; white-space: pre-wrap;">${escapeHtml(value)}</p></div>`;
+
+  const htmlBody = wrapHtml(
+    `SyntIQ — ${type === "empresa" ? "Solicitud In-Company" : "Nuevo Interés"}`,
+    `<table style="width: 100%; border-collapse: collapse;">${rows}</table>
+     ${message ? block("Mensaje", message) : ""}
+     ${objective ? block("Objetivo", objective) : ""}
+     <p style="margin-top: 16px; font-size: 11px; color: #94A3B8;">Consentimiento RGPD aceptado · Origen: ${escapeHtml(
+       origin || "N/A"
+     )} · ${escapeHtml(now.toLocaleString("es-ES"))}</p>`
+  );
+
+  try {
+    await sendMail({
+      to: CONTACT_EMAIL,
       replyTo: email,
       subject,
-      text: textBody,
+      text: lines.join("\n"),
       html: htmlBody,
     });
-
-    return NextResponse.json({ success: true });
   } catch (error) {
     console.error("[SyntIQ Contact API Error]", error);
     return NextResponse.json(
-      { error: "Error interno del servidor." },
-      { status: 500 }
+      { error: `No hemos podido enviar tu solicitud. Escríbenos directamente a ${CONTACT_EMAIL}.` },
+      { status: 502 }
     );
   }
+
+  return NextResponse.json({ success: true });
 }

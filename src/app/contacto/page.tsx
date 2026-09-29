@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://www.syntiqgroup.com/contacto",
     images: [
       {
-        url: "/assets/logo-syntiq.png",
+        url: "/assets/og-syntiq.png",
         width: 1200,
         height: 630,
         alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -104,7 +104,7 @@ export default function ContactoPage() {
       {/* Alternative Contact */}
       <section className="py-8 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-2">
-          <p className="text-sm text-slate-500 font-light">
+          <p className="text-sm text-slate-600 font-light">
             ¿Prefieres escribirnos directamente?{" "}
             <a
               href="mailto:syntiqgroup@gmail.com"
@@ -113,7 +113,7 @@ export default function ContactoPage() {
               syntiqgroup@gmail.com
             </a>
           </p>
-          <p className="text-xs text-slate-600 font-light">
+          <p className="text-sm text-slate-600 font-light">
             También puedes conocer nuestra{" "}
             <Link
               href="/formacion-inteligencia-artificial-republica-dominicana"

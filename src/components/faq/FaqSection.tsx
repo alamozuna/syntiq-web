@@ -81,7 +81,7 @@ export default function FaqSection({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 sm:mb-16">
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase">
             {badge}
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
@@ -105,7 +105,7 @@ export default function FaqSection({
                 className={cn(
                   "rounded-2xl border transition-all duration-200 overflow-hidden",
                   isOpen
-                    ? "bg-slate-50/80 border-slate-300 shadow-xs"
+                    ? "bg-slate-50/80 border-slate-300 shadow-sm"
                     : "bg-white border-slate-200/90 hover:border-slate-300"
                 )}
               >
@@ -122,7 +122,7 @@ export default function FaqSection({
                       <HelpCircle
                         className={cn(
                           "w-4 h-4 shrink-0 transition-colors",
-                          isOpen ? "text-blue-600" : "text-slate-400"
+                          isOpen ? "text-blue-600" : "text-slate-600"
                         )}
                       />
                       <span className="text-sm sm:text-base font-medium text-slate-900">
@@ -148,7 +148,7 @@ export default function FaqSection({
                   transition={{ duration: 0.2, ease: "easeInOut" }}
                   style={{ overflow: "hidden" }}
                 >
-                  <div className="px-5 pb-5 pt-0 text-xs sm:text-sm text-slate-600 font-light leading-relaxed border-t border-slate-200/60 mt-1">
+                  <div className="px-5 pb-5 pt-0 text-sm text-slate-600 font-light leading-relaxed border-t border-slate-200/60 mt-1">
                     <p className="pt-3">{faq.answer}</p>
                   </div>
                 </motion.div>

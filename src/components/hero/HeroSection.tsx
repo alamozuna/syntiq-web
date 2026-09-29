@@ -26,8 +26,8 @@ export default function HeroSection() {
               transition={{ duration: 0.4 }}
               className="flex justify-center lg:justify-start mb-5"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-900/60 border border-blue-700/60 text-blue-300 shadow-xs">
-                <span className="brand-label text-[10px] tracking-widest uppercase font-semibold">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-900/60 border border-blue-700/60 text-blue-300 shadow-sm">
+                <span className="brand-label tracking-widest uppercase font-semibold">
                   APRENDE · CONSTRUYE · AUTOMATIZA
                 </span>
               </div>
@@ -68,18 +68,18 @@ export default function HeroSection() {
             >
               <a
                 href="/formaciones"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm sm:text-base px-7 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.01] active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium text-base px-7 py-3.5 rounded-full transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
               >
-                <span>Ver próximos talleres</span>
+                <span>Ver formaciones</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </a>
 
               <a
                 href="#formaciones"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white font-medium text-sm sm:text-base px-6 py-3.5 rounded-full border border-white/25 hover:border-white/40 transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white font-medium text-base px-6 py-3.5 rounded-full border border-white/25 hover:border-white/40 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F172A]"
               >
                 <BookOpen className="w-4 h-4 text-blue-400" />
-                <span>Explorar formaciones</span>
+                <span>Ver modalidades</span>
               </a>
             </motion.div>
 
@@ -98,7 +98,7 @@ export default function HeroSection() {
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
                     4.7/5
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Valoración media</span>
+                  <span className="text-sm text-slate-300 font-medium">Dinámica de los formadores</span>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
                     12/13
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Calificaron la explicación como excelente</span>
+                  <span className="text-sm text-slate-300 font-medium">Calificaron la explicación como excelente</span>
                 </div>
               </div>
 
@@ -122,7 +122,7 @@ export default function HeroSection() {
                   <span className="font-brand-display text-xl sm:text-2xl font-light text-white block leading-tight">
                     11/13
                   </span>
-                  <span className="text-[11px] text-slate-400 font-medium">Intención de aplicar hoy</span>
+                  <span className="text-sm text-slate-300 font-medium">Intención de aplicar hoy</span>
                 </div>
               </div>
             </motion.div>

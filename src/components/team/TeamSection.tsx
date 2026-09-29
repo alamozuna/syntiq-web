@@ -93,13 +93,13 @@ export default function TeamSection() {
                       {member.name}
                     </h3>
                     <p className="text-sm font-medium text-blue-600 mt-0.5">{member.role}</p>
-                    <span className="text-[11px] font-mono text-slate-500 block mt-1">
+                    <span className="text-xs font-mono text-slate-500 block mt-1">
                       {member.credentials}
                     </span>
                   </div>
                 </div>
 
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light mb-6">
+                <p className="text-sm text-slate-600 leading-relaxed font-light mb-6">
                   {member.bio}
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function TeamSection() {
                 {member.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-2.5 py-1 rounded-md text-[10px] font-mono bg-slate-50 text-slate-700 border border-slate-200 font-medium"
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-50 text-slate-700 border border-slate-200 font-medium"
                   >
                     {tag}
                   </span>
@@ -123,31 +123,31 @@ export default function TeamSection() {
         <div id="gobernanza" className="mt-16 p-6 sm:p-8 rounded-3xl bg-[#0F172A] text-slate-200 border border-slate-800 shadow-elevation-3">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             <div className="space-y-1">
-              <span className="brand-label text-blue-400 text-[10px]">
+              <span className="brand-label text-blue-400">
                 REGLA HUMAN-IN-THE-LOOP
               </span>
               <h3 className="text-sm font-semibold text-white">Supervisión Sistemática</h3>
-              <p className="text-xs text-slate-300 font-light">
+              <p className="text-sm text-slate-300 font-light">
                 Ningún agente sale a producción sin auditoría humana de logs para evitar
                 alucinaciones o sesgos.
               </p>
             </div>
             <div className="space-y-1">
-              <span className="brand-label text-emerald-400 text-[10px]">
+              <span className="brand-label text-emerald-400">
                 PROHIBIDO EL &quot;VAPORWARE&quot;
               </span>
               <h3 className="text-sm font-semibold text-white">Soluciones Reales Hoy</h3>
-              <p className="text-xs text-slate-300 font-light">
+              <p className="text-sm text-slate-300 font-light">
                 No vendemos maquetas teóricas. Construimos sistemas operativos que resuelven dolores
                 financieros desde el primer mes.
               </p>
             </div>
             <div className="space-y-1">
-              <span className="brand-label text-indigo-400 text-[10px]">
+              <span className="brand-label text-indigo-400">
                 INTEGRIDAD INNEGOCIABLE
               </span>
               <h3 className="text-sm font-semibold text-white">Obsesión por el Dato Real</h3>
-              <p className="text-xs text-slate-300 font-light">
+              <p className="text-sm text-slate-300 font-light">
                 Preferimos perder una propuesta comercial antes que inflar expectativas de IA no
                 validadas matemáticamente.
               </p>

@@ -70,7 +70,7 @@ export default function CursoModularPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 mb-6">
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+            <span className="text-xs tracking-widest uppercase font-semibold font-mono">
               SYNTIQ AI BUILDER
             </span>
           </div>
@@ -131,7 +131,7 @@ export default function CursoModularPage() {
 
                   {/* Center Node */}
                   <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full bg-slate-950 border-4 border-slate-800 z-10 shrink-0">
-                    <span className="text-xs font-bold text-slate-500">{mod.id}</span>
+                    <span className="text-xs font-bold text-slate-400">{mod.id}</span>
                   </div>
                   
                   {/* Empty Spacer */}

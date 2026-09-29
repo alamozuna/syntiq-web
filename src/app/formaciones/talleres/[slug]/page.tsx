@@ -50,7 +50,7 @@ export function generateMetadata({ params }: Props): Metadata {
       url: `https://www.syntiqgroup.com/formaciones/talleres/${course.slug}`,
       images: [
         {
-          url: "/assets/logo-syntiq.png",
+          url: "/assets/og-syntiq.png",
           width: 1200,
           height: 630,
           alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -201,7 +201,7 @@ export default function CoursePage({ params }: Props) {
                   </div>
                   <h2 className="text-2xl font-semibold text-slate-900">Para quién es</h2>
                 </div>
-                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+                <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                   <ul className="space-y-4">
                     {course.audience.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3 text-slate-700">
@@ -223,7 +223,7 @@ export default function CoursePage({ params }: Props) {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {course.learningObjectives.map((item, idx) => (
-                    <div key={idx} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs flex gap-4 items-start">
+                    <div key={idx} className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex gap-4 items-start">
                       <span className="text-blue-200 font-mono text-lg font-bold">0{idx + 1}</span>
                       <p className="text-slate-700">{item}</p>
                     </div>
@@ -239,7 +239,7 @@ export default function CoursePage({ params }: Props) {
                   </div>
                   <h2 className="text-2xl font-semibold text-slate-900">Agenda</h2>
                 </div>
-                <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+                <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                   {course.agenda.map((item, idx) => (
                     <div key={idx} className="border-b border-slate-100 last:border-0 p-5">
                       <h3 className="font-mono text-slate-800 font-medium">{item.title}</h3>
@@ -264,7 +264,7 @@ export default function CoursePage({ params }: Props) {
                   <h2 className="text-2xl font-semibold text-slate-900">Preguntas Frecuentes</h2>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+                  <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <h3 className="font-semibold text-slate-900 mb-2">¿Necesito conocimientos previos de programación?</h3>
                     <p className="text-slate-600 text-sm">
                       {course.level.includes("Avanzado") 
@@ -272,7 +272,7 @@ export default function CoursePage({ params }: Props) {
                         : "No. Todos nuestros talleres iniciales e intermedios están diseñados para perfiles no técnicos. Usamos herramientas No-Code o asistidas por IA."}
                     </p>
                   </div>
-                  <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs">
+                  <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm">
                     <h3 className="font-semibold text-slate-900 mb-2">¿Tendré acceso al material después del taller?</h3>
                     <p className="text-slate-600 text-sm">Sí, tendrás acceso al proyecto construido durante la sesión y a los recursos principales del taller.</p>
                   </div>
@@ -285,7 +285,7 @@ export default function CoursePage({ params }: Props) {
             <div className="lg:col-span-4 space-y-8">
               
               {/* Tools */}
-              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs sticky top-28">
+              <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm sticky top-28">
                 <h3 className="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
                   <Hammer className="w-5 h-5 text-blue-600" />
                   Herramientas

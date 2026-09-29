@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import JsonLd from "@/components/seo/JsonLd";
+import MotionProvider from "@/components/providers/MotionProvider";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
       "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales, equipos y empresas.",
     images: [
       {
-        url: "/assets/logo-syntiq.png",
+        url: "/assets/og-syntiq.png",
         width: 1200,
         height: 630,
         alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
     title: "SyntIQ Group | Formación en Inteligencia Artificial",
     description:
       "Aprende IA construyendo automatizaciones, aplicaciones y agentes reales. Talleres prácticos para profesionales y empresas.",
-    images: ["/assets/logo-syntiq.png"],
+    images: ["/assets/og-syntiq.png"],
   },
   robots: {
     index: true,
@@ -114,22 +115,22 @@ const organizationSchema = {
         {
           "@type": "Person",
           name: "Bryan Villar Sánchez",
-          jobTitle: "Formador Principal de IA & Operaciones",
+          jobTitle: "Operaciones, Automatización & Formación",
         },
         {
           "@type": "Person",
           name: "Alam Antonio Ozuna Silva",
-          jobTitle: "Director Académico & Estrategia de Negocios",
+          jobTitle: "Estrategia, Data & Formación",
         },
         {
           "@type": "Person",
           name: "Laura Nicole Espino Andújar",
-          jobTitle: "Formadora de Gobernanza de IA & Propiedad Intelectual",
+          jobTitle: "Legal & Gobernanza",
         },
         {
           "@type": "Person",
           name: "Karyleydi Ortiz Segura",
-          jobTitle: "Coordinadora de Experiencia del Alumno & Operaciones",
+          jobTitle: "Marketing & Comunicación",
         },
       ],
       sameAs: ["https://www.instagram.com/synt.iqgroup/"],
@@ -162,7 +163,7 @@ export default function RootLayout({
         <JsonLd data={organizationSchema} />
       </head>
       <body className="antialiased selection:bg-blue-600/20 selection:text-slate-900 bg-white text-slate-900 min-h-screen">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

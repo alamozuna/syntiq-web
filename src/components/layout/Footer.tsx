@@ -20,14 +20,14 @@ export default function Footer() {
               <BrandLogo size="md" variant="light" />
             </Link>
 
-            <p className="text-xs text-slate-300 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
               Formación práctica y talleres de Inteligencia Artificial para profesionales y empresas.
               Aprende a construir agentes autónomos y automatiza tu operativa real.
             </p>
 
             <Link
               href="/formaciones"
-              className="inline-flex items-center gap-2 text-[11px] font-mono text-blue-400 bg-blue-950/40 border border-blue-500/30 px-3 py-1 rounded-full w-fit hover:bg-blue-950/60 transition-colors"
+              className="inline-flex items-center gap-2 text-xs font-mono text-blue-400 bg-blue-950/40 border border-blue-500/30 px-3 py-1 rounded-full w-fit hover:bg-blue-950/60 transition-colors"
             >
               <span>Explora nuestras formaciones →</span>
             </Link>
@@ -35,27 +35,27 @@ export default function Footer() {
 
           {/* Col 3: Formaciones */}
           <div className="space-y-3">
-            <span className="brand-label text-slate-200 block text-[10px]">
+            <span className="brand-label text-slate-200 block">
               FORMACIONES
             </span>
-            <ul className="space-y-2 text-slate-300">
+            <ul className="space-y-0.5 md:space-y-1 text-slate-300">
               <li>
-                <Link href="/formaciones" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Todas las Formaciones
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/talleres-intensivos" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/talleres-intensivos" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Talleres Intensivos
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/curso-modular" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/curso-modular" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Programa Modular
                 </Link>
               </li>
               <li>
-                <Link href="/formaciones/in-company" className="hover:text-blue-400 transition-colors">
+                <Link href="/formaciones/in-company" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Formación In-Company
                 </Link>
               </li>
@@ -64,22 +64,22 @@ export default function Footer() {
 
           {/* Col 4: Recursos */}
           <div className="space-y-3">
-            <span className="brand-label text-slate-200 block text-[10px]">
+            <span className="brand-label text-slate-200 block">
               ACADEMIA & RECURSOS
             </span>
-            <ul className="space-y-2 text-slate-300">
+            <ul className="space-y-0.5 md:space-y-1 text-slate-300">
               <li>
-                <Link href="/nosotros" className="hover:text-blue-400 transition-colors">
+                <Link href="/nosotros" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Sobre Nosotros & Equipo
                 </Link>
               </li>
               <li>
-                <Link href="/#resultados" className="hover:text-blue-400 transition-colors">
+                <Link href="/#resultados" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Resultados de Alumnos
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="hover:text-blue-400 transition-colors">
+                <Link href="/contacto" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors">
                   Contacto & Admisión
                 </Link>
               </li>
@@ -88,20 +88,20 @@ export default function Footer() {
 
           {/* Col 5: Filosofía */}
           <div className="space-y-3">
-            <span className="brand-label text-slate-200 block text-[10px]">
+            <span className="brand-label text-slate-200 block">
               FILOSOFÍA ACADÉMICA
             </span>
-            <p className="text-[11px] text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-400 leading-relaxed">
               <strong className="text-slate-200">Mayordomía Radical:</strong> Buscamos la excelencia no para nosotros, sino para honrar el encargo recibido.
             </p>
-            <p className="text-[11px] text-slate-400 leading-relaxed">
+            <p className="text-sm text-slate-400 leading-relaxed">
               <strong className="text-slate-200">Integridad:</strong> Preferimos perder un cliente que inflar resultados o prometer IA que no hemos validado.
             </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-mono">
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-mono">
           <div>
             © {new Date().getFullYear()} SyntIQ Group. Todos los derechos reservados.
           </div>
@@ -111,15 +111,15 @@ export default function Footer() {
               href="https://www.instagram.com/synt.iqgroup/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition-colors"
+              className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-blue-400 transition-colors"
               aria-label="Instagram de SyntIQ Group"
             >
               Instagram
             </a>
-            <Link href="/privacidad" className="hover:text-slate-200 transition-colors">
+            <Link href="/privacidad" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-slate-200 transition-colors">
               Privacidad & RGPD
             </Link>
-            <Link href="/terminos" className="hover:text-slate-200 transition-colors">
+            <Link href="/terminos" className="inline-flex items-center min-h-[44px] md:min-h-[32px] hover:text-slate-200 transition-colors">
               Términos de Servicio
             </Link>
           </div>
@@ -127,7 +127,7 @@ export default function Footer() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-blue-400 rounded px-1"
+            className="flex items-center gap-1 min-h-[44px] md:min-h-[32px] text-slate-300 hover:text-white transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 rounded px-2"
           >
             <span>Volver arriba</span>
             <ArrowUp className="w-3.5 h-3.5" />

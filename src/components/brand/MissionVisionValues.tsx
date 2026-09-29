@@ -85,7 +85,7 @@ export default function MissionVisionValues() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-blue-200 text-blue-700 shadow-sm mb-4">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span className="brand-label text-[10px] tracking-widest uppercase">
+            <span className="brand-label tracking-widest uppercase">
               FILOSOFÍA & IDENTIDAD ACADÉMICA
             </span>
           </div>
@@ -156,7 +156,7 @@ export default function MissionVisionValues() {
                     <Target className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="brand-label text-blue-600 text-[10px] block">PROPÓSITO CENTRAL</span>
+                    <span className="brand-label text-blue-600 block">PROPÓSITO CENTRAL</span>
                     <h3 className="font-brand-display text-3xl text-[#0F172A] font-light">Nuestra Misión</h3>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function MissionVisionValues() {
                     <Eye className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="brand-label text-indigo-600 text-[10px] block">HORIZONTE ESTRATÉGICO</span>
+                    <span className="brand-label text-indigo-600 block">HORIZONTE ESTRATÉGICO</span>
                     <h3 className="font-brand-display text-3xl text-[#0F172A] font-light">Nuestra Visión</h3>
                   </div>
                 </div>
@@ -217,7 +217,7 @@ export default function MissionVisionValues() {
                         <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
                           <IconComponent className="w-5 h-5" />
                         </div>
-                        <span className="text-[10px] font-mono uppercase bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md">
+                        <span className="text-xs font-mono uppercase bg-slate-100 text-slate-600 px-2 py-0.5 rounded-md">
                           {v.badge}
                         </span>
                       </div>
@@ -225,15 +225,15 @@ export default function MissionVisionValues() {
                       <h3 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-1">
                         {v.title}
                       </h3>
-                      <p className="text-xs font-medium text-blue-600 mb-3">
+                      <p className="text-sm font-medium text-blue-600 mb-3">
                         {v.tagline}
                       </p>
-                      <p className="text-xs text-slate-600 font-light leading-relaxed">
+                      <p className="text-sm text-slate-600 font-light leading-relaxed">
                         {v.description}
                       </p>
                     </div>
 
-                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-[11px] text-slate-400 font-mono">
+                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs text-slate-400 font-mono">
                       <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                       <span>Principio Innegociable</span>
                     </div>
@@ -262,13 +262,13 @@ export default function MissionVisionValues() {
                     <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 mb-5">
                       <RuleIcon className="w-5 h-5" />
                     </div>
-                    <span className="brand-label text-emerald-600 text-[10px] block mb-1">
+                    <span className="brand-label text-emerald-600 block mb-1">
                       REGLA OPERATIVA #0{idx + 1}
                     </span>
                     <h3 className="font-brand-display text-2xl text-[#0F172A] font-normal mb-3">
                       {rule.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                    <p className="text-sm text-slate-600 font-light leading-relaxed">
                       {rule.description}
                     </p>
                   </div>

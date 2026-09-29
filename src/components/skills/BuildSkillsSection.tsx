@@ -19,11 +19,11 @@ const SKILLS = [
     icon: MessageSquareCode,
     badge: "Lenguaje Natural",
     microVisual: (
-      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-[11px] text-slate-700 space-y-1">
-        <div className="text-slate-400">&lt;prompt_estructurado&gt;</div>
+      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-xs text-slate-700 space-y-1">
+        <div className="text-slate-600">&lt;prompt_estructurado&gt;</div>
         <div className="text-blue-600 font-medium">rol: Analista Financiero</div>
         <div className="text-slate-600">salida: JSON estricto sin relleno</div>
-        <div className="text-emerald-600 flex items-center gap-1 text-[10px]">
+        <div className="text-emerald-700 flex items-center gap-1 text-xs">
           <CheckCircle2 className="w-3 h-3" /> Flujos estructurados
         </div>
       </div>
@@ -36,15 +36,15 @@ const SKILLS = [
     icon: Terminal,
     badge: "Desarrollo Asistido",
     microVisual: (
-      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-[11px] text-slate-700 space-y-1">
-        <div className="flex items-center justify-between text-[10px] text-slate-400">
+      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-xs text-slate-700 space-y-1">
+        <div className="flex items-center justify-between text-xs text-slate-600">
           <span>cursor // mini-app.tsx</span>
-          <span className="text-emerald-600">✓ Listo</span>
+          <span className="text-emerald-700">✓ Listo</span>
         </div>
-        <div className="text-slate-600 text-[10px]">
+        <div className="text-slate-600 text-xs">
           <span className="text-blue-600 font-medium">&quot;Crea un dashboard de leads...&quot;</span>
         </div>
-        <div className="text-slate-500 text-[10px] pt-1 border-t border-slate-200">
+        <div className="text-slate-600 text-xs pt-1 border-t border-slate-200">
           Prototipado rápido asistido por IA
         </div>
       </div>
@@ -57,15 +57,15 @@ const SKILLS = [
     icon: Workflow,
     badge: "n8n & APIs",
     microVisual: (
-      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-[11px] text-slate-700">
-        <div className="flex items-center justify-between gap-1 text-[10px] py-1">
+      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-xs text-slate-700">
+        <div className="flex items-center justify-between gap-1 text-xs py-1">
           <span className="px-2 py-0.5 rounded bg-blue-100 text-blue-700">Email</span>
           <ArrowRight className="w-3 h-3 text-slate-400" />
           <span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">n8n IA</span>
           <ArrowRight className="w-3 h-3 text-slate-400" />
           <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">CRM</span>
         </div>
-        <div className="text-[10px] text-slate-500 mt-1 text-center">
+        <div className="text-xs text-slate-600 mt-1 text-center">
           Automatización continua sin intervención manual
         </div>
       </div>
@@ -78,17 +78,17 @@ const SKILLS = [
     icon: Bot,
     badge: "Supervisión Humana",
     microVisual: (
-      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-[11px] text-slate-700 space-y-1">
-        <div className="flex items-center justify-between text-[10px]">
-          <span className="text-slate-500">Razonamiento</span>
-          <span className="text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200 text-[9px]">
+      <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 font-mono text-xs text-slate-700 space-y-1">
+        <div className="flex items-center justify-between text-xs">
+          <span className="text-slate-600">Razonamiento</span>
+          <span className="text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200 text-xs">
             HITL
           </span>
         </div>
-        <div className="text-[10px] text-slate-600">
+        <div className="text-xs text-slate-600">
           Regla: si confianza &lt; 90% → alerta Slack
         </div>
-        <div className="text-[10px] text-emerald-600 font-medium">
+        <div className="text-xs text-emerald-700 font-medium">
           Acción ejecutada con control humano
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function BuildSkillsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase">
             QUÉ VAS A APRENDER A CONSTRUIR
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
@@ -133,7 +133,7 @@ export default function BuildSkillsSection() {
                     <div className="w-10 h-10 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="font-mono text-xs text-slate-400 font-medium">
+                    <span className="font-mono text-xs text-slate-600 font-medium">
                       {skill.number}
                     </span>
                   </div>
@@ -142,7 +142,7 @@ export default function BuildSkillsSection() {
                   <h3 className="text-base font-bold text-slate-900 tracking-wide mb-2 font-mono">
                     {skill.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed mb-6">
+                  <p className="text-sm text-slate-600 font-light leading-relaxed mb-6">
                     {skill.phrase}
                   </p>
                 </div>

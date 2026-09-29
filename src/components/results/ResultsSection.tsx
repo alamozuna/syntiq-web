@@ -28,7 +28,7 @@ export default function ResultsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="brand-label text-blue-400 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-400 font-semibold tracking-wider uppercase">
             EXPERIENCIAS REALES
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-white font-light mt-3 leading-tight">
@@ -60,7 +60,7 @@ export default function ResultsSection() {
               
               <div className="pt-4 border-t border-slate-700/60">
                 <span className="font-semibold text-white text-xs block">{item.author}</span>
-                <span className="text-[10px] text-slate-400 font-light">{item.context}</span>
+                <span className="text-sm text-slate-400 font-light">{item.context}</span>
               </div>
             </motion.div>
           ))}
@@ -83,8 +83,8 @@ export default function ResultsSection() {
                 <span className="font-brand-display text-2xl font-light text-white block leading-tight">4.7</span>
                 <span className="text-slate-400 text-sm">/ 5</span>
               </div>
-              <span className="text-xs text-slate-300 font-medium block mt-0.5">Ritmo y coordinación</span>
-              <span className="text-[10px] text-slate-500 font-light">13 respuestas del taller</span>
+              <span className="text-sm text-slate-300 font-medium block mt-0.5">Ritmo y coordinación</span>
+              <span className="text-sm text-slate-400 font-light">13 respuestas del taller</span>
             </div>
           </motion.div>
 
@@ -100,8 +100,8 @@ export default function ResultsSection() {
             </div>
             <div>
               <span className="font-brand-display text-2xl font-light text-white block leading-tight">12 <span className="text-slate-400 text-sm font-sans">de</span> 13</span>
-              <span className="text-xs text-slate-300 font-medium block mt-0.5">Calificaron la explicación como excelente</span>
-              <span className="text-[10px] text-slate-500 font-light">Taller de IA Agéntica y Antigravity</span>
+              <span className="text-sm text-slate-300 font-medium block mt-0.5">Calificaron la explicación como excelente</span>
+              <span className="text-sm text-slate-400 font-light">Taller de IA Agéntica y Antigravity</span>
             </div>
           </motion.div>
 
@@ -117,8 +117,8 @@ export default function ResultsSection() {
             </div>
             <div>
               <span className="font-brand-display text-2xl font-light text-white block leading-tight">11 <span className="text-slate-400 text-sm font-sans">de</span> 13</span>
-              <span className="text-xs text-slate-300 font-medium block mt-0.5">Saldrán a aplicar IA y automatización</span>
-              <span className="text-[10px] text-slate-500 font-light">Intención declarada</span>
+              <span className="text-sm text-slate-300 font-medium block mt-0.5">Saldrán a aplicar IA y automatización</span>
+              <span className="text-sm text-slate-400 font-light">Intención declarada</span>
             </div>
           </motion.div>
         </div>

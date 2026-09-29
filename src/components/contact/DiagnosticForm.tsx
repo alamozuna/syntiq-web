@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, Suspense } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -38,13 +39,20 @@ const INTEREST_AREAS = [
   { id: "workspace", label: "Google Workspace" },
 ];
 
+// Programs that can be preselected via ?formacion= but aren't single entries in formaciones.ts.
+const EXTRA_PROGRAMS: { slug: string; title: string }[] = [
+  { slug: "programa-modular", title: "Programa Modular — SyntIQ AI Builder" },
+];
+
 function ContactFormContent() {
   const searchParams = useSearchParams();
   const formacionParam = searchParams.get("formacion");
   const modalidadParam = searchParams.get("modalidad");
 
-  const selectedCourse = formacionParam
-    ? formaciones.find((f) => f.slug === formacionParam)
+  const selectedCourse: { slug: string; title: string } | null = formacionParam
+    ? formaciones.find((f) => f.slug === formacionParam) ??
+      EXTRA_PROGRAMS.find((p) => p.slug === formacionParam) ??
+      null
     : null;
 
   const [mode, setMode] = useState<"individual" | "empresa" | null>(
@@ -53,6 +61,9 @@ function ContactFormContent() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [consent, setConsent] = useState(false);
+  // Hidden field: bots fill it, humans never see it.
+  const [honeypot, setHoneypot] = useState("");
 
   // Individual form data
   const [individualData, setIndividualData] = useState({
@@ -80,6 +91,12 @@ function ContactFormContent() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!consent) {
+      setSubmitError("Debes aceptar la política de privacidad para enviar el formulario.");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitError(null);
 
@@ -87,6 +104,8 @@ function ContactFormContent() {
       mode === "individual"
         ? {
             type: "individual",
+            consent,
+            website: honeypot,
             name: individualData.name,
             email: individualData.email,
             phone: individualData.phone || null,
@@ -106,6 +125,8 @@ function ContactFormContent() {
           }
         : {
             type: "empresa",
+            consent,
+            website: honeypot,
             name: empresaData.name,
             email: empresaData.email,
             company: empresaData.company,
@@ -126,12 +147,21 @@ function ContactFormContent() {
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error("Failed");
+      // Surface the server's message: the API now fails loudly when the email can't be sent.
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(
+          data?.error ||
+            "Hubo un problema al enviar tu solicitud. Inténtalo nuevamente o escríbenos a syntiqgroup@gmail.com."
+        );
+      }
 
       setIsSuccess(true);
-    } catch {
+    } catch (error) {
       setSubmitError(
-        "Hubo un problema al enviar tu solicitud. Inténtalo nuevamente o escríbenos a syntiqgroup@gmail.com."
+        error instanceof Error
+          ? error.message
+          : "Hubo un problema al enviar tu solicitud. Inténtalo nuevamente o escríbenos a syntiqgroup@gmail.com."
       );
     } finally {
       setIsSubmitting(false);
@@ -182,7 +212,7 @@ function ContactFormContent() {
                     <span className="text-lg font-semibold text-slate-900 block mb-1">
                       Para mí
                     </span>
-                    <span className="text-xs text-slate-500 font-light">
+                    <span className="text-xs text-slate-600 font-light">
                       Quiero aprender a construir con IA
                     </span>
                   </div>
@@ -199,7 +229,7 @@ function ContactFormContent() {
                     <span className="text-lg font-semibold text-slate-900 block mb-1">
                       Para mi equipo
                     </span>
-                    <span className="text-xs text-slate-500 font-light">
+                    <span className="text-xs text-slate-600 font-light">
                       Necesito formar a varias personas
                     </span>
                   </div>
@@ -221,7 +251,7 @@ function ContactFormContent() {
                   <h3 className="text-2xl font-semibold text-[#0F172A] mb-2">
                     Cuéntanos sobre ti
                   </h3>
-                  <p className="text-slate-500 font-light text-sm">
+                  <p className="text-slate-600 font-light text-sm">
                     Completa los datos para que podamos orientarte hacia la formación adecuada.
                   </p>
                 </div>
@@ -265,7 +295,7 @@ function ContactFormContent() {
                   <div className="space-y-1.5">
                     <label htmlFor="ind-phone" className="text-sm font-medium text-slate-700">
                       WhatsApp / Teléfono{" "}
-                      <span className="text-slate-400 font-light">(Opcional)</span>
+                      <span className="text-slate-600 font-light">(Opcional)</span>
                     </label>
                     <input
                       type="tel"
@@ -329,7 +359,7 @@ function ContactFormContent() {
                   <div className="space-y-1.5">
                     <label htmlFor="ind-message" className="text-sm font-medium text-slate-700">
                       ¿Qué te gustaría construir?{" "}
-                      <span className="text-slate-400 font-light">(Opcional)</span>
+                      <span className="text-slate-600 font-light">(Opcional)</span>
                     </label>
                     <textarea
                       id="ind-message"
@@ -342,6 +372,15 @@ function ContactFormContent() {
                       placeholder="Cuéntanos tu objetivo o proyecto..."
                     />
                   </div>
+
+                  <HoneypotField value={honeypot} onChange={setHoneypot} />
+
+                  <ConsentCheckbox
+                    id="ind-consent"
+                    checked={consent}
+                    onChange={setConsent}
+                    disabled={isSubmitting}
+                  />
 
                   {/* Error */}
                   {submitError && (
@@ -375,15 +414,11 @@ function ContactFormContent() {
                       type="button"
                       onClick={() => setMode(null)}
                       disabled={isSubmitting}
-                      className="text-sm text-slate-500 hover:text-slate-800 transition-colors"
+                      className="min-h-[44px] px-3 text-sm text-slate-600 hover:text-slate-900 transition-colors rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                     >
                       ← Cambiar tipo
                     </button>
                   </div>
-
-                  <p className="text-[10px] text-slate-400 font-light mt-2">
-                    Tus datos están seguros. No compartimos tu email con terceros.
-                  </p>
                 </form>
               </div>
             </motion.div>
@@ -402,7 +437,7 @@ function ContactFormContent() {
                   <h3 className="text-2xl font-semibold text-[#0F172A] mb-2">
                     Formación para tu equipo
                   </h3>
-                  <p className="text-slate-500 font-light text-sm">
+                  <p className="text-slate-600 font-light text-sm">
                     Cuéntanos sobre tu empresa y diseñaremos una propuesta a medida.
                   </p>
                 </div>
@@ -506,7 +541,7 @@ function ContactFormContent() {
                   <div className="space-y-1.5">
                     <label htmlFor="emp-objective" className="text-sm font-medium text-slate-700">
                       Objetivo{" "}
-                      <span className="text-slate-400 font-light">(Opcional)</span>
+                      <span className="text-slate-600 font-light">(Opcional)</span>
                     </label>
                     <textarea
                       id="emp-objective"
@@ -519,6 +554,15 @@ function ContactFormContent() {
                       placeholder="¿Qué problema quieres resolver o qué capacidades quieres desarrollar?"
                     />
                   </div>
+
+                  <HoneypotField value={honeypot} onChange={setHoneypot} />
+
+                  <ConsentCheckbox
+                    id="emp-consent"
+                    checked={consent}
+                    onChange={setConsent}
+                    disabled={isSubmitting}
+                  />
 
                   {/* Error */}
                   {submitError && (
@@ -533,7 +577,7 @@ function ContactFormContent() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 px-8 rounded-full transition-all shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-3.5 px-8 rounded-full transition-all shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <>
@@ -552,15 +596,11 @@ function ContactFormContent() {
                       type="button"
                       onClick={() => setMode(null)}
                       disabled={isSubmitting}
-                      className="text-sm text-slate-500 hover:text-slate-800 transition-colors"
+                      className="min-h-[44px] px-3 text-sm text-slate-600 hover:text-slate-900 transition-colors rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                     >
                       ← Cambiar tipo
                     </button>
                   </div>
-
-                  <p className="text-[10px] text-slate-400 font-light mt-2">
-                    Tus datos están seguros. No compartimos información con terceros.
-                  </p>
                 </form>
               </div>
             </motion.div>
@@ -583,7 +623,7 @@ function ContactFormContent() {
               <p className="text-slate-600 font-light max-w-md mx-auto mb-8">
                 Nos pondremos en contacto contigo usando los datos que proporcionaste.
               </p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-500">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-600">
                 <Mail className="w-4 h-4" />
                 <span>Revisa tu bandeja de entrada</span>
               </div>
@@ -592,6 +632,63 @@ function ContactFormContent() {
         </AnimatePresence>
       </div>
     </section>
+  );
+}
+
+/** RGPD consent — required before any personal data is sent. */
+function ConsentCheckbox({
+  id,
+  checked,
+  onChange,
+  disabled,
+}: {
+  id: string;
+  checked: boolean;
+  onChange: (value: boolean) => void;
+  disabled?: boolean;
+}) {
+  return (
+    <div className="flex items-start gap-3">
+      <input
+        id={id}
+        type="checkbox"
+        required
+        checked={checked}
+        disabled={disabled}
+        onChange={(e) => onChange(e.target.checked)}
+        className="mt-0.5 h-5 w-5 shrink-0 rounded border-slate-300 text-blue-600 accent-blue-600 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+      />
+      <label htmlFor={id} className="text-sm text-slate-600 leading-relaxed cursor-pointer">
+        He leído y acepto la{" "}
+        <Link
+          href="/privacidad"
+          target="_blank"
+          className="font-medium text-blue-700 underline underline-offset-2 hover:text-blue-800"
+        >
+          política de privacidad
+        </Link>
+        . Usaremos tus datos solo para responder a tu solicitud; no los compartimos con terceros. *
+      </label>
+    </div>
+  );
+}
+
+/** Off-screen field that only bots fill in. Hidden from assistive tech and the tab order. */
+function HoneypotField({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  return (
+    <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+      <label>
+        No rellenar este campo
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+        />
+      </label>
+    </div>
   );
 }
 

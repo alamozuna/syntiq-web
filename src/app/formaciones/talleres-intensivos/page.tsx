@@ -28,9 +28,9 @@ export default function TalleresIntensivosPage() {
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-xs mb-5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-sm mb-5">
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+            <span className="text-xs tracking-widest uppercase font-semibold font-mono">
               2 A 4 HORAS
             </span>
           </div>
@@ -48,8 +48,14 @@ export default function TalleresIntensivosPage() {
       </section>
 
       {/* Grid */}
-      <section className="py-20">
+      <section className="py-20" aria-labelledby="talleres-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            id="talleres-heading"
+            className="font-brand-display text-3xl sm:text-4xl font-light text-slate-900 mb-10"
+          >
+            Talleres disponibles
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {talleres.map((course) => (
               <CourseCard key={course.id} course={course} />
