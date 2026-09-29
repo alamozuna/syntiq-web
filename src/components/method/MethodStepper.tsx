@@ -50,7 +50,7 @@ export default function MethodStepper() {
           transition={{ duration: 0.4 }}
           className="text-center max-w-3xl mx-auto mb-16 sm:mb-20"
         >
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase">
             MÉTODO SYNTIQ
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light mt-3 leading-tight">
@@ -85,7 +85,9 @@ export default function MethodStepper() {
                     key={step.number}
                     type="button"
                     onClick={() => setActiveStep(idx)}
-                    className="flex flex-col items-center text-center cursor-pointer group focus:outline-none"
+                    aria-pressed={isActive}
+                    aria-label={`Paso ${step.number}: ${step.label.toLowerCase()}`}
+                    className="flex flex-col items-center text-center cursor-pointer group rounded-2xl p-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4"
                   >
                     {/* Node circle */}
                     <div
@@ -95,15 +97,23 @@ export default function MethodStepper() {
                           ? "bg-blue-600 text-white shadow-md scale-105"
                           : isPast
                           ? "bg-blue-50 text-blue-600 border border-blue-200"
-                          : "bg-white border border-slate-200 text-slate-400 group-hover:border-slate-300"
+                          : "bg-white border border-slate-200 text-slate-600 group-hover:border-slate-300"
                       )}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
 
-                    {/* Step label */}
-                    <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider mb-1">
-                      PASO {step.number}
+                    {/* Step label: number + name, so users don't have to click to discover each step */}
+                    <span className="text-xs font-mono text-slate-600 uppercase tracking-wider">
+                      Paso {step.number}
+                    </span>
+                    <span
+                      className={cn(
+                        "text-xs sm:text-sm font-semibold uppercase tracking-wide mt-0.5",
+                        isActive ? "text-blue-700" : "text-slate-800"
+                      )}
+                    >
+                      {step.label}
                     </span>
                   </button>
                 );
@@ -121,13 +131,13 @@ export default function MethodStepper() {
                 <span className="text-xs font-semibold text-slate-900 block font-mono">
                   {STEPS[activeStep].label} — {STEPS[activeStep].tagline}
                 </span>
-                <p className="text-xs text-slate-500 font-light mt-0.5">
+                <p className="text-sm text-slate-600 font-light mt-0.5">
                   {STEPS[activeStep].detail}
                 </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-1 text-[11px] font-mono text-blue-600 shrink-0">
+            <div className="flex items-center gap-1 text-xs font-mono text-blue-600 shrink-0">
               <span>Paso {activeStep + 1} de 4</span>
             </div>
           </div>
@@ -141,24 +151,24 @@ export default function MethodStepper() {
             return (
               <div
                 key={step.number}
-                className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-start gap-4"
+                className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-4"
               >
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
                   <Icon className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="text-[10px] font-mono text-slate-600">
+                    <span className="text-xs font-mono text-slate-600">
                       {step.number}
                     </span>
                     <h3 className="text-xs font-bold font-mono text-slate-900">
                       {step.label}
                     </h3>
                   </div>
-                  <p className="text-xs font-medium text-slate-700 mb-1">
+                  <p className="text-sm font-medium text-slate-700 mb-1">
                     &ldquo;{step.tagline}&rdquo;
                   </p>
-                  <p className="text-[11px] text-slate-500 font-light leading-relaxed">
+                  <p className="text-sm text-slate-600 font-light leading-relaxed">
                     {step.detail}
                   </p>
                 </div>

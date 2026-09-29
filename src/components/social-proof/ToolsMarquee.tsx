@@ -9,7 +9,7 @@ const TOOLS = [
   { name: "Claude", role: "Razonamiento Profundo", badge: "Anthropic" },
   { name: "Gemini", role: "Análisis Multimodal", badge: "Google" },
   { name: "n8n", role: "Orquestación de Agentes", badge: "No-Code" },
-  { name: "Antigravity", role: "Entorno Agéntico", badge: "DeepMind" },
+  { name: "Antigravity", role: "Entorno Agéntico", badge: "Google" },
   { name: "Cursor", role: "Vibe Coding & Asistencia", badge: "Dev" },
   { name: "NotebookLM", role: "Investigación con Fuentes", badge: "RAG" },
   { name: "Google Workspace", role: "Integración Operativa", badge: "Productividad" },
@@ -27,13 +27,13 @@ export default function ToolsMarquee() {
         transition={{ duration: 0.4 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center"
       >
-        <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] block mb-3">
+        <span className="brand-label text-blue-600 font-semibold tracking-wider block mb-3">
           IA GLOBAL. APLICACIÓN LOCAL.
         </span>
         <h2 className="font-brand-display text-xl sm:text-2xl text-slate-900 font-light max-w-3xl mx-auto leading-relaxed mb-3">
           Aprendemos con herramientas de clase mundial y las aplicamos a problemas, profesiones y empresas de nuestra realidad.
         </h2>
-        <p className="text-[11px] sm:text-xs text-slate-600 font-mono tracking-wide">
+        <p className="text-xs text-slate-600 font-mono tracking-wide">
           Diseñado desde República Dominicana
         </p>
       </motion.div>
@@ -45,12 +45,12 @@ export default function ToolsMarquee() {
           {TOOLS.map((tool, idx) => (
             <div
               key={`tool-1-${idx}`}
-              className="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-blue-300 hover:shadow-sm transition-all shrink-0 cursor-default"
+              className="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-blue-300 hover:shadow-sm transition-all shrink-0 cursor-default"
             >
               <span className="text-xs sm:text-sm font-medium text-slate-900">
                 {tool.name}
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
+              <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
                 {tool.badge}
               </span>
             </div>
@@ -60,12 +60,12 @@ export default function ToolsMarquee() {
           {TOOLS.map((tool, idx) => (
             <div
               key={`tool-2-${idx}`}
-              className="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:border-blue-300 hover:shadow-sm transition-all shrink-0 cursor-default"
+              className="flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:border-blue-300 hover:shadow-sm transition-all shrink-0 cursor-default"
             >
               <span className="text-xs sm:text-sm font-medium text-slate-900">
                 {tool.name}
               </span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
+              <span className="text-xs font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-600">
                 {tool.badge}
               </span>
             </div>

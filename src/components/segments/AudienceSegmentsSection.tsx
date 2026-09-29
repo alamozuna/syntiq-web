@@ -53,7 +53,7 @@ export default function AudienceSegmentsSection() {
     <section className="relative py-20 sm:py-28 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-          <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-4">
+          <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-4">
             PARA QUIÉN ES SYNTIQ
           </span>
           <h2 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light leading-tight mb-5">

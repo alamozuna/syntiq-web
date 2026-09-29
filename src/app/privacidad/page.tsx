@@ -34,7 +34,7 @@ export default function PrivacidadPage() {
             <h1 className="font-brand-display text-3xl sm:text-5xl text-[#0F172A] font-light leading-tight">
               Política de Privacidad y Protección de Datos
             </h1>
-            <p className="mt-3 text-xs sm:text-sm font-mono text-slate-500">
+            <p className="mt-3 text-xs sm:text-sm font-mono text-slate-600">
               Última actualización: Septiembre {new Date().getFullYear()} · Versión 1.3
             </p>
           </div>
@@ -43,7 +43,7 @@ export default function PrivacidadPage() {
 
       {/* Main Content Article */}
       <section className="py-16 sm:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-xs sm:text-sm text-slate-700 font-light leading-relaxed">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-sm text-slate-700 font-light leading-relaxed">
           {/* Legal Notice Box */}
           <div className="p-4 sm:p-5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-start gap-3">
             <AlertCircle className="w-5 h-5 shrink-0 text-amber-700 mt-0.5" />

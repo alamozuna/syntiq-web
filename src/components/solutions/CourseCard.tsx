@@ -52,7 +52,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
     }
     if (course.status === "COMING_SOON") {
       return (
-        <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-500">
+        <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
           Próximamente
         </span>
       );
@@ -73,7 +73,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
       {/* Featured badge */}
       {course.featured && (
         <div className="absolute -top-3 right-6">
-          <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-[10px] font-mono font-semibold tracking-wider uppercase shadow-sm">
+          <span className="px-3 py-1 rounded-full bg-blue-600 text-white text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
             Destacado
           </span>
         </div>
@@ -81,7 +81,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
 
       {/* Header: Category & Status */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-5">
-        <span className="text-[10px] font-mono text-blue-600 uppercase tracking-wider font-semibold">
+        <span className="text-xs font-mono text-blue-600 uppercase tracking-wider font-semibold">
           {course.category}
         </span>
         {renderStatusBadge()}
@@ -113,7 +113,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
 
       {/* Outcome Block */}
       <div className="mb-6 rounded-xl bg-slate-50 border border-slate-200/80 p-4">
-        <p className="text-[10px] font-mono text-blue-600 mb-1.5 uppercase tracking-wider font-semibold">
+        <p className="text-xs font-mono text-blue-600 mb-1.5 uppercase tracking-wider font-semibold">
           Construyes
         </p>
         <p className="text-sm text-slate-700 font-light leading-relaxed">
@@ -127,7 +127,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
         {course.tools.slice(0, 4).map((tool, idx) => (
           <span
             key={idx}
-            className="rounded-lg bg-slate-100 border border-slate-200/80 px-2.5 py-1 text-[11px] font-medium text-slate-600"
+            className="rounded-lg bg-slate-100 border border-slate-200/80 px-2.5 py-1 text-xs font-medium text-slate-600"
           >
             {tool}
           </span>
@@ -141,7 +141,7 @@ export default function CourseCard({ course, className }: CourseCardProps) {
       <div className="pt-4 border-t border-slate-100">
         <Link
           href={ctaHref}
-          className="group/cta inline-flex items-center text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700"
+          className="group/cta inline-flex items-center min-h-[44px] -my-2 text-sm font-semibold text-blue-700 transition-colors hover:text-blue-800 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
         >
           {ctaText}
           <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover/cta:translate-x-1" />

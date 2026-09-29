@@ -156,7 +156,7 @@ export default function UseCasesSection() {
                   </div>
                   
                   <div className="px-4 py-2 bg-blue-50 border border-blue-100 rounded-xl">
-                    <span className="block text-[10px] font-mono text-blue-600 tracking-wider uppercase mb-1">
+                    <span className="block text-xs font-mono text-blue-600 tracking-wider uppercase mb-1">
                       RESULTADO PRINCIPAL
                     </span>
                     <span className="text-sm font-semibold text-blue-900">

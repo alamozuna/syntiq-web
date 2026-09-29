@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: "https://www.syntiqgroup.com/formaciones",
     images: [
       {
-        url: "/assets/logo-syntiq.png",
+        url: "/assets/og-syntiq.png",
         width: 1200,
         height: 630,
         alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -95,9 +95,9 @@ export default function FormacionesPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-xs mb-5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-sm mb-5">
             <Sparkles className="w-3.5 h-3.5" />
-            <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+            <span className="text-xs tracking-widest uppercase font-semibold font-mono">
               FORMACIONES SYNTIQ
             </span>
           </div>
@@ -135,12 +135,12 @@ export default function FormacionesPage() {
                   className={`scroll-mt-24 rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-200 ${
                     format.isFeatured
                       ? "bg-white border-2 border-blue-500 shadow-md ring-4 ring-blue-50/70 relative"
-                      : "bg-white border border-slate-200/90 shadow-xs hover:border-slate-300 hover:shadow-sm"
+                      : "bg-white border border-slate-200/90 shadow-sm hover:border-slate-300 hover:shadow-sm"
                   }`}
                 >
                   {format.isFeatured && (
                     <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                      <span className="px-3.5 py-1 rounded-full bg-blue-600 text-white text-[10px] font-mono font-semibold tracking-wider uppercase shadow-xs">
+                      <span className="px-3.5 py-1 rounded-full bg-blue-600 text-white text-xs font-mono font-semibold tracking-wider uppercase shadow-sm">
                         Programa Modular
                       </span>
                     </div>
@@ -166,10 +166,10 @@ export default function FormacionesPage() {
 
                     {/* Target */}
                     <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 mb-6">
-                      <span className="text-[10px] font-mono text-slate-600 uppercase tracking-wider block mb-1">
+                      <span className="text-xs font-mono text-slate-600 uppercase tracking-wider block mb-1">
                         Ideal para:
                       </span>
-                      <p className="text-xs text-slate-600 font-light leading-relaxed">
+                      <p className="text-sm text-slate-600 font-light leading-relaxed">
                         {format.target}
                       </p>
                     </div>
@@ -179,7 +179,7 @@ export default function FormacionesPage() {
                       {format.points.map((pt, i) => (
                         <li
                           key={i}
-                          className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-600 font-light"
+                          className="flex items-start gap-2.5 text-sm text-slate-600 font-light"
                         >
                           <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                           <span>{pt}</span>
@@ -192,7 +192,7 @@ export default function FormacionesPage() {
                   <div className="pt-4 border-t border-slate-100">
                     <Link
                       href={format.ctaHref}
-                      className={`group w-full min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full py-3 px-5 text-xs sm:text-sm font-semibold transition-all duration-200 shadow-xs ${
+                      className={`group w-full min-h-[44px] inline-flex items-center justify-center gap-2 rounded-full py-3 px-5 text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm ${
                         format.isFeatured
                           ? "bg-blue-600 hover:bg-blue-700 text-white hover:shadow-md"
                           : "bg-slate-900 hover:bg-slate-800 text-white"
@@ -213,7 +213,7 @@ export default function FormacionesPage() {
       <section className="py-20 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-3">
+            <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-3">
               EMPIEZA AQUÍ
             </span>
             <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 font-light mb-4">
@@ -245,7 +245,7 @@ export default function FormacionesPage() {
           </p>
           <Link
             href="/formacion-inteligencia-artificial-republica-dominicana"
-            className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 min-h-[44px] text-blue-700 hover:text-blue-800 font-medium text-sm transition-colors rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <span>Conoce nuestro programa para profesionales y empresas dominicanas</span>
             <ArrowRight className="w-4 h-4" />

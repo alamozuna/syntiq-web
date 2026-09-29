@@ -32,12 +32,18 @@ export default function CourseCatalog() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Filters (Horizontal Scroll on Mobile) */}
-        <div className="flex overflow-x-auto pb-4 mb-16 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide gap-2 sm:gap-3 sm:flex-wrap sm:justify-center">
+        <div
+          role="group"
+          aria-label="Filtrar formaciones por categoría"
+          className="flex overflow-x-auto pb-4 mb-16 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide gap-2 sm:gap-3 sm:flex-wrap sm:justify-center"
+        >
           {CATEGORIES.map((category) => (
             <button
               key={category}
+              type="button"
               onClick={() => setActiveCategory(category)}
-              className={`whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono font-medium transition-all duration-200 ${
+              aria-pressed={activeCategory === category}
+              className={`whitespace-nowrap min-h-[44px] px-4 py-2 rounded-full text-sm font-mono font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 ${
                 activeCategory === category
                   ? "bg-slate-900 text-white shadow-md"
                   : "bg-slate-100 text-slate-600 hover:bg-slate-200"
@@ -67,7 +73,7 @@ export default function CourseCatalog() {
             </div>
           ) : (
             <div className="text-center py-20 bg-slate-50 rounded-3xl border border-slate-200">
-              <p className="text-slate-500 font-light">
+              <p className="text-slate-600 font-light">
                 No hay formaciones destacadas en esta categoría.
               </p>
             </div>
@@ -93,7 +99,7 @@ export default function CourseCatalog() {
             </div>
           ) : (
             <div className="text-center py-16 bg-slate-50 rounded-3xl border border-slate-200">
-              <p className="text-slate-500 font-light">
+              <p className="text-slate-600 font-light">
                 No hay nuevas formaciones anunciadas en esta categoría por ahora.
               </p>
             </div>

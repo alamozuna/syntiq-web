@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://www.syntiqgroup.com/formacion-inteligencia-artificial-republica-dominicana",
     images: [
       {
-        url: "/assets/logo-syntiq.png",
+        url: "/assets/og-syntiq.png",
         width: 1200,
         height: 630,
         alt: "SyntIQ - Aprende · Construye · Automatiza",
@@ -131,9 +131,9 @@ export default function FormacionIARDPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-xs mb-5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 shadow-sm mb-5">
             <MapPin className="w-3.5 h-3.5" />
-            <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+            <span className="text-xs tracking-widest uppercase font-semibold font-mono">
               REPÚBLICA DOMINICANA
             </span>
           </div>
@@ -174,7 +174,7 @@ export default function FormacionIARDPage() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-3">
+            <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-3">
               QUÉ OFRECEMOS
             </span>
             <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 font-light mb-4">
@@ -253,7 +253,7 @@ export default function FormacionIARDPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-3">
+              <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-3">
                 AUTOMATIZACIÓN E IA APLICADA
               </span>
               <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 font-light mb-4">
@@ -286,14 +286,14 @@ export default function FormacionIARDPage() {
 
               <Link
                 href="/formaciones"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                className="inline-flex items-center gap-2 min-h-[44px] text-blue-700 hover:text-blue-800 font-medium text-sm transition-colors rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <span>Explorar todas las formaciones</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
-            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-xs">
+            <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
               <div className="flex items-center gap-2 mb-6">
                 <Cpu className="w-5 h-5 text-blue-600" />
                 <span className="text-xs font-mono font-semibold text-slate-500 uppercase tracking-wider">
@@ -320,14 +320,14 @@ export default function FormacionIARDPage() {
                   },
                 ].map((s) => (
                   <div key={s.step} className="flex gap-4">
-                    <span className="text-2xl font-brand-display font-light text-blue-600/40">
+                    <span className="text-2xl font-brand-display font-light text-blue-500">
                       {s.step}
                     </span>
                     <div>
                       <h4 className="text-sm font-semibold text-slate-900 mb-1">
                         {s.title}
                       </h4>
-                      <p className="text-xs text-slate-500 font-light leading-relaxed">
+                      <p className="text-sm text-slate-500 font-light leading-relaxed">
                         {s.desc}
                       </p>
                     </div>
@@ -343,7 +343,7 @@ export default function FormacionIARDPage() {
       <section className="py-12 bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-2">
+            <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-2">
               HERRAMIENTAS QUE APRENDERÁS A UTILIZAR
             </span>
           </div>
@@ -367,7 +367,7 @@ export default function FormacionIARDPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 mb-6">
                 <MapPin className="w-3.5 h-3.5" />
-                <span className="text-[10px] tracking-widest uppercase font-semibold font-mono">
+                <span className="text-xs tracking-widest uppercase font-semibold font-mono">
                   PRESENCIA LOCAL
                 </span>
               </div>
@@ -395,7 +395,7 @@ export default function FormacionIARDPage() {
                   <span className="text-xs font-medium text-white block">
                     Presencial y virtual
                   </span>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-xs text-slate-400">
                     Formación flexible para toda la isla
                   </span>
                 </div>
@@ -404,7 +404,7 @@ export default function FormacionIARDPage() {
                   <span className="text-xs font-medium text-white block">
                     Contexto local
                   </span>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-xs text-slate-400">
                     Casos adaptados al mercado dominicano
                   </span>
                 </div>
@@ -439,7 +439,7 @@ export default function FormacionIARDPage() {
       <section className="py-16 sm:py-20 bg-white border-t border-slate-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="brand-label text-blue-600 font-semibold tracking-wider text-[10px] sm:text-[11px] uppercase block mb-3">
+            <span className="brand-label text-blue-600 font-semibold tracking-wider uppercase block mb-3">
               PREGUNTAS FRECUENTES
             </span>
             <h2 className="font-brand-display text-3xl sm:text-4xl text-slate-900 font-light">
